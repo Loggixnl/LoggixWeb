@@ -1,0 +1,35 @@
+{
+  "_comment": "301 Redirects - Use this if you change any URL structure. Map old URLs to new ones.",
+  "redirects": [
+    {
+      "_example": "Example redirect - remove or modify as needed",
+      "from": "/old-path/",
+      "to": "/new-path/",
+      "status": 301
+    }
+  ],
+  "preservedUrls": [
+    "/",
+    "/en_home/",
+    "/en_web/",
+    "/en_apis_ai/",
+    "/en_saas/",
+    "/en_news/",
+    "/en_team/",
+    "/en_privacy-policy-36442/",
+    "/nl_web/",
+    "/nl_apis_ai/",
+    "/nl_saas/",
+    "/nl_team/",
+    "/news/",
+    "/privacy-policy/",
+    "/privacy-policy-2/",
+    "/maintenance/"
+  ],
+  "notes": [
+    "CRITICAL: Keep all existing URLs exactly as they are to preserve Google rankings",
+    "If you MUST change a URL, add a 301 redirect from old to new",
+    "Trailing slashes matter - the current site uses trailing slashes",
+    "The bilingual structure uses en_ and nl_ prefixes"
+  ]
+}

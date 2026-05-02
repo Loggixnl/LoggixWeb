@@ -1,0 +1,396 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===================================
+   CSS CUSTOM PROPERTIES (THEMES)
+   =================================== */
+@layer base {
+  /* Light Theme (default) - Loggix brand colors */
+  :root {
+    /* Foundation */
+    --bg-primary: #FFFFFF;
+    --bg-secondary: #F5F5F7;
+    --bg-elevated: #FFFFFF;
+    --bg-dark-panel: #0D2C54;
+
+    /* Text */
+    --text-primary: #0D2C54;
+    --text-secondary: #41808B;
+    --text-muted: #6B7B8A;
+
+    /* Brand Colors */
+    --color-primary: #41808B;
+    --color-primary-hover: #357078;
+    --color-warning: #F6511D;
+    --color-attention: #FFB400;
+    --color-action: #7FB800;
+    --color-support: #0D2C54;
+
+    /* Accent (uses primary) */
+    --accent: #41808B;
+    --accent-hover: #357078;
+    --accent-glow: rgba(65, 128, 139, 0.15);
+
+    /* Grid */
+    --grid-color: rgba(13, 44, 84, 0.06);
+  }
+
+  /* Dark Theme */
+  .dark {
+    --bg-primary: #0D2C54;
+    --bg-secondary: #163D5E;
+    --bg-elevated: #1E4A6A;
+    --bg-dark-panel: #091E3A;
+
+    --text-primary: #F5F5F7;
+    --text-secondary: #A1C4CC;
+    --text-muted: #7A9AA6;
+
+    /* Brand Colors (adjusted for dark) */
+    --color-primary: #5BA3B0;
+    --color-primary-hover: #41808B;
+    --color-warning: #FF6B3D;
+    --color-attention: #FFC333;
+    --color-action: #9AD11A;
+    --color-support: #A1C4CC;
+
+    --accent: #5BA3B0;
+    --accent-hover: #41808B;
+    --accent-glow: rgba(91, 163, 176, 0.25);
+
+    --grid-color: rgba(255, 255, 255, 0.06);
+  }
+}
+
+/* ===================================
+   BASE STYLES
+   =================================== */
+@layer base {
+  html {
+    @apply scroll-smooth;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply antialiased;
+    font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, system-ui, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  /* Typography - Apple style: clean, medium weight headlines */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, system-ui, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    color: var(--text-primary);
+  }
+
+  h1 {
+    @apply text-h1;
+  }
+
+  h2 {
+    @apply text-h2;
+  }
+
+  h3 {
+    @apply text-h3;
+  }
+
+  p {
+    color: var(--text-secondary);
+  }
+
+  a {
+    color: var(--accent);
+    transition: opacity 0.2s ease;
+  }
+
+  a:hover {
+    opacity: 0.8;
+  }
+
+  /* Selection */
+  ::selection {
+    background-color: var(--accent);
+    color: var(--bg-primary);
+  }
+}
+
+/* ===================================
+   COMPONENT CLASSES
+   =================================== */
+@layer components {
+  /* Buttons */
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 font-medium rounded-lg transition-all duration-200;
+    font-family: 'Geist', system-ui, sans-serif;
+  }
+
+  .btn-primary {
+    @apply btn;
+    background-color: var(--color-primary);
+    color: white;
+  }
+
+  .btn-primary:hover {
+    background-color: var(--color-primary-hover);
+    transform: translateY(-1px);
+  }
+
+  .btn-secondary {
+    @apply btn border;
+    background-color: transparent;
+    border-color: var(--text-muted);
+    color: var(--text-primary);
+  }
+
+  .btn-secondary:hover {
+    border-color: var(--text-secondary);
+    background-color: var(--bg-secondary);
+  }
+
+  .btn-ghost {
+    @apply btn;
+    background-color: transparent;
+    color: var(--text-primary);
+  }
+
+  .btn-ghost:hover {
+    background-color: var(--bg-secondary);
+  }
+
+  /* Cards */
+  .card {
+    @apply rounded-xl p-6 transition-all duration-300;
+    background-color: var(--bg-elevated);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .dark .card {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.12);
+  }
+
+  .dark .card:hover {
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4);
+  }
+
+  /* Sections */
+  .section {
+    @apply py-20 md:py-32;
+  }
+
+  .section-tight {
+    @apply py-12 md:py-20;
+  }
+
+  /* Apple-style full-width panels */
+  .panel-light {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+  }
+
+  .panel-gray {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+  }
+
+  .panel-dark {
+    background-color: var(--bg-dark-panel);
+    color: #F5F5F7;
+  }
+
+  .panel-dark h1,
+  .panel-dark h2,
+  .panel-dark h3,
+  .panel-dark h4 {
+    color: #F5F5F7;
+  }
+
+  .panel-dark p {
+    color: #A1A1A6;
+  }
+
+  .panel-dark .label {
+    color: #86868B;
+  }
+
+  /* Containers */
+  .container-wide {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-narrow {
+    @apply max-w-4xl mx-auto px-4 sm:px-6;
+  }
+
+  /* Labels */
+  .label {
+    @apply text-label uppercase tracking-widest;
+    color: var(--text-muted);
+    font-family: 'Geist Mono', 'SF Mono', monospace;
+  }
+
+  /* Grid Background */
+  .grid-background {
+    background-image:
+      linear-gradient(var(--grid-color) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  /* Glow effect */
+  .glow {
+    box-shadow: 0 0 40px var(--accent-glow);
+  }
+
+  .glow-lg {
+    box-shadow: 0 0 80px var(--accent-glow);
+  }
+
+  /* Department tag styles */
+  .dept-tag {
+    @apply px-4 py-2 rounded-full text-sm font-medium;
+    font-family: 'Geist', system-ui, sans-serif;
+    background-color: var(--bg-elevated);
+    border: 1px solid var(--grid-color);
+    transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .dept-tag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px var(--accent-glow);
+    border-color: var(--accent);
+  }
+}
+
+/* ===================================
+   PROSE STYLES (Blog content)
+   =================================== */
+@layer components {
+  .prose-loggix {
+    @apply prose prose-lg max-w-none;
+  }
+
+  .prose-loggix h1,
+  .prose-loggix h2,
+  .prose-loggix h3,
+  .prose-loggix h4 {
+    font-family: 'Instrument Serif', Georgia, serif;
+    color: var(--text-primary);
+  }
+
+  .prose-loggix p,
+  .prose-loggix li {
+    color: var(--text-secondary);
+  }
+
+  .prose-loggix a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .prose-loggix a:hover {
+    text-decoration: underline;
+  }
+
+  .prose-loggix code {
+    @apply px-1.5 py-0.5 rounded text-sm;
+    background-color: var(--bg-secondary);
+    font-family: 'Geist Mono', monospace;
+  }
+
+  .prose-loggix pre {
+    @apply rounded-xl;
+    background-color: var(--bg-elevated);
+  }
+
+  .prose-loggix img {
+    @apply rounded-xl;
+  }
+
+  .prose-loggix blockquote {
+    border-left-color: var(--accent);
+    color: var(--text-secondary);
+  }
+}
+
+/* ===================================
+   ANIMATION UTILITIES
+   =================================== */
+@layer utilities {
+  /* Stagger delays for children */
+  .stagger-1 { animation-delay: 0.1s; }
+  .stagger-2 { animation-delay: 0.2s; }
+  .stagger-3 { animation-delay: 0.3s; }
+  .stagger-4 { animation-delay: 0.4s; }
+  .stagger-5 { animation-delay: 0.5s; }
+  .stagger-6 { animation-delay: 0.6s; }
+
+  /* Start invisible for animations */
+  .animate-start {
+    opacity: 0;
+  }
+
+  /* Scroll-triggered animation states */
+  .scroll-animate {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .scroll-animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Scroll reveal (used by components) */
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .scroll-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Theme transition */
+  .theme-transition {
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  }
+}
+
+/* ===================================
+   REDUCED MOTION SUPPORT
+   =================================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ===================================
+   FONT SMOOTHING
+   =================================== */
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+}

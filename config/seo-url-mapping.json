@@ -1,0 +1,202 @@
+{
+  "meta": {
+    "domain": "loggix.com",
+    "lastCrawled": "2025-04-19",
+    "description": "URL mapping to preserve SEO rankings during site rebuild"
+  },
+  "pages": {
+    "homepage": {
+      "url": "/",
+      "priority": "1.0",
+      "changefreq": "weekly"
+    },
+    "en_home": {
+      "url": "/en_home/",
+      "priority": "1.0",
+      "changefreq": "weekly",
+      "title": "FileMaker - English Homepage"
+    },
+    "en_web": {
+      "url": "/en_web/",
+      "priority": "0.8",
+      "changefreq": "monthly",
+      "title": "Web Apps"
+    },
+    "en_apis_ai": {
+      "url": "/en_apis_ai/",
+      "priority": "0.8",
+      "changefreq": "monthly",
+      "title": "API & AI"
+    },
+    "en_saas": {
+      "url": "/en_saas/",
+      "priority": "0.8",
+      "changefreq": "monthly",
+      "title": "SaaS"
+    },
+    "en_news": {
+      "url": "/en_news/",
+      "priority": "0.7",
+      "changefreq": "weekly",
+      "title": "Blog/News"
+    },
+    "en_team": {
+      "url": "/en_team/",
+      "priority": "0.6",
+      "changefreq": "monthly",
+      "title": "Team"
+    },
+    "en_privacy": {
+      "url": "/en_privacy-policy-36442/",
+      "priority": "0.3",
+      "changefreq": "yearly",
+      "title": "Privacy Policy (EN)"
+    },
+    "nl_web": {
+      "url": "/nl_web/",
+      "priority": "0.8",
+      "changefreq": "monthly",
+      "title": "Web Apps (NL)"
+    },
+    "nl_apis_ai": {
+      "url": "/nl_apis_ai/",
+      "priority": "0.8",
+      "changefreq": "monthly",
+      "title": "API & AI (NL)"
+    },
+    "nl_saas": {
+      "url": "/nl_saas/",
+      "priority": "0.8",
+      "changefreq": "monthly",
+      "title": "SaaS (NL)"
+    },
+    "nl_team": {
+      "url": "/nl_team/",
+      "priority": "0.6",
+      "changefreq": "monthly",
+      "title": "Team (NL)"
+    },
+    "news": {
+      "url": "/news/",
+      "priority": "0.7",
+      "changefreq": "weekly",
+      "title": "News Archive"
+    },
+    "privacy_policy": {
+      "url": "/privacy-policy/",
+      "priority": "0.3",
+      "changefreq": "yearly",
+      "title": "Privacy Policy"
+    },
+    "privacy_policy_2": {
+      "url": "/privacy-policy-2/",
+      "priority": "0.3",
+      "changefreq": "yearly",
+      "title": "Privacy Policy Alt"
+    },
+    "maintenance": {
+      "url": "/maintenance/",
+      "priority": "0.1",
+      "changefreq": "yearly",
+      "title": "Maintenance Page"
+    }
+  },
+  "blogPosts": [
+    {
+      "url": "/filemaker-news-4/",
+      "lastmod": "2024-12-28"
+    },
+    {
+      "url": "/filemaker-news-3/",
+      "lastmod": "2024-12-28"
+    },
+    {
+      "url": "/this-is-an-awesome-sticky-post/",
+      "lastmod": "2024-12-28"
+    },
+    {
+      "url": "/understanding-semantic-search-in-filemaker-a-game-changer-for-product-companies/",
+      "lastmod": "2024-12-28"
+    },
+    {
+      "url": "/help-your-client-understand-their-own-processes/",
+      "lastmod": "2024-12-28"
+    },
+    {
+      "url": "/animate-to-height-auto-and-other-intrinsic-sizing-keywords-in-css/",
+      "lastmod": "2024-12-28"
+    },
+    {
+      "url": "/loggix_website/",
+      "lastmod": "2025-01-10"
+    },
+    {
+      "url": "/good-looking-screenshots-and-more/",
+      "lastmod": "2025-01-12"
+    },
+    {
+      "url": "/extremely-clear-talk-on-ai/",
+      "lastmod": "2025-01-21"
+    },
+    {
+      "url": "/seamless-payment-integration-between-filemaker-and-mollie-payment-provider/",
+      "lastmod": "2025-01-21"
+    },
+    {
+      "url": "/how-does-deepseek-integrates-apexcharts-with-filemaker/",
+      "lastmod": "2025-01-28"
+    },
+    {
+      "url": "/why-use-filemaker-features-importance-and-ai-integration/",
+      "lastmod": "2025-06-26"
+    },
+    {
+      "url": "/your-filemaker-server-still-on-tls-1-1/",
+      "lastmod": "2025-02-12"
+    },
+    {
+      "url": "/webapps-based-on-filemaker-36480/",
+      "lastmod": "2025-07-09"
+    },
+    {
+      "url": "/printing-from-filemaker-server-is-possible/",
+      "lastmod": "2025-07-10"
+    },
+    {
+      "url": "/enrich-build-up-lead-database-in-filemaker-36489/",
+      "lastmod": "2025-07-09"
+    },
+    {
+      "url": "/useful-tools-for-vue-js-developers-36496/",
+      "lastmod": "2025-07-09"
+    },
+    {
+      "url": "/filemaker-app-cross-borders-working-with-exchange-rates-timezones-vat-validation-and-address-autocompletion-36507/",
+      "lastmod": "2025-07-09"
+    },
+    {
+      "url": "/filemaker-2025-is-here-36514/",
+      "lastmod": "2025-07-09"
+    },
+    {
+      "url": "/filemaker-2025-tip-warning-36519/",
+      "lastmod": "2025-07-09"
+    },
+    {
+      "url": "/bebuilder-36532/",
+      "lastmod": "2025-12-06"
+    },
+    {
+      "url": "/bebuilder-36541/",
+      "lastmod": "2025-12-20"
+    },
+    {
+      "url": "/filemaker-mcp-server-ai-and-hosted-fm-files-36551/",
+      "lastmod": "2025-12-22"
+    },
+    {
+      "url": "/talking-to-your-data-with-the-filemaker-app-assistant-36558/",
+      "lastmod": "2025-12-22"
+    }
+  ]
+}

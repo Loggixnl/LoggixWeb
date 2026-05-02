@@ -1,0 +1,121 @@
+{
+  "nav": {
+    "home": "Home",
+    "fm": "Databases",
+    "ai": "AI",
+    "products": "Products",
+    "blog": "Blog",
+    "team": "Team"
+  },
+  "common": {
+    "contactUs": "Contact Us",
+    "learnMore": "Learn More",
+    "readMore": "Read More",
+    "subscribe": "Subscribe",
+    "sendMessage": "Send Message",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "phone": "Phone",
+    "company": "Company"
+  },
+  "home": {
+    "title": "Loggix - Custom Software & FileMaker Development",
+    "description": "Loggix builds custom software with FileMaker, web applications and API integrations for businesses.",
+    "hero": {
+      "headline": "We create solutions",
+      "headlineSub": "that run companies",
+      "subheadline": "We believe that every company deserves affordable custom build software, tailor made to your needs and wishes.",
+      "description": "Loggix builds custom software with FileMaker, web apps and AI integrations. We believe every company deserves affordable custom software, tailored to your needs and wishes.",
+      "videoHint": "Hover to watch the video",
+      "discoverMore": "Learn more",
+      "contactUs": "Contact us"
+    },
+    "companyWide": {
+      "title": "Company Wide Solution",
+      "description": "We have a complete ERP framework ready to kick start your company wide dreams. Fully modular and therefore still 100% customisable."
+    },
+    "smallProject": {
+      "title": "Small Project Solution",
+      "description": "Familiar with FileMaker and/or looking for a quick and simple web integration. No matter the size of your project, we are available to work with you!"
+    },
+    "buildTogether": {
+      "title": "Let's build your Software together",
+      "description": "Over 30 years developing custom solutions using FileMaker database platform, FMBetterForms web toolset, and proprietary API connectors."
+    },
+    "stats": {
+      "standardModules": "Standard Modules",
+      "customBuild": "Custom Build",
+      "apiConnectors": "API Connectors"
+    },
+    "journey": {
+      "title": "WorkplaceOS Journey",
+      "step1": {
+        "title": "Let's build your first app",
+        "description": "FileMaker flexibility for gradual growth"
+      },
+      "step2": {
+        "title": "Get teams involved",
+        "description": "Centralize and advance systems"
+      },
+      "step3": {
+        "title": "Central hub with API's",
+        "description": "Connect third-party integrations"
+      },
+      "step4": {
+        "title": "Introduce Web & AI",
+        "description": "Integrate FileMaker with web apps and AI"
+      }
+    },
+    "modules": {
+      "title": "Modular Framework",
+      "description": "Our framework consists of ready-to-use modules that can be customized",
+      "contact": {
+        "title": "Contact Module",
+        "description": "CRM integrating with Quotes, Finance, HR"
+      },
+      "quotation": {
+        "title": "Quotation Module",
+        "description": "Basis for Order/Invoicing with product/stock integration"
+      },
+      "report": {
+        "title": "Report Module",
+        "description": "Flexible KPI dashboard"
+      }
+    },
+    "markets": {
+      "title": "Who We Work With",
+      "startups": {
+        "name": "Startups",
+        "description": "Speed to market via PoC"
+      },
+      "smbs": {
+        "name": "SMBs",
+        "description": "Integrated workplace OS"
+      },
+      "projects": {
+        "name": "Projects",
+        "description": "Quick, lasting software support"
+      },
+      "government": {
+        "name": "Government",
+        "description": "Solutions for public agencies"
+      },
+      "multimedia": {
+        "name": "Multi-media",
+        "description": "Apple-related software focus"
+      }
+    },
+    "contact": {
+      "title": "Get in Touch",
+      "description": "Interested in booking a demo or make use of our 15 minutes of free consultancy?"
+    }
+  },
+  "footer": {
+    "description": "Custom software & FileMaker development. Over 30 years of experience.",
+    "offices": "Offices",
+    "links": "Links",
+    "copyright": "All Rights Reserved",
+    "globalTeam": "Teams in Netherlands, India, Vietnam & New Zealand"
+  }
+}

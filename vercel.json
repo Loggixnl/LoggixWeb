@@ -1,0 +1,46 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": ".output/public",
+  "framework": "nuxtjs",
+  "trailingSlash": true,
+  "redirects": [
+    { "source": "/en_home/", "destination": "/en/", "permanent": true },
+    { "source": "/en_web/", "destination": "/en/filemaker/", "permanent": true },
+    { "source": "/en_apis_ai/", "destination": "/en/ai/", "permanent": true },
+    { "source": "/en_saas/", "destination": "/en/saas/", "permanent": true },
+    { "source": "/en_team/", "destination": "/en/team/", "permanent": true },
+    { "source": "/en_news/", "destination": "/en/blog/", "permanent": true },
+    { "source": "/nl_web/", "destination": "/filemaker/", "permanent": true },
+    { "source": "/nl_apis_ai/", "destination": "/ai/", "permanent": true },
+    { "source": "/nl_saas/", "destination": "/saas/", "permanent": true },
+    { "source": "/nl_team/", "destination": "/team/", "permanent": true },
+    { "source": "/news/", "destination": "/blog/", "permanent": true },
+    { "source": "/web/", "destination": "/filemaker/", "permanent": true },
+    { "source": "/en/web/", "destination": "/en/filemaker/", "permanent": true },
+    { "source": "/api-ai/", "destination": "/ai/", "permanent": true },
+    { "source": "/en/api-ai/", "destination": "/en/ai/", "permanent": true },
+    { "source": "/saas/", "destination": "/products/", "permanent": true },
+    { "source": "/en/saas/", "destination": "/en/products/", "permanent": true }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/$1"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        }
+      ]
+    }
+  ]
+}
