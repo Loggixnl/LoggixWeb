@@ -107,7 +107,7 @@ const projects = computed(() => locale.value === 'nl' ? [
 <template>
   <div>
     <!-- Hero Section with Teal Gradient -->
-    <section class="pt-16 pb-20 md:pt-24 md:pb-32 bg-gradient-to-b from-[#d5e1eb] via-[#e8eff4] to-[#F5F5F7]">
+    <section class="min-h-screen flex items-center bg-gradient-to-b from-[#d5e1eb] via-[#e8eff4] to-[#F5F5F7]">
       <div class="container-wide">
         <div class="text-center max-w-4xl mx-auto">
           <!-- Partner Badge -->

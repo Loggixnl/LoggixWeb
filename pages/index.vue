@@ -202,11 +202,8 @@ const solutions = [
 
 <template>
   <div>
-    <!-- Hero Section -->
+    <!-- Hero Section (includes Client Logos) -->
     <HeroSection />
-
-    <!-- Client Logos Carousel -->
-    <ClientLogos />
 
     <!-- Solution Sections -->
     <div id="solutions">
