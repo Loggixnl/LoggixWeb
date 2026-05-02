@@ -46,7 +46,7 @@ const pauseVideo = () => {
 </script>
 
 <template>
-  <section class="relative pt-16 pb-20 md:pt-24 md:pb-32 bg-gradient-to-b from-[#8AA399]/20 via-[#8AA399]/10 to-[#F5F5F7]">
+  <section class="relative pt-16 pb-20 md:pt-24 md:pb-32 bg-gradient-to-b from-[#e3ebe7] via-[#eff3f1] to-[#F5F5F7]">
     <div class="container-wide">
       <!-- Main Headline -->
       <div class="text-center max-w-5xl mx-auto mb-16 md:mb-24">

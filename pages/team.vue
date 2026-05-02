@@ -65,7 +65,7 @@ const locations = [
 <template>
   <div>
     <!-- Hero with Amber Gradient -->
-    <section class="pt-16 pb-20 md:pt-24 md:pb-32 bg-gradient-to-b from-[#F4AC32]/20 via-[#F4AC32]/10 to-[#F5F5F7]">
+    <section class="pt-16 pb-20 md:pt-24 md:pb-32 bg-gradient-to-b from-[#fdf0d5] via-[#fef7e8] to-[#F5F5F7]">
       <div class="container-wide">
         <div class="text-center max-w-3xl mx-auto">
           <h1 class="text-4xl md:text-5xl lg:text-6xl font-semibold text-[#0D2C54] mb-6">

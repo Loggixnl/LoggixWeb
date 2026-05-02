@@ -16,7 +16,7 @@ const { data: posts } = await useAsyncData('blog-posts', () =>
 <template>
   <div>
     <!-- Hero with Purple Gradient -->
-    <section class="pt-16 pb-20 md:pt-24 md:pb-32 bg-gradient-to-b from-[#A23B72]/20 via-[#A23B72]/10 to-[#F5F5F7]">
+    <section class="pt-16 pb-20 md:pt-24 md:pb-32 bg-gradient-to-b from-[#f0dbe6] via-[#f6ecf1] to-[#F5F5F7]">
       <div class="container-wide">
         <div class="text-center max-w-3xl mx-auto">
           <h1 class="text-4xl md:text-5xl lg:text-6xl font-semibold text-[#0D2C54] mb-6">
