@@ -10,8 +10,6 @@
   "common": {
     "contactUs": "Neem contact op",
     "learnMore": "Meer info",
-    "readMore": "Lees meer",
-    "subscribe": "Abonneren",
     "sendMessage": "Verstuur bericht",
     "name": "Naam",
     "email": "E-mail",
@@ -25,90 +23,10 @@
     "hero": {
       "headline": "We creëren oplossingen",
       "headlineSub": "waarop bedrijven exceleren",
-      "subheadline": "Wij geloven dat elk bedrijf betaalbare maatwerk software verdient, op maat gemaakt naar uw wensen.",
-      "description": "Loggix bouwt custom software met FileMaker, web apps en AI-integraties. Wij geloven dat elk bedrijf betaalbare maatwerk software verdient, op maat gemaakt naar uw wensen.",
-      "videoHint": "Hover om de video te bekijken",
+      "description": "In een tijdperk waarin AI 'alles' kan bouwen, is het uiterst belangrijk om te weten wat uw bedrijf werkelijk nodig heeft.",
+      "videoHint": "Muis over om de video te bekijken",
       "discoverMore": "Ontdek meer",
       "contactUs": "Neem contact op"
-    },
-    "companyWide": {
-      "title": "Bedrijfsbrede Oplossing",
-      "description": "We hebben een compleet ERP framework klaar om uw bedrijfsbrede dromen te realiseren. Volledig modulair en daarom nog steeds 100% aanpasbaar."
-    },
-    "smallProject": {
-      "title": "Klein Project",
-      "description": "Bekend met FileMaker en/of op zoek naar een snelle en simpele web integratie. Ongeacht de grootte van uw project, wij staan voor u klaar!"
-    },
-    "buildTogether": {
-      "title": "Laten we samen uw software bouwen",
-      "description": "Meer dan 30 jaar ervaring in het ontwikkelen van maatwerk oplossingen met FileMaker, FMBetterForms en API connectoren."
-    },
-    "stats": {
-      "standardModules": "Standaard Modules",
-      "customBuild": "Maatwerk",
-      "apiConnectors": "API Connectoren"
-    },
-    "journey": {
-      "title": "WorkplaceOS Reis",
-      "step1": {
-        "title": "Bouw uw eerste app",
-        "description": "FileMaker flexibiliteit voor geleidelijke groei"
-      },
-      "step2": {
-        "title": "Betrek teams",
-        "description": "Centraliseer en verbeter systemen"
-      },
-      "step3": {
-        "title": "Centrale hub met API's",
-        "description": "Verbind externe integraties"
-      },
-      "step4": {
-        "title": "Introduceer Web & AI",
-        "description": "Integreer FileMaker met web apps en AI"
-      }
-    },
-    "modules": {
-      "title": "Modulair Framework",
-      "description": "Ons framework bestaat uit kant-en-klare modules die aangepast kunnen worden",
-      "contact": {
-        "title": "Contact Module",
-        "description": "CRM geïntegreerd met Offertes, Financiën, HR"
-      },
-      "quotation": {
-        "title": "Offerte Module",
-        "description": "Basis voor Order/Facturatie met product/voorraad integratie"
-      },
-      "report": {
-        "title": "Rapport Module",
-        "description": "Flexibel KPI dashboard"
-      }
-    },
-    "markets": {
-      "title": "Met wie we werken",
-      "startups": {
-        "name": "Startups",
-        "description": "Snel naar markt via PoC"
-      },
-      "smbs": {
-        "name": "MKB",
-        "description": "Geïntegreerd workplace OS"
-      },
-      "projects": {
-        "name": "Projecten",
-        "description": "Snelle, duurzame software support"
-      },
-      "government": {
-        "name": "Overheid",
-        "description": "Oplossingen voor publieke sector"
-      },
-      "multimedia": {
-        "name": "Multi-media",
-        "description": "Apple-gerelateerde software"
-      }
-    },
-    "contact": {
-      "title": "Neem contact op",
-      "description": "Geïnteresseerd in een demo of 15 minuten gratis advies?"
     }
   },
   "footer": {
