@@ -107,9 +107,20 @@ const projects = computed(() => locale.value === 'nl' ? [
 <template>
   <div>
     <!-- Hero Section with Teal Gradient -->
-    <section class="min-h-screen flex items-center bg-gradient-to-b from-[#d5e1eb] via-[#e8eff4] to-[#F5F5F7]">
+    <section class="min-h-screen pt-20 bg-gradient-to-b from-[#d5e1eb] via-[#e8eff4] to-[#F5F5F7]">
       <div class="container-wide">
         <div class="text-center max-w-4xl mx-auto">
+          <!-- Pill Badge -->
+          <div class="flex justify-center mb-6">
+            <div class="inline-flex items-center gap-2 px-4 py-2 bg-white border border-[#E8E8ED] rounded-full text-sm text-[#6B7B8A]">
+              <span class="relative flex h-3 w-3">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#2F6690] opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-3 w-3 bg-[#2F6690]"></span>
+              </span>
+              {{ locale === 'nl' ? 'FileMaker, Supabase, Elastic Search' : 'FileMaker, Supabase, Elastic Search' }}
+            </div>
+          </div>
+
           <!-- Partner Badge -->
           <div class="flex justify-center mb-8">
             <div class="bg-white rounded-xl px-6 py-3 border border-[#E8E8ED]">

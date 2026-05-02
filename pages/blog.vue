@@ -16,9 +16,20 @@ const { data: posts } = await useAsyncData('blog-posts', () =>
 <template>
   <div>
     <!-- Hero with Purple Gradient -->
-    <section class="min-h-screen flex items-center bg-gradient-to-b from-[#f0dbe6] via-[#f6ecf1] to-[#F5F5F7]">
+    <section class="min-h-screen pt-20 bg-gradient-to-b from-[#f0dbe6] via-[#f6ecf1] to-[#F5F5F7]">
       <div class="container-wide">
         <div class="text-center max-w-3xl mx-auto">
+          <!-- Pill Badge -->
+          <div class="flex justify-center mb-8">
+            <div class="inline-flex items-center gap-2 px-4 py-2 bg-white border border-[#E8E8ED] rounded-full text-sm text-[#6B7B8A]">
+              <span class="relative flex h-3 w-3">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#A23B72] opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-3 w-3 bg-[#A23B72]"></span>
+              </span>
+              {{ locale === 'nl' ? 'Het laatste nieuws' : 'The latest news' }}
+            </div>
+          </div>
+
           <h1 class="text-4xl md:text-5xl lg:text-6xl font-semibold text-[#0D2C54] mb-6">
             Blog
           </h1>

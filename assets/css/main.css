@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -74,15 +76,15 @@
 
   body {
     @apply antialiased;
-    font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, system-ui, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, system-ui, 'Segoe UI', Roboto, sans-serif;
     background-color: var(--bg-primary);
     color: var(--text-primary);
     transition: background-color 0.2s ease, color 0.2s ease;
   }
 
-  /* Typography - Apple style: clean, medium weight headlines */
+  /* Typography - Montserrat for headings, Open Sans for body */
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, system-ui, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
     font-weight: 600;
     letter-spacing: -0.015em;
     color: var(--text-primary);
@@ -127,7 +129,7 @@
   /* Buttons */
   .btn {
     @apply inline-flex items-center justify-center px-6 py-3 font-medium rounded-lg transition-all duration-200;
-    font-family: 'Geist', system-ui, sans-serif;
+    font-family: 'Open Sans', system-ui, sans-serif;
   }
 
   .btn-primary {
@@ -236,7 +238,8 @@
   .label {
     @apply text-label uppercase tracking-widest;
     color: var(--text-muted);
-    font-family: 'Geist Mono', 'SF Mono', monospace;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
   }
 
   /* Grid Background */
@@ -259,7 +262,7 @@
   /* Department tag styles */
   .dept-tag {
     @apply px-4 py-2 rounded-full text-sm font-medium;
-    font-family: 'Geist', system-ui, sans-serif;
+    font-family: 'Open Sans', system-ui, sans-serif;
     background-color: var(--bg-elevated);
     border: 1px solid var(--grid-color);
     transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
@@ -284,7 +287,7 @@
   .prose-loggix h2,
   .prose-loggix h3,
   .prose-loggix h4 {
-    font-family: 'Instrument Serif', Georgia, serif;
+    font-family: 'Montserrat', sans-serif;
     color: var(--text-primary);
   }
 
@@ -305,7 +308,7 @@
   .prose-loggix code {
     @apply px-1.5 py-0.5 rounded text-sm;
     background-color: var(--bg-secondary);
-    font-family: 'Geist Mono', monospace;
+    font-family: 'SF Mono', 'Menlo', 'Monaco', monospace;
   }
 
   .prose-loggix pre {

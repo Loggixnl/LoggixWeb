@@ -114,7 +114,7 @@ const aiCapabilities = [
 <template>
   <div>
     <!-- Hero Section with Green Gradient -->
-    <section class="min-h-screen flex items-center bg-gradient-to-b from-[#e3ebe7] via-[#eff3f1] to-[#F5F5F7]">
+    <section class="min-h-screen pt-20 bg-gradient-to-b from-[#e3ebe7] via-[#eff3f1] to-[#F5F5F7]">
       <div class="container-wide">
         <div class="text-center max-w-4xl mx-auto">
           <!-- AI Badge -->

@@ -75,6 +75,7 @@ export default defineNuxtConfig({
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        { rel: 'preload', as: 'image', href: '/videos/loggix-poster.jpg' },
       ],
     },
   },

@@ -129,12 +129,15 @@ const products = computed(() => locale.value === 'nl' ? [
 <template>
   <div>
     <!-- Hero Section with Blue Gradient -->
-    <section class="min-h-screen flex items-center bg-gradient-to-b from-[#d5e1eb] via-[#e8eff4] to-[#F5F5F7]">
+    <section class="min-h-screen pt-20 bg-gradient-to-b from-[#d5e1eb] via-[#e8eff4] to-[#F5F5F7]">
       <div class="container-wide">
         <div class="text-center max-w-4xl mx-auto">
-          <!-- Badge -->
+          <!-- Pill Badge -->
           <div class="inline-flex items-center gap-2 px-4 py-2 bg-white border border-[#E8E8ED] rounded-full text-sm text-[#6B7B8A] mb-8">
-            <span class="w-2 h-2 bg-[#7FB800] rounded-full"></span>
+            <span class="relative flex h-3 w-3">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#7FB800] opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-3 w-3 bg-[#7FB800]"></span>
+            </span>
             {{ locale === 'nl' ? 'Kant-en-klare oplossingen' : 'Ready-made solutions' }}
           </div>
 

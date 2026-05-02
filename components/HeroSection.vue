@@ -3,8 +3,7 @@ const { t, locale } = useI18n();
 
 const heroReady = ref(false);
 const videoRef = ref<HTMLVideoElement | null>(null);
-const videoLoaded = ref(false);
-const loadingProgress = ref(0);
+const videoReady = ref(false);
 
 onMounted(() => {
   // Small delay to ensure smooth animation start
@@ -13,20 +12,9 @@ onMounted(() => {
   });
 });
 
-// Track video loading progress
-const onProgress = () => {
-  if (videoRef.value) {
-    const video = videoRef.value;
-    if (video.buffered.length > 0 && video.duration > 0) {
-      const bufferedEnd = video.buffered.end(video.buffered.length - 1);
-      loadingProgress.value = (bufferedEnd / video.duration) * 100;
-    }
-  }
-};
-
 // Called when video is ready to play
 const onVideoReady = () => {
-  videoLoaded.value = true;
+  videoReady.value = true;
 };
 
 // Play video on hover
@@ -63,8 +51,19 @@ const allClients = [...clients, ...clients];
 <template>
   <section class="relative min-h-screen flex flex-col bg-gradient-to-b from-[#e3ebe7] via-[#eff3f1] to-[#F5F5F7]">
     <!-- Main Content -->
-    <div class="flex-1 flex flex-col justify-center pt-16 pb-8">
+    <div class="flex-1 flex flex-col pt-20 pb-8">
       <div class="container-wide">
+        <!-- Badge Pill -->
+        <div class="text-center mb-8">
+          <div class="inline-flex items-center gap-2 px-4 py-2 bg-white border border-[#E8E8ED] rounded-full text-sm text-[#6B7B8A]">
+            <span class="relative flex h-3 w-3">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#7FB800] opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-3 w-3 bg-[#7FB800]"></span>
+            </span>
+            {{ locale === 'nl' ? 'Maatwerk software, web apps, AI en API\'s' : 'Bespoke software, web apps, AI and API\'s' }}
+          </div>
+        </div>
+
         <!-- Main Headline -->
         <div class="text-center max-w-5xl mx-auto mb-12 md:mb-16">
           <h1
@@ -98,57 +97,30 @@ const allClients = [...clients, ...clients];
                 <!-- Video element -->
                 <video
                   ref="videoRef"
-                  src="/videos/loggix-intro-web.mp4"
+                  src="/videos/loggix-intro-small.mp4"
+                  poster="/videos/loggix-poster.jpg"
                   loop
                   playsinline
-                  preload="auto"
+                  preload="metadata"
+                  muted
                   class="w-full h-full object-cover"
-                  @progress="onProgress"
-                  @loadeddata="onProgress"
-                  @canplaythrough="onVideoReady"
+                  @loadeddata="onVideoReady"
+                  @canplay="onVideoReady"
                 >
                 </video>
 
-                <!-- Placeholder when no video -->
-                <div v-if="!videoLoaded" class="absolute inset-0 flex items-center justify-center bg-[#F5F5F7]">
-                  <div class="text-center">
-                    <div class="w-16 h-16 rounded-full bg-white flex items-center justify-center mx-auto mb-3 shadow-lg">
-                      <svg class="w-6 h-6 text-[#41808B]" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M8 5v14l11-7z"/>
-                      </svg>
-                    </div>
-                    <span class="text-sm text-[#6B7B8A]">Video</span>
+                <!-- Play icon overlay (shown when not playing) -->
+                <div
+                  v-if="videoReady"
+                  class="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 hover:opacity-100 transition-opacity duration-300"
+                >
+                  <div class="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center shadow-lg">
+                    <svg class="w-6 h-6 text-[#41808B] ml-1" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M8 5v14l11-7z"/>
+                    </svg>
                   </div>
                 </div>
               </div>
-
-              <!-- Circular progress ring -->
-              <svg
-                v-if="!videoLoaded && loadingProgress > 0"
-                class="absolute inset-0 w-full h-full -rotate-90 pointer-events-none"
-                viewBox="0 0 100 100"
-              >
-                <circle
-                  cx="50"
-                  cy="50"
-                  r="48"
-                  fill="none"
-                  stroke="rgba(65, 128, 139, 0.2)"
-                  stroke-width="2"
-                />
-                <circle
-                  cx="50"
-                  cy="50"
-                  r="48"
-                  fill="none"
-                  stroke="#41808B"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  :stroke-dasharray="301.6"
-                  :stroke-dashoffset="301.6 - (301.6 * loadingProgress / 100)"
-                  class="transition-all duration-300"
-                />
-              </svg>
             </div>
 
             <!-- Hover hint -->

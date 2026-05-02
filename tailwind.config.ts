@@ -47,27 +47,30 @@ export default <Config>{
         },
       },
       fontFamily: {
-        // Apple-style system font stack (SF Pro on Apple devices)
+        // Montserrat for headings/display
         display: [
-          'SF Pro Display',
+          'Montserrat',
           '-apple-system',
           'BlinkMacSystemFont',
           'system-ui',
-          'Segoe UI',
-          'Roboto',
-          'Helvetica Neue',
-          'Arial',
           'sans-serif',
         ],
+        // Montserrat for headings
+        montserrat: [
+          'Montserrat',
+          'sans-serif',
+        ],
+        // Open Sans for body text
         sans: [
-          'SF Pro Text',
+          'Open Sans',
           '-apple-system',
           'BlinkMacSystemFont',
           'system-ui',
-          'Segoe UI',
-          'Roboto',
-          'Helvetica Neue',
-          'Arial',
+          'sans-serif',
+        ],
+        // Open Sans alias
+        opensans: [
+          'Open Sans',
           'sans-serif',
         ],
         mono: ['SF Mono', 'Menlo', 'Monaco', 'Consolas', 'monospace'],
