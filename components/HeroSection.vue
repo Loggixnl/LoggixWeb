@@ -82,7 +82,7 @@ const allClients = [...clients, ...clients];
 
         <!-- Video + Description Row -->
         <div
-          class="grid md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto"
+          class="grid md:grid-cols-[320px_1fr] gap-16 items-center max-w-6xl mx-auto"
           :class="{ 'animate-fade-in-up': heroReady }"
           :style="heroReady ? { animationDelay: '300ms' } : {}"
         >
@@ -149,7 +149,7 @@ const allClients = [...clients, ...clients];
               </NuxtLink>
               <NuxtLink
                 :to="{ hash: '#contact' }"
-                class="inline-flex items-center gap-2 px-6 py-3 text-[#41808B] font-medium hover:underline"
+                class="inline-flex items-center gap-2 px-6 py-3 text-[#41808B] font-medium border border-[#41808B] rounded-full hover:bg-[#41808B] hover:text-white transition-colors"
               >
                 {{ t('home.hero.contactUs') }}
               </NuxtLink>

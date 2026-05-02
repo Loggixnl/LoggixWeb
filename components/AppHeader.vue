@@ -44,7 +44,7 @@ onMounted(() => {
         <img
           src="/images/loggix-logo.png"
           alt="Loggix"
-          class="h-9 transition-all duration-200"
+          class="h-11 transition-all duration-200"
         />
       </NuxtLink>
 
@@ -53,7 +53,7 @@ onMounted(() => {
         <li v-for="item in navItems" :key="item.path">
           <NuxtLink
             :to="localePath(item.path)"
-            class="text-sm font-medium text-[#6B7B8A] hover:text-[#0D2C54] transition-colors duration-200"
+            class="text-base font-medium text-[#6B7B8A] hover:text-[#0D2C54] transition-colors duration-200"
           >
             {{ t(item.labelKey) }}
           </NuxtLink>
