@@ -43,7 +43,7 @@
     "hero": {
       "headline": "We creëren oplossingen",
       "headlineSub": "waarop bedrijven exceleren",
-      "description": "<b>Welkom bij Loggix.</b> We geloven dat elk bedrijf recht heeft op betaalbare, op maat gemaakte software, afgestemd op hun behoeften en processen. We bouwen en verbinden uw oplossing snel en betaalbaar met AI, API's en Webapplicaties.",
+      "description": "<b>Welkom bij Loggix.</b> We geloven dat elk bedrijf recht heeft op betaalbare, op maat gemaakte software, afgestemd op hun behoeften en processen. We bouwen en verbinden jouw oplossing snel en betaalbaar met AI, API's en Webapplicaties.",
       "videoHint": "Muis over de video om te bekijken",
       "discoverMore": "Ontdek meer",
       "contactUs": "Neem contact op",
@@ -52,13 +52,13 @@
     "solutions": {
       "database": {
         "title": "Database Oplossingen",
-        "subtitle": "Gebaseerd op FileMaker, Supabase of Elastic",
-        "description": "We bouwen robuuste database oplossingen die meegroeien met uw bedrijf. Van eenvoudig databeheer tot complexe enterprise systemen, onze databases integreren naadloos met uw bestaande workflows.",
+        "subtitle": "O.a. FileMaker, Supabase en Elastic",
+        "description": "Samen met jou, bouwen we robuuste database oplossingen die meegroeien met je bedrijf. Van eenvoudig databeheer tot complexe enterprise systemen, onze databases integreren naadloos met uw bestaande workflows.",
         "examples": {
           "crm": { "title": "CRM Systemen", "description": "Klantrelatiebeheer" },
           "erp": { "title": "ERP Oplossingen", "description": "Bedrijfsresource planning" },
           "dataWarehouse": { "title": "Data Warehouses", "description": "Gecentraliseerde data opslag" },
-          "api": { "title": "API Integraties", "description": "Verbind uw systemen" }
+          "api": { "title": "API Integraties", "description": "Verbind je systemen" }
         }
       },
       "ai": {
