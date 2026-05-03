@@ -87,7 +87,7 @@ const solutions = computed(() => [
 </script>
 
 <template>
-  <div>
+  <div class="scroll-snap-container">
     <!-- Hero Section (includes Client Logos) -->
     <HeroSection />
 
@@ -105,3 +105,9 @@ const solutions = computed(() => [
     <ContactSection />
   </div>
 </template>
+
+<style scoped>
+.scroll-snap-container {
+  scroll-snap-type: y proximity;
+}
+</style>

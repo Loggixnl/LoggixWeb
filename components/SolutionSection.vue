@@ -51,7 +51,7 @@ onMounted(() => {
   <section
     :id="solution.id"
     ref="sectionRef"
-    class="py-20 md:py-32 bg-white border-t border-[#E8E8ED]"
+    class="min-h-[calc(100vh-5rem)] py-12 md:py-16 bg-white border-t border-[#E8E8ED] snap-start flex flex-col justify-center"
   >
     <div class="container-wide">
       <!-- Section Header -->

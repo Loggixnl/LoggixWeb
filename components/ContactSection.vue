@@ -49,7 +49,7 @@ onMounted(() => {
   <section
     id="contact"
     ref="sectionRef"
-    class="py-20 md:py-32 bg-[#F5F5F7]"
+    class="min-h-[calc(100vh-5rem)] py-12 md:py-16 bg-[#F5F5F7] snap-start flex items-center"
   >
     <div class="container-wide">
       <div class="grid lg:grid-cols-2 gap-16 lg:gap-24">

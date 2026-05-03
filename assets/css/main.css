@@ -72,6 +72,8 @@
   html {
     @apply scroll-smooth;
     scroll-behavior: smooth;
+    scroll-snap-type: y proximity;
+    scroll-padding-top: 5rem; /* Account for fixed header */
   }
 
   body {

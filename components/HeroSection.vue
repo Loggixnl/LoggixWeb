@@ -49,12 +49,12 @@ const allClients = [...clients, ...clients];
 </script>
 
 <template>
-  <section class="relative min-h-screen flex flex-col bg-gradient-to-b from-[#e3ebe7] via-[#eff3f1] to-[#F5F5F7]">
+  <section class="relative h-[calc(100vh-5rem)] mt-20 flex flex-col bg-gradient-to-b from-[#e3ebe7] via-[#eff3f1] to-[#F5F5F7] snap-start">
     <!-- Main Content -->
-    <div class="flex-1 flex flex-col pt-20 pb-8">
+    <div class="flex-1 flex flex-col pb-4">
       <div class="container-wide">
         <!-- Badge Pill -->
-        <div class="text-center mb-8">
+        <div class="text-center mb-4 md:mb-6">
           <div class="inline-flex items-center gap-2 px-4 py-2 bg-white border border-[#E8E8ED] rounded-full text-sm text-[#6B7B8A]">
             <span class="relative flex h-3 w-3">
               <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#7FB800] opacity-75"></span>
@@ -65,7 +65,7 @@ const allClients = [...clients, ...clients];
         </div>
 
         <!-- Main Headline -->
-        <div class="text-center max-w-5xl mx-auto mb-12 md:mb-16">
+        <div class="text-center max-w-5xl mx-auto mb-6 md:mb-10">
           <h1
             class="font-display text-[#0D2C54]"
             :class="{ 'animate-fade-in-up': heroReady }"
@@ -82,14 +82,14 @@ const allClients = [...clients, ...clients];
 
         <!-- Video + Description Row -->
         <div
-          class="grid md:grid-cols-[320px_1fr] gap-16 items-center max-w-6xl mx-auto"
+          class="grid md:grid-cols-[280px_1fr] gap-10 items-center max-w-6xl mx-auto"
           :class="{ 'animate-fade-in-up': heroReady }"
           :style="heroReady ? { animationDelay: '300ms' } : {}"
         >
           <!-- Circular Video Container -->
           <div class="flex flex-col items-center justify-center">
             <div
-              class="relative w-64 h-64 md:w-80 md:h-80 cursor-pointer"
+              class="relative w-56 h-56 md:w-64 md:h-64 cursor-pointer"
               @mouseenter="playVideo"
               @mouseleave="pauseVideo"
             >
@@ -134,7 +134,7 @@ const allClients = [...clients, ...clients];
 
           <!-- Description -->
           <div>
-            <p class="text-xl md:text-2xl text-[#0D2C54] leading-[2.0] mb-10" v-html="t('home.hero.description')"></p>
+            <p class="text-lg md:text-xl text-[#0D2C54] leading-relaxed mb-6" v-html="t('home.hero.description')"></p>
             <div class="flex flex-wrap gap-4">
               <NuxtLink
                 :to="{ hash: '#solutions' }"
@@ -165,13 +165,13 @@ const allClients = [...clients, ...clients];
 
     <!-- Client Logos Section (at bottom of hero) -->
     <div
-      class="pb-8"
+      class="pb-4"
       :class="{ 'animate-fade-in-up': heroReady }"
       :style="heroReady ? { animationDelay: '500ms' } : {}"
     >
       <div class="container-wide">
         <!-- Label -->
-        <p class="text-center text-sm text-[#6B7B8A] mb-6">
+        <p class="text-center text-sm text-[#6B7B8A] mb-4">
           {{ t('home.trustedBy') }}
         </p>
 
