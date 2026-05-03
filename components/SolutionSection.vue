@@ -10,6 +10,7 @@ interface Solution {
   subtitle: string;
   description: string;
   link?: string;
+  image?: string;
   examples: Example[];
 }
 
@@ -75,10 +76,16 @@ onMounted(() => {
         ]"
         :style="isVisible ? { animationDelay: '100ms' } : {}"
       >
-        <!-- Image Placeholder -->
+        <!-- Image -->
         <div :class="reversed ? 'md:order-2' : 'md:order-1'">
-          <div class="aspect-[4/3] bg-[#F5F5F7] rounded-2xl flex items-center justify-center border border-[#E8E8ED]">
-            <span class="text-[#86868B]">Image</span>
+          <div class="aspect-[4/3] bg-[#F5F5F7] rounded-2xl flex items-center justify-center border border-[#E8E8ED] overflow-hidden">
+            <img
+              v-if="solution.image"
+              :src="solution.image"
+              :alt="solution.title"
+              class="w-full h-full object-cover"
+            />
+            <span v-else class="text-[#86868B]">Image</span>
           </div>
         </div>
 

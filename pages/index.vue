@@ -23,6 +23,7 @@ const solutions = computed(() => [
     subtitle: t('home.solutions.database.subtitle'),
     description: t('home.solutions.database.description'),
     link: '/filemaker',
+    image: '/images/Frame_laptop.png',
     examples: [
       { title: t('home.solutions.database.examples.crm.title'), description: t('home.solutions.database.examples.crm.description') },
       { title: t('home.solutions.database.examples.erp.title'), description: t('home.solutions.database.examples.erp.description') },
