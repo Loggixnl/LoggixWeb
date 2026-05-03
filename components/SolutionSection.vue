@@ -83,7 +83,7 @@ onMounted(() => {
               v-if="solution.image"
               :src="solution.image"
               :alt="solution.title"
-              class="w-full h-full object-cover"
+              class="w-full h-full object-contain p-4"
             />
             <span v-else class="text-[#86868B]">Image</span>
           </div>
