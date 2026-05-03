@@ -29,6 +29,9 @@ export default defineNuxtConfig({
       fullInstall: true,
       optimizeTranslationDirective: false,
     },
+    compilation: {
+      strictMessage: false, // Allow HTML in messages
+    },
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: 'i18n_locale',
