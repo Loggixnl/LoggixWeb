@@ -25,7 +25,9 @@
     "moreInfo": "Meer informatie",
     "language": "Taal",
     "privacyPolicy": "Privacybeleid",
-    "sending": "Verzenden..."
+    "sending": "Verzenden...",
+    "meetTeam": "Ontmoet het team",
+    "viewArticles": "Bekijk artikelen"
   },
   "contact": {
     "getInTouch": "Contact",
@@ -53,7 +55,7 @@
       "database": {
         "title": "Database Oplossingen",
         "subtitle": "O.a. FileMaker, Supabase en Elastic",
-        "description": "Samen met jou, bouwen we robuuste database oplossingen die meegroeien met je bedrijf. Van eenvoudig databeheer tot complexe enterprise systemen, onze databases integreren naadloos met uw bestaande workflows.",
+        "description": "Samen met jou, bouwen we robuuste database oplossingen die meegroeien met je bedrijf. Van eenvoudig databeheer tot complexe enterprise systemen, onze databases integreren naadloos met uw bestaande workflows.<br><br>Je kunt bij ons terecht voor de kleinste (uur basis) to de groot (Saas) oplossingen.",
         "examples": {
           "crm": { "title": "CRM Systemen", "description": "Klantrelatiebeheer" },
           "erp": { "title": "ERP Oplossingen", "description": "Bedrijfsresource planning" },

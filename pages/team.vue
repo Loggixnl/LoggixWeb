@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { t, locale } = useI18n();
+const localePath = useLocalePath();
 
 useSeoMeta({
   title: t('pages.team.title'),
@@ -63,117 +64,114 @@ const locations = [
 <template>
   <div>
     <!-- Hero with Amber Gradient -->
-    <section class="min-h-screen pt-20 bg-gradient-to-b from-[#fdf0d5] via-[#fef7e8] to-[#F5F5F7]">
+    <section class="h-[calc(100vh-5rem)] mt-20 flex flex-col justify-center bg-gradient-to-b from-[#fdf0d5] via-[#fef7e8] to-[#F5F5F7] snap-start">
       <div class="container-wide">
         <div class="text-center max-w-3xl mx-auto">
           <!-- Pill Badge -->
-          <div class="flex justify-center mb-8">
+          <div class="flex justify-center mb-6">
             <div class="inline-flex items-center gap-2 px-4 py-2 bg-white border border-[#E8E8ED] rounded-full text-sm text-[#6B7B8A]">
               <span class="relative flex h-3 w-3">
                 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#F4AC32] opacity-75"></span>
                 <span class="relative inline-flex rounded-full h-3 w-3 bg-[#F4AC32]"></span>
               </span>
-              {{ t('pages.team.badge') }}
+              <span v-html="t('pages.team.badge')"></span>
             </div>
           </div>
 
-          <h1 class="text-4xl md:text-5xl lg:text-6xl font-semibold text-[#0D2C54] mb-6">
-            {{ t('pages.team.headline') }}
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-semibold text-[#0D2C54] mb-4">
+            <span v-html="t('pages.team.headline')"></span>
           </h1>
-          <p class="text-lg text-[#41808B] leading-relaxed">
-            {{ t('pages.team.intro') }}
-          </p>
+          <p class="text-lg text-[#41808B] leading-relaxed mb-8" v-html="t('pages.team.intro')"></p>
+
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href="#leadership" class="inline-flex items-center gap-2 px-6 py-3 bg-[#41808B] text-white rounded-full font-medium hover:bg-[#357078] transition-colors">
+              {{ t('common.meetTeam') || 'Meet the Team' }}
+            </a>
+            <NuxtLink :to="localePath('/') + '#contact'" class="inline-flex items-center gap-2 px-6 py-3 text-[#41808B] font-medium hover:underline">
+              {{ t('common.contactUs') }}
+            </NuxtLink>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Leadership -->
-    <section ref="sectionRef" class="py-20 md:py-32 bg-white border-t border-[#E8E8ED]">
+    <section id="leadership" ref="sectionRef" class="min-h-[calc(100vh-5rem)] py-12 md:py-16 bg-white border-t border-[#E8E8ED] snap-start flex flex-col justify-center">
       <div class="container-wide">
-        <h2 class="text-xl md:text-2xl font-semibold text-[#0D2C54] text-center mb-12" :class="{ 'animate-fade-in-up': isVisible }">
-          {{ t('pages.team.sections.leadership') }}
-        </h2>
+        <h2 class="text-xl md:text-2xl font-semibold text-[#0D2C54] text-center mb-12" :class="{ 'animate-fade-in-up': isVisible }" v-html="t('pages.team.sections.leadership')"></h2>
         <div class="max-w-2xl mx-auto" :class="{ 'animate-fade-in-up': isVisible }" :style="isVisible ? { animationDelay: '100ms' } : {}">
           <div v-for="member in leadership" :key="member.name" class="bg-white rounded-2xl p-8 border border-[#E8E8ED] text-center">
             <div class="w-24 h-24 rounded-full bg-[#F5F5F7] mx-auto mb-6 flex items-center justify-center border border-[#E8E8ED]">
               <span class="text-4xl">👨‍💼</span>
             </div>
-            <h3 class="text-2xl font-semibold text-[#0D2C54] mb-1">{{ member.name }}</h3>
-            <p class="text-[#41808B] font-medium mb-4">{{ member.role }}</p>
-            <p class="text-[#6B7B8A] mb-4">{{ member.description }}</p>
-            <p class="text-[#6B7B8A] italic">"{{ member.quote }}"</p>
-            <p class="text-sm text-[#86868B] mt-4">📍 {{ member.location }}</p>
+            <h3 class="text-2xl font-semibold text-[#0D2C54] mb-1" v-html="member.name"></h3>
+            <p class="text-[#41808B] font-medium mb-4" v-html="member.role"></p>
+            <p class="text-[#6B7B8A] mb-4" v-html="member.description"></p>
+            <p class="text-[#6B7B8A] italic">"<span v-html="member.quote"></span>"</p>
+            <p class="text-sm text-[#86868B] mt-4">📍 <span v-html="member.location"></span></p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- FileMaker Developers -->
-    <section class="py-20 md:py-32 bg-[#F5F5F7]">
+    <section class="min-h-[calc(100vh-5rem)] py-12 md:py-16 bg-[#F5F5F7] snap-start flex flex-col justify-center">
       <div class="container-wide">
-        <h2 class="text-xl md:text-2xl font-semibold text-[#0D2C54] text-center mb-12">
-          {{ t('pages.team.sections.fmDevelopers') }}
-        </h2>
+        <h2 class="text-xl md:text-2xl font-semibold text-[#0D2C54] text-center mb-12" v-html="t('pages.team.sections.fmDevelopers')"></h2>
         <div class="grid md:grid-cols-3 gap-8">
           <div v-for="member in fmDevelopers" :key="member.name" class="bg-white rounded-2xl p-6 border border-[#E8E8ED] text-center">
             <div class="w-20 h-20 rounded-full bg-[#41808B]/10 mx-auto mb-4 flex items-center justify-center">
               <span class="text-3xl">👨‍💻</span>
             </div>
-            <h3 class="text-xl font-semibold text-[#0D2C54] mb-1">{{ member.name }}</h3>
-            <p class="text-[#41808B] text-sm font-medium mb-3">{{ member.role }}</p>
-            <p class="text-[#6B7B8A] text-sm">{{ member.description }}</p>
-            <p class="text-xs text-[#86868B] mt-3">📍 {{ member.location }}</p>
+            <h3 class="text-xl font-semibold text-[#0D2C54] mb-1" v-html="member.name"></h3>
+            <p class="text-[#41808B] text-sm font-medium mb-3" v-html="member.role"></p>
+            <p class="text-[#6B7B8A] text-sm" v-html="member.description"></p>
+            <p class="text-xs text-[#86868B] mt-3">📍 <span v-html="member.location"></span></p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Vue.js Developers -->
-    <section class="py-20 md:py-32 bg-white border-t border-[#E8E8ED]">
+    <section class="min-h-[calc(100vh-5rem)] py-12 md:py-16 bg-white border-t border-[#E8E8ED] snap-start flex flex-col justify-center">
       <div class="container-wide">
-        <h2 class="text-xl md:text-2xl font-semibold text-[#0D2C54] text-center mb-12">
-          {{ t('pages.team.sections.vueDevelopers') }}
-        </h2>
+        <h2 class="text-xl md:text-2xl font-semibold text-[#0D2C54] text-center mb-12" v-html="t('pages.team.sections.vueDevelopers')"></h2>
         <div class="grid md:grid-cols-3 gap-8">
           <div v-for="member in vueDevelopers" :key="member.name" class="bg-white rounded-2xl p-6 border border-[#E8E8ED] text-center">
             <div class="w-20 h-20 rounded-full bg-[#7FB800]/10 mx-auto mb-4 flex items-center justify-center">
               <span class="text-3xl">👨‍💻</span>
             </div>
-            <h3 class="text-xl font-semibold text-[#0D2C54] mb-1">{{ member.name }}</h3>
-            <p class="text-[#7FB800] text-sm font-medium mb-3">{{ member.role }}</p>
-            <p class="text-[#6B7B8A] text-sm">{{ member.description }}</p>
-            <p class="text-xs text-[#86868B] mt-3">📍 {{ member.location }}</p>
+            <h3 class="text-xl font-semibold text-[#0D2C54] mb-1" v-html="member.name"></h3>
+            <p class="text-[#7FB800] text-sm font-medium mb-3" v-html="member.role"></p>
+            <p class="text-[#6B7B8A] text-sm" v-html="member.description"></p>
+            <p class="text-xs text-[#86868B] mt-3">📍 <span v-html="member.location"></span></p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Extended Team -->
-    <section class="py-20 md:py-32 bg-[#F5F5F7]">
+    <section class="min-h-[calc(100vh-5rem)] py-12 md:py-16 bg-[#F5F5F7] snap-start flex flex-col justify-center">
       <div class="container-wide">
-        <h2 class="text-xl md:text-2xl font-semibold text-[#0D2C54] text-center mb-12">
-          {{ t('pages.team.sections.extendedTeam') }}
-        </h2>
+        <h2 class="text-xl md:text-2xl font-semibold text-[#0D2C54] text-center mb-12" v-html="t('pages.team.sections.extendedTeam')"></h2>
         <div class="grid md:grid-cols-3 gap-8">
           <div v-for="member in otherTeam" :key="member.name" class="bg-white rounded-2xl p-6 border border-[#E8E8ED] text-center">
             <div class="w-20 h-20 rounded-full bg-[#FFB400]/10 mx-auto mb-4 flex items-center justify-center">
               <span class="text-3xl">{{ member.name === 'Team Vietnam' ? '👥' : '👨‍💻' }}</span>
             </div>
-            <h3 class="text-xl font-semibold text-[#0D2C54] mb-1">{{ member.name }}</h3>
-            <p class="text-[#FFB400] text-sm font-medium mb-3">{{ member.role }}</p>
-            <p class="text-[#6B7B8A] text-sm">{{ member.description }}</p>
-            <p class="text-xs text-[#86868B] mt-3">📍 {{ member.location }}</p>
+            <h3 class="text-xl font-semibold text-[#0D2C54] mb-1" v-html="member.name"></h3>
+            <p class="text-[#FFB400] text-sm font-medium mb-3" v-html="member.role"></p>
+            <p class="text-[#6B7B8A] text-sm" v-html="member.description"></p>
+            <p class="text-xs text-[#86868B] mt-3">📍 <span v-html="member.location"></span></p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Global Presence -->
-    <section class="py-20 md:py-32 bg-[#0D2C54]">
+    <section class="min-h-[calc(100vh-5rem)] py-12 md:py-16 bg-[#0D2C54] snap-start flex items-center">
       <div class="container-wide text-center">
-        <h2 class="text-xl md:text-2xl font-semibold text-white mb-12">
-          {{ t('pages.team.sections.globalPresence') }}
-        </h2>
+        <h2 class="text-xl md:text-2xl font-semibold text-white mb-12" v-html="t('pages.team.sections.globalPresence')"></h2>
         <div class="flex flex-wrap justify-center gap-12">
           <div v-for="loc in locations" :key="loc.country" class="text-center">
             <div class="text-4xl mb-3">
@@ -182,8 +180,8 @@ const locations = [
               <span v-if="loc.flag === 'VN'">🇻🇳</span>
               <span v-if="loc.flag === 'NZ'">🇳🇿</span>
             </div>
-            <p class="font-semibold text-white">{{ loc.country }}</p>
-            <p class="text-[#41808B] text-sm">{{ loc.city }}</p>
+            <p class="font-semibold text-white" v-html="loc.country"></p>
+            <p class="text-[#41808B] text-sm" v-html="loc.city"></p>
           </div>
         </div>
       </div>

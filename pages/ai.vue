@@ -78,11 +78,11 @@ const aiCapabilities = computed(() => [
 <template>
   <div>
     <!-- Hero Section with Green Gradient -->
-    <section class="min-h-screen pt-20 bg-gradient-to-b from-[#e3ebe7] via-[#eff3f1] to-[#F5F5F7]">
+    <section class="h-[calc(100vh-5rem)] mt-20 flex flex-col justify-center bg-gradient-to-b from-[#e3ebe7] via-[#eff3f1] to-[#F5F5F7] snap-start">
       <div class="container-wide">
         <div class="text-center max-w-4xl mx-auto">
           <!-- AI Badge -->
-          <div class="inline-flex items-center gap-2 px-4 py-2 bg-white border border-[#E8E8ED] rounded-full text-sm text-[#6B7B8A] mb-8">
+          <div class="inline-flex items-center gap-2 px-4 py-2 bg-white border border-[#E8E8ED] rounded-full text-sm text-[#6B7B8A] mb-6">
             <span class="relative flex h-3 w-3">
               <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#7FB800] opacity-75"></span>
               <span class="relative inline-flex rounded-full h-3 w-3 bg-[#7FB800]"></span>
@@ -90,16 +90,14 @@ const aiCapabilities = computed(() => [
             {{ t('pages.ai.badge') }}
           </div>
 
-          <h1 class="text-4xl md:text-5xl lg:text-6xl font-semibold text-[#0D2C54] mb-6">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-semibold text-[#0D2C54] mb-4">
             {{ t('pages.ai.headline') }}
           </h1>
 
-          <p class="text-lg text-[#41808B] mb-8 max-w-3xl mx-auto leading-relaxed">
-            {{ t('pages.ai.intro') }}
-          </p>
+          <p class="text-lg text-[#41808B] mb-6 max-w-3xl mx-auto leading-relaxed" v-html="t('pages.ai.intro')"></p>
 
           <!-- AI capabilities -->
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10 max-w-3xl mx-auto">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 max-w-3xl mx-auto">
             <div v-for="cap in aiCapabilities" :key="cap.icon" class="bg-white rounded-xl p-4 border border-[#E8E8ED]">
               <div class="w-10 h-10 rounded-lg bg-[#F5F5F7] flex items-center justify-center mx-auto mb-2">
                 <svg v-if="cap.icon === 'chatbot'" class="w-5 h-5 text-[#41808B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -115,7 +113,7 @@ const aiCapabilities = computed(() => [
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
-              <div class="text-sm text-[#6B7B8A]">{{ cap.label }}</div>
+              <div class="text-sm text-[#6B7B8A]" v-html="cap.label"></div>
             </div>
           </div>
 
@@ -132,11 +130,9 @@ const aiCapabilities = computed(() => [
     </section>
 
     <!-- AI Partners/Tech -->
-    <section class="py-12 bg-white border-b border-[#E8E8ED]">
+    <section class="py-12 bg-white border-b border-[#E8E8ED] snap-start">
       <div class="container-wide">
-        <p class="text-center text-sm text-[#6B7B8A] mb-6 uppercase tracking-wider">
-          {{ t('pages.ai.techTitle') }}
-        </p>
+        <p class="text-center text-sm text-[#6B7B8A] mb-6 uppercase tracking-wider" v-html="t('pages.ai.techTitle')"></p>
         <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12">
           <span class="text-2xl font-bold text-[#E8E8ED]">OpenAI</span>
           <span class="text-2xl font-bold text-[#E8E8ED]">Claude</span>
@@ -147,18 +143,14 @@ const aiCapabilities = computed(() => [
     </section>
 
     <!-- Examples -->
-    <section id="examples" ref="sectionRef" class="py-20 md:py-32 bg-white">
+    <section id="examples" ref="sectionRef" class="min-h-[calc(100vh-5rem)] py-12 md:py-16 bg-white snap-start flex flex-col justify-center">
       <div class="container-wide">
-        <div class="text-center mb-16" :class="{ 'animate-fade-in-up': isVisible }">
-          <h2 class="text-xl md:text-2xl font-semibold text-[#0D2C54] mb-2">
-            {{ t('pages.ai.applicationsTitle') }}
-          </h2>
-          <p class="text-sm text-[#6B7B8A]">
-            {{ t('pages.ai.applicationsSubtitle') }}
-          </p>
+        <div class="text-center mb-12" :class="{ 'animate-fade-in-up': isVisible }">
+          <h2 class="text-xl md:text-2xl font-semibold text-[#0D2C54] mb-2" v-html="t('pages.ai.applicationsTitle')"></h2>
+          <p class="text-sm text-[#6B7B8A]" v-html="t('pages.ai.applicationsSubtitle')"></p>
         </div>
 
-        <div class="space-y-20">
+        <div class="space-y-16">
           <div
             v-for="(project, index) in projects"
             :key="project.title"
@@ -175,18 +167,16 @@ const aiCapabilities = computed(() => [
 
             <!-- Content -->
             <div :class="index % 2 === 1 ? 'md:order-1' : 'md:order-2'">
-              <span class="text-sm uppercase tracking-wider text-[#6B7B8A] font-medium mb-2 block">
-                {{ project.subtitle }}
-              </span>
-              <h3 class="text-2xl font-semibold text-[#0D2C54] mb-4">{{ project.title }}</h3>
-              <p class="text-[#41808B] mb-6 leading-relaxed">{{ project.description }}</p>
+              <span class="text-sm uppercase tracking-wider text-[#6B7B8A] font-medium mb-2 block" v-html="project.subtitle"></span>
+              <h3 class="text-2xl font-semibold text-[#0D2C54] mb-4" v-html="project.title"></h3>
+              <p class="text-[#41808B] mb-6 leading-relaxed" v-html="project.description"></p>
 
               <ul class="space-y-2 mb-6">
                 <li v-for="feature in project.features" :key="feature" class="flex items-start gap-2 text-[#6B7B8A]">
                   <svg class="w-5 h-5 text-[#7FB800] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                   </svg>
-                  <span class="text-sm">{{ feature }}</span>
+                  <span class="text-sm" v-html="feature"></span>
                 </li>
               </ul>
 
@@ -203,14 +193,10 @@ const aiCapabilities = computed(() => [
     </section>
 
     <!-- CTA Section -->
-    <section class="py-20 md:py-32 bg-[#0D2C54]">
+    <section class="min-h-[calc(100vh-5rem)] py-12 md:py-16 bg-[#0D2C54] snap-start flex items-center">
       <div class="container-wide text-center">
-        <h2 class="text-3xl md:text-4xl font-semibold text-white mb-6">
-          {{ t('pages.ai.ctaTitle') }}
-        </h2>
-        <p class="text-[#41808B] text-lg mb-8 max-w-2xl mx-auto">
-          {{ t('pages.ai.ctaDescription') }}
-        </p>
+        <h2 class="text-3xl md:text-4xl font-semibold text-white mb-6" v-html="t('pages.ai.ctaTitle')"></h2>
+        <p class="text-[#41808B] text-lg mb-8 max-w-2xl mx-auto" v-html="t('pages.ai.ctaDescription')"></p>
         <NuxtLink :to="localePath('/') + '#contact'" class="inline-flex items-center gap-2 px-6 py-3 bg-[#41808B] text-white rounded-full font-medium hover:bg-[#357078] transition-colors">
           {{ t('common.contactUs') }}
         </NuxtLink>

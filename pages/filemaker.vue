@@ -71,11 +71,11 @@ const projects = computed(() => [
 <template>
   <div>
     <!-- Hero Section with Teal Gradient -->
-    <section class="min-h-screen pt-20 bg-gradient-to-b from-[#d5e1eb] via-[#e8eff4] to-[#F5F5F7]">
+    <section class="h-[calc(100vh-5rem)] mt-20 flex flex-col justify-center bg-gradient-to-b from-[#d5e1eb] via-[#e8eff4] to-[#F5F5F7] snap-start">
       <div class="container-wide">
         <div class="text-center max-w-4xl mx-auto">
           <!-- Pill Badge -->
-          <div class="flex justify-center mb-6">
+          <div class="flex justify-center mb-4">
             <div class="inline-flex items-center gap-2 px-4 py-2 bg-white border border-[#E8E8ED] rounded-full text-sm text-[#6B7B8A]">
               <span class="relative flex h-3 w-3">
                 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#2F6690] opacity-75"></span>
@@ -86,39 +86,37 @@ const projects = computed(() => [
           </div>
 
           <!-- Partner Badge -->
-          <div class="flex justify-center mb-8">
+          <div class="flex justify-center mb-6">
             <div class="bg-white rounded-xl px-6 py-3 border border-[#E8E8ED]">
-              <img src="/images/claris-partner-badge.svg" alt="Claris FileMaker Partner" class="h-12 opacity-70" />
+              <img src="/images/claris-partner-badge.svg" alt="Claris FileMaker Partner" class="h-10 opacity-70" />
             </div>
           </div>
 
-          <h1 class="text-4xl md:text-5xl lg:text-6xl font-semibold text-[#0D2C54] mb-6">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-semibold text-[#0D2C54] mb-4">
             {{ t('pages.filemaker.headline') }}
           </h1>
 
-          <p class="text-lg text-[#41808B] mb-8 max-w-3xl mx-auto leading-relaxed">
-            {{ t('pages.filemaker.intro') }}
-          </p>
+          <p class="text-lg text-[#41808B] mb-6 max-w-3xl mx-auto leading-relaxed" v-html="t('pages.filemaker.intro')"></p>
 
           <!-- Key benefits -->
-          <div class="flex flex-wrap justify-center gap-6 mb-10">
+          <div class="flex flex-wrap justify-center gap-6 mb-8">
             <div class="flex items-center gap-2 text-[#6B7B8A]">
               <svg class="w-5 h-5 text-[#7FB800]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
               </svg>
-              <span>{{ t('pages.filemaker.benefits.fast') }}</span>
+              <span v-html="t('pages.filemaker.benefits.fast')"></span>
             </div>
             <div class="flex items-center gap-2 text-[#6B7B8A]">
               <svg class="w-5 h-5 text-[#7FB800]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
               </svg>
-              <span>{{ t('pages.filemaker.benefits.crossPlatform') }}</span>
+              <span v-html="t('pages.filemaker.benefits.crossPlatform')"></span>
             </div>
             <div class="flex items-center gap-2 text-[#6B7B8A]">
               <svg class="w-5 h-5 text-[#7FB800]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
               </svg>
-              <span>{{ t('pages.filemaker.benefits.scalable') }}</span>
+              <span v-html="t('pages.filemaker.benefits.scalable')"></span>
             </div>
           </div>
 
@@ -135,42 +133,38 @@ const projects = computed(() => [
     </section>
 
     <!-- Quick Benefits -->
-    <section class="py-12 bg-white border-b border-[#E8E8ED]">
+    <section class="py-12 bg-white border-b border-[#E8E8ED] snap-start">
       <div class="container-wide">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           <div>
             <div class="text-3xl font-bold text-[#41808B] mb-1">30+</div>
-            <div class="text-[#6B7B8A] text-sm">{{ t('pages.filemaker.stats.years') }}</div>
+            <div class="text-[#6B7B8A] text-sm" v-html="t('pages.filemaker.stats.years')"></div>
           </div>
           <div>
             <div class="text-3xl font-bold text-[#41808B] mb-1">100+</div>
-            <div class="text-[#6B7B8A] text-sm">{{ t('pages.filemaker.stats.projects') }}</div>
+            <div class="text-[#6B7B8A] text-sm" v-html="t('pages.filemaker.stats.projects')"></div>
           </div>
           <div>
             <div class="text-3xl font-bold text-[#41808B] mb-1">40+</div>
-            <div class="text-[#6B7B8A] text-sm">{{ t('pages.filemaker.stats.connectors') }}</div>
+            <div class="text-[#6B7B8A] text-sm" v-html="t('pages.filemaker.stats.connectors')"></div>
           </div>
           <div>
             <div class="text-3xl font-bold text-[#41808B] mb-1">24/7</div>
-            <div class="text-[#6B7B8A] text-sm">{{ t('pages.filemaker.stats.support') }}</div>
+            <div class="text-[#6B7B8A] text-sm" v-html="t('pages.filemaker.stats.support')"></div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Projects / Examples -->
-    <section id="projects" ref="sectionRef" class="py-20 md:py-32 bg-white">
+    <section id="projects" ref="sectionRef" class="min-h-[calc(100vh-5rem)] py-12 md:py-16 bg-white snap-start flex flex-col justify-center">
       <div class="container-wide">
-        <div class="text-center mb-16" :class="{ 'animate-fade-in-up': isVisible }">
-          <h2 class="text-xl md:text-2xl font-semibold text-[#0D2C54] mb-2">
-            {{ t('pages.filemaker.examplesTitle') }}
-          </h2>
-          <p class="text-sm text-[#6B7B8A]">
-            {{ t('pages.filemaker.examplesSubtitle') }}
-          </p>
+        <div class="text-center mb-12" :class="{ 'animate-fade-in-up': isVisible }">
+          <h2 class="text-xl md:text-2xl font-semibold text-[#0D2C54] mb-2" v-html="t('pages.filemaker.examplesTitle')"></h2>
+          <p class="text-sm text-[#6B7B8A]" v-html="t('pages.filemaker.examplesSubtitle')"></p>
         </div>
 
-        <div class="space-y-20">
+        <div class="space-y-16">
           <div
             v-for="(project, index) in projects"
             :key="project.title"
@@ -187,18 +181,16 @@ const projects = computed(() => [
 
             <!-- Content -->
             <div :class="index % 2 === 1 ? 'md:order-1' : 'md:order-2'">
-              <span class="text-sm uppercase tracking-wider text-[#6B7B8A] font-medium mb-2 block">
-                {{ project.subtitle }}
-              </span>
-              <h3 class="text-2xl font-semibold text-[#0D2C54] mb-4">{{ project.title }}</h3>
-              <p class="text-[#41808B] mb-6 leading-relaxed">{{ project.description }}</p>
+              <span class="text-sm uppercase tracking-wider text-[#6B7B8A] font-medium mb-2 block" v-html="project.subtitle"></span>
+              <h3 class="text-2xl font-semibold text-[#0D2C54] mb-4" v-html="project.title"></h3>
+              <p class="text-[#41808B] mb-6 leading-relaxed" v-html="project.description"></p>
 
               <ul class="space-y-2 mb-6">
                 <li v-for="feature in project.features" :key="feature" class="flex items-start gap-2 text-[#6B7B8A]">
                   <svg class="w-5 h-5 text-[#7FB800] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                   </svg>
-                  <span class="text-sm">{{ feature }}</span>
+                  <span class="text-sm" v-html="feature"></span>
                 </li>
               </ul>
 
@@ -215,14 +207,10 @@ const projects = computed(() => [
     </section>
 
     <!-- CTA Section -->
-    <section class="py-20 md:py-32 bg-[#0D2C54]">
+    <section class="min-h-[calc(100vh-5rem)] py-12 md:py-16 bg-[#0D2C54] snap-start flex items-center">
       <div class="container-wide text-center">
-        <h2 class="text-3xl md:text-4xl font-semibold text-white mb-6">
-          {{ t('pages.filemaker.ctaTitle') }}
-        </h2>
-        <p class="text-[#41808B] text-lg mb-8 max-w-2xl mx-auto">
-          {{ t('pages.filemaker.ctaDescription') }}
-        </p>
+        <h2 class="text-3xl md:text-4xl font-semibold text-white mb-6" v-html="t('pages.filemaker.ctaTitle')"></h2>
+        <p class="text-[#41808B] text-lg mb-8 max-w-2xl mx-auto" v-html="t('pages.filemaker.ctaDescription')"></p>
         <NuxtLink :to="localePath('/') + '#contact'" class="inline-flex items-center gap-2 px-6 py-3 bg-[#41808B] text-white rounded-full font-medium hover:bg-[#357078] transition-colors">
           {{ t('common.contactUs') }}
         </NuxtLink>

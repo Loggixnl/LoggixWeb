@@ -82,11 +82,11 @@ const products = computed(() => [
 <template>
   <div>
     <!-- Hero Section with Blue Gradient -->
-    <section class="min-h-screen pt-20 bg-gradient-to-b from-[#d5e1eb] via-[#e8eff4] to-[#F5F5F7]">
+    <section class="h-[calc(100vh-5rem)] mt-20 flex flex-col justify-center bg-gradient-to-b from-[#d5e1eb] via-[#e8eff4] to-[#F5F5F7] snap-start">
       <div class="container-wide">
         <div class="text-center max-w-4xl mx-auto">
           <!-- Pill Badge -->
-          <div class="inline-flex items-center gap-2 px-4 py-2 bg-white border border-[#E8E8ED] rounded-full text-sm text-[#6B7B8A] mb-8">
+          <div class="inline-flex items-center gap-2 px-4 py-2 bg-white border border-[#E8E8ED] rounded-full text-sm text-[#6B7B8A] mb-6">
             <span class="relative flex h-3 w-3">
               <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#7FB800] opacity-75"></span>
               <span class="relative inline-flex rounded-full h-3 w-3 bg-[#7FB800]"></span>
@@ -94,27 +94,25 @@ const products = computed(() => [
             {{ t('pages.products.badge') }}
           </div>
 
-          <h1 class="text-4xl md:text-5xl lg:text-6xl font-semibold text-[#0D2C54] mb-6">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-semibold text-[#0D2C54] mb-4">
             {{ t('pages.products.headline') }}
           </h1>
 
-          <p class="text-lg text-[#41808B] mb-8 max-w-3xl mx-auto leading-relaxed">
-            {{ t('pages.products.intro') }}
-          </p>
+          <p class="text-lg text-[#41808B] mb-6 max-w-3xl mx-auto leading-relaxed" v-html="t('pages.products.intro')"></p>
 
           <!-- Quick stats -->
-          <div class="grid grid-cols-3 gap-6 mb-10 max-w-2xl mx-auto">
+          <div class="grid grid-cols-3 gap-6 mb-8 max-w-2xl mx-auto">
             <div class="bg-white rounded-xl p-4 border border-[#E8E8ED]">
               <div class="text-3xl font-bold text-[#41808B] mb-1">4+</div>
-              <div class="text-sm text-[#6B7B8A]">{{ t('pages.products.stats.products') }}</div>
+              <div class="text-sm text-[#6B7B8A]" v-html="t('pages.products.stats.products')"></div>
             </div>
             <div class="bg-white rounded-xl p-4 border border-[#E8E8ED]">
               <div class="text-3xl font-bold text-[#41808B] mb-1">40+</div>
-              <div class="text-sm text-[#6B7B8A]">{{ t('pages.products.stats.connectors') }}</div>
+              <div class="text-sm text-[#6B7B8A]" v-html="t('pages.products.stats.connectors')"></div>
             </div>
             <div class="bg-white rounded-xl p-4 border border-[#E8E8ED]">
               <div class="text-3xl font-bold text-[#41808B] mb-1">99.9%</div>
-              <div class="text-sm text-[#6B7B8A]">{{ t('pages.products.stats.uptime') }}</div>
+              <div class="text-sm text-[#6B7B8A]" v-html="t('pages.products.stats.uptime')"></div>
             </div>
           </div>
 
@@ -131,9 +129,9 @@ const products = computed(() => [
     </section>
 
     <!-- Products -->
-    <section id="products" ref="sectionRef" class="py-20 md:py-32 bg-white">
+    <section id="products" ref="sectionRef" class="min-h-[calc(100vh-5rem)] py-12 md:py-16 bg-white snap-start flex flex-col justify-center">
       <div class="container-wide">
-        <div class="space-y-20">
+        <div class="space-y-16">
           <div
             v-for="(product, index) in products"
             :key="product.title"
@@ -150,18 +148,16 @@ const products = computed(() => [
 
             <!-- Content -->
             <div :class="index % 2 === 1 ? 'md:order-1' : 'md:order-2'">
-              <span class="text-sm uppercase tracking-wider text-[#6B7B8A] font-medium mb-2 block">
-                {{ product.subtitle }}
-              </span>
-              <h3 class="text-2xl font-semibold text-[#0D2C54] mb-4">{{ product.title }}</h3>
-              <p class="text-[#41808B] mb-6 leading-relaxed">{{ product.description }}</p>
+              <span class="text-sm uppercase tracking-wider text-[#6B7B8A] font-medium mb-2 block" v-html="product.subtitle"></span>
+              <h3 class="text-2xl font-semibold text-[#0D2C54] mb-4" v-html="product.title"></h3>
+              <p class="text-[#41808B] mb-6 leading-relaxed" v-html="product.description"></p>
 
               <ul class="space-y-2 mb-6">
                 <li v-for="feature in product.features" :key="feature" class="flex items-start gap-2 text-[#6B7B8A]">
                   <svg class="w-5 h-5 text-[#7FB800] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                   </svg>
-                  <span class="text-sm">{{ feature }}</span>
+                  <span class="text-sm" v-html="feature"></span>
                 </li>
               </ul>
 
@@ -178,15 +174,11 @@ const products = computed(() => [
     </section>
 
     <!-- Pricing Teaser -->
-    <section class="py-20 md:py-32 bg-[#F5F5F7]">
+    <section class="min-h-[calc(100vh-5rem)] py-12 md:py-16 bg-[#F5F5F7] snap-start flex items-center">
       <div class="container-wide">
         <div class="text-center max-w-3xl mx-auto">
-          <h2 class="text-xl md:text-2xl font-semibold text-[#0D2C54] mb-6">
-            {{ t('pages.products.pricingTitle') }}
-          </h2>
-          <p class="text-[#41808B] mb-8 leading-relaxed">
-            {{ t('pages.products.pricingDescription') }}
-          </p>
+          <h2 class="text-xl md:text-2xl font-semibold text-[#0D2C54] mb-6" v-html="t('pages.products.pricingTitle')"></h2>
+          <p class="text-[#41808B] mb-8 leading-relaxed" v-html="t('pages.products.pricingDescription')"></p>
           <NuxtLink :to="localePath('/') + '#contact'" class="inline-flex items-center gap-2 px-6 py-3 bg-[#41808B] text-white rounded-full font-medium hover:bg-[#357078] transition-colors">
             {{ t('common.requestPricing') }}
           </NuxtLink>
@@ -195,14 +187,10 @@ const products = computed(() => [
     </section>
 
     <!-- CTA Section -->
-    <section class="py-20 md:py-32 bg-[#0D2C54]">
+    <section class="min-h-[calc(100vh-5rem)] py-12 md:py-16 bg-[#0D2C54] snap-start flex items-center">
       <div class="container-wide text-center">
-        <h2 class="text-3xl md:text-4xl font-semibold text-white mb-6">
-          {{ t('pages.products.ctaTitle') }}
-        </h2>
-        <p class="text-[#41808B] text-lg mb-8 max-w-2xl mx-auto">
-          {{ t('pages.products.ctaDescription') }}
-        </p>
+        <h2 class="text-3xl md:text-4xl font-semibold text-white mb-6" v-html="t('pages.products.ctaTitle')"></h2>
+        <p class="text-[#41808B] text-lg mb-8 max-w-2xl mx-auto" v-html="t('pages.products.ctaDescription')"></p>
         <NuxtLink :to="localePath('/') + '#contact'" class="inline-flex items-center gap-2 px-6 py-3 bg-[#41808B] text-white rounded-full font-medium hover:bg-[#357078] transition-colors">
           {{ t('common.contactUs') }}
         </NuxtLink>
