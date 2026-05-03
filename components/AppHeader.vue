@@ -152,7 +152,7 @@ onMounted(() => {
 
           <li class="pt-4 border-t border-[#E8E8ED]">
             <div class="flex items-center gap-4 text-sm font-mono">
-              <span class="text-[#6B7B8A]">Language:</span>
+              <span class="text-[#6B7B8A]">{{ t('common.language') }}:</span>
               <NuxtLink
                 :to="switchLocalePath('en')"
                 class="px-2 py-1 rounded"

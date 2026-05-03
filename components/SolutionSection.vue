@@ -1,19 +1,14 @@
 <script setup lang="ts">
 interface Example {
   title: string;
-  titleNl: string;
   description: string;
-  descriptionNl: string;
 }
 
 interface Solution {
   id: string;
   title: string;
-  titleNl: string;
   subtitle: string;
-  subtitleNl: string;
   description: string;
-  descriptionNl: string;
   link?: string;
   examples: Example[];
 }
@@ -49,10 +44,6 @@ onMounted(() => {
     observer.disconnect();
   });
 });
-
-const displayTitle = computed(() => locale.value === 'nl' ? props.solution.titleNl : props.solution.title);
-const displaySubtitle = computed(() => locale.value === 'nl' ? props.solution.subtitleNl : props.solution.subtitle);
-const displayDescription = computed(() => locale.value === 'nl' ? props.solution.descriptionNl : props.solution.description);
 </script>
 
 <template>
@@ -68,10 +59,10 @@ const displayDescription = computed(() => locale.value === 'nl' ? props.solution
         :class="{ 'animate-fade-in-up': isVisible }"
       >
         <h2 class="text-xl md:text-2xl font-semibold text-[#0D2C54] mb-2">
-          {{ displayTitle }}
+          {{ solution.title }}
         </h2>
         <p class="text-sm text-[#6B7B8A]">
-          {{ displaySubtitle }}
+          {{ solution.subtitle }}
         </p>
       </div>
 
@@ -94,7 +85,7 @@ const displayDescription = computed(() => locale.value === 'nl' ? props.solution
         <!-- Description -->
         <div :class="reversed ? 'md:order-1' : 'md:order-2'">
           <p class="text-lg text-[#0D2C54] leading-relaxed mb-8">
-            {{ displayDescription }}
+            {{ solution.description }}
           </p>
 
           <!-- Learn More Button -->
@@ -123,10 +114,10 @@ const displayDescription = computed(() => locale.value === 'nl' ? props.solution
           class="group"
         >
           <h3 class="text-base font-medium text-[#0D2C54] mb-1 group-hover:text-[#41808B] transition-colors">
-            {{ locale === 'nl' ? example.titleNl : example.title }}
+            {{ example.title }}
           </h3>
           <p class="text-xs text-[#6B7B8A] mb-4">
-            {{ locale === 'nl' ? example.descriptionNl : example.description }}
+            {{ example.description }}
           </p>
           <div class="aspect-square bg-[#F5F5F7] rounded-xl flex items-center justify-center border border-[#E8E8ED] group-hover:border-[#41808B]/30 transition-colors">
             <span class="text-sm text-[#6B7B8A]">Image</span>

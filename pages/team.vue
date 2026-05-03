@@ -2,10 +2,8 @@
 const { t, locale } = useI18n();
 
 useSeoMeta({
-  title: 'Team - Loggix',
-  description: locale.value === 'nl'
-    ? 'Maak kennis met het Loggix team van FileMaker en Vue.js developers.'
-    : 'Meet the Loggix team of FileMaker and Vue.js developers.',
+  title: t('pages.team.title'),
+  description: t('pages.team.description'),
 });
 
 const sectionRef = ref<HTMLElement | null>(null);
@@ -75,18 +73,15 @@ const locations = [
                 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#F4AC32] opacity-75"></span>
                 <span class="relative inline-flex rounded-full h-3 w-3 bg-[#F4AC32]"></span>
               </span>
-              {{ locale === 'nl' ? 'Meer over ons' : 'More about us' }}
+              {{ t('pages.team.badge') }}
             </div>
           </div>
 
           <h1 class="text-4xl md:text-5xl lg:text-6xl font-semibold text-[#0D2C54] mb-6">
-            {{ locale === 'nl' ? 'Ons Team' : 'Meet Our Team' }}
+            {{ t('pages.team.headline') }}
           </h1>
           <p class="text-lg text-[#41808B] leading-relaxed">
-            {{ locale === 'nl'
-              ? 'Een wereldwijd team van FileMaker en Vue.js experts.'
-              : 'A global team of FileMaker and Vue.js experts, united by a passion for building great software.'
-            }}
+            {{ t('pages.team.intro') }}
           </p>
         </div>
       </div>
@@ -96,7 +91,7 @@ const locations = [
     <section ref="sectionRef" class="py-20 md:py-32 bg-white border-t border-[#E8E8ED]">
       <div class="container-wide">
         <h2 class="text-xl md:text-2xl font-semibold text-[#0D2C54] text-center mb-12" :class="{ 'animate-fade-in-up': isVisible }">
-          Leadership
+          {{ t('pages.team.sections.leadership') }}
         </h2>
         <div class="max-w-2xl mx-auto" :class="{ 'animate-fade-in-up': isVisible }" :style="isVisible ? { animationDelay: '100ms' } : {}">
           <div v-for="member in leadership" :key="member.name" class="bg-white rounded-2xl p-8 border border-[#E8E8ED] text-center">
@@ -117,7 +112,7 @@ const locations = [
     <section class="py-20 md:py-32 bg-[#F5F5F7]">
       <div class="container-wide">
         <h2 class="text-xl md:text-2xl font-semibold text-[#0D2C54] text-center mb-12">
-          FileMaker Developers
+          {{ t('pages.team.sections.fmDevelopers') }}
         </h2>
         <div class="grid md:grid-cols-3 gap-8">
           <div v-for="member in fmDevelopers" :key="member.name" class="bg-white rounded-2xl p-6 border border-[#E8E8ED] text-center">
@@ -137,7 +132,7 @@ const locations = [
     <section class="py-20 md:py-32 bg-white border-t border-[#E8E8ED]">
       <div class="container-wide">
         <h2 class="text-xl md:text-2xl font-semibold text-[#0D2C54] text-center mb-12">
-          Vue.js Developers
+          {{ t('pages.team.sections.vueDevelopers') }}
         </h2>
         <div class="grid md:grid-cols-3 gap-8">
           <div v-for="member in vueDevelopers" :key="member.name" class="bg-white rounded-2xl p-6 border border-[#E8E8ED] text-center">
@@ -157,7 +152,7 @@ const locations = [
     <section class="py-20 md:py-32 bg-[#F5F5F7]">
       <div class="container-wide">
         <h2 class="text-xl md:text-2xl font-semibold text-[#0D2C54] text-center mb-12">
-          {{ locale === 'nl' ? 'Uitgebreid Team' : 'Extended Team' }}
+          {{ t('pages.team.sections.extendedTeam') }}
         </h2>
         <div class="grid md:grid-cols-3 gap-8">
           <div v-for="member in otherTeam" :key="member.name" class="bg-white rounded-2xl p-6 border border-[#E8E8ED] text-center">
@@ -177,7 +172,7 @@ const locations = [
     <section class="py-20 md:py-32 bg-[#0D2C54]">
       <div class="container-wide text-center">
         <h2 class="text-xl md:text-2xl font-semibold text-white mb-12">
-          {{ locale === 'nl' ? 'Onze Wereldwijde Aanwezigheid' : 'Our Global Presence' }}
+          {{ t('pages.team.sections.globalPresence') }}
         </h2>
         <div class="flex flex-wrap justify-center gap-12">
           <div v-for="loc in locations" :key="loc.country" class="text-center">

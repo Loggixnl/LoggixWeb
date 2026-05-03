@@ -58,18 +58,15 @@ onMounted(() => {
           :class="{ 'animate-fade-in-up': isVisible }"
         >
           <span class="text-sm uppercase tracking-wider text-[#6B7B8A] font-medium mb-4 block">
-            {{ locale === 'nl' ? 'Contact' : 'Get in touch' }}
+            {{ t('contact.getInTouch') }}
           </span>
 
           <h2 class="text-h2 text-[#0D2C54] mb-6">
-            {{ locale === 'nl' ? 'Laten we praten over uw software' : 'Let\'s talk about your software' }}
+            {{ t('contact.headline') }}
           </h2>
 
           <p class="text-[#41808B] mb-8 max-w-md leading-relaxed">
-            {{ locale === 'nl'
-              ? 'Boek een gratis 15 minuten consultancy gesprek of vraag een demo aan van onze oplossingen.'
-              : 'Book a free 15-minute consultancy call or request a demo of our solutions.'
-            }}
+            {{ t('contact.description') }}
           </p>
 
           <!-- Contact info -->
@@ -81,7 +78,7 @@ onMounted(() => {
                 </svg>
               </div>
               <div>
-                <p class="text-sm text-[#6B7B8A]">{{ locale === 'nl' ? 'Telefoon' : 'Phone' }}</p>
+                <p class="text-sm text-[#6B7B8A]">{{ t('common.phone') }}</p>
                 <a href="tel:+31854872106" class="text-[#0D2C54] hover:text-[#41808B] transition-colors">
                   +31 (0)85 487 2106
                 </a>
@@ -110,7 +107,7 @@ onMounted(() => {
                 </svg>
               </div>
               <div>
-                <p class="text-sm text-[#6B7B8A]">{{ locale === 'nl' ? 'Locatie' : 'Location' }}</p>
+                <p class="text-sm text-[#6B7B8A]">{{ t('contact.location') }}</p>
                 <span class="text-[#0D2C54]">Utrecht, Netherlands</span>
               </div>
             </div>
@@ -143,7 +140,7 @@ onMounted(() => {
                     type="text"
                     required
                     class="w-full px-4 py-3 rounded-xl bg-[#F5F5F7] border border-[#E8E8ED] text-[#0D2C54] placeholder-[#6B7B8A] focus:outline-none focus:border-[#41808B] focus:ring-1 focus:ring-[#41808B] transition-colors"
-                    :placeholder="locale === 'nl' ? 'Uw naam' : 'Your name'"
+                    :placeholder="t('contact.namePlaceholder')"
                   />
                 </div>
                 <div>
@@ -169,7 +166,7 @@ onMounted(() => {
                     v-model="formData.company"
                     type="text"
                     class="w-full px-4 py-3 rounded-xl bg-[#F5F5F7] border border-[#E8E8ED] text-[#0D2C54] placeholder-[#6B7B8A] focus:outline-none focus:border-[#41808B] focus:ring-1 focus:ring-[#41808B] transition-colors"
-                    :placeholder="locale === 'nl' ? 'Bedrijfsnaam' : 'Company name'"
+                    :placeholder="t('contact.companyPlaceholder')"
                   />
                 </div>
                 <div>
@@ -194,7 +191,7 @@ onMounted(() => {
                   required
                   rows="4"
                   class="w-full px-4 py-3 rounded-xl bg-[#F5F5F7] border border-[#E8E8ED] text-[#0D2C54] placeholder-[#6B7B8A] focus:outline-none focus:border-[#41808B] focus:ring-1 focus:ring-[#41808B] transition-colors resize-none"
-                  :placeholder="locale === 'nl' ? 'Vertel ons over uw project...' : 'Tell us about your project...'"
+                  :placeholder="t('contact.messagePlaceholder')"
                 />
               </div>
 
@@ -209,7 +206,7 @@ onMounted(() => {
                     <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" />
                     <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
                   </svg>
-                  {{ locale === 'nl' ? 'Verzenden...' : 'Sending...' }}
+                  {{ t('common.sending') }}
                 </span>
               </button>
 
@@ -223,7 +220,7 @@ onMounted(() => {
                   v-if="submitStatus === 'success'"
                   class="p-4 rounded-xl bg-[#7FB800]/10 text-[#7FB800] text-center font-medium"
                 >
-                  {{ locale === 'nl' ? 'Bedankt! We nemen snel contact met u op.' : 'Thank you! We\'ll be in touch soon.' }}
+                  {{ t('contact.successMessage') }}
                 </div>
               </Transition>
             </form>

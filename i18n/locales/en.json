@@ -15,7 +15,27 @@
     "email": "Email",
     "message": "Message",
     "phone": "Phone",
-    "company": "Company"
+    "company": "Company",
+    "viewExamples": "View examples",
+    "viewPossibilities": "View possibilities",
+    "viewProducts": "View products",
+    "requestDemo": "Request demo",
+    "requestPricing": "Request pricing",
+    "similarProject": "Similar project?",
+    "moreInfo": "Learn more",
+    "language": "Language",
+    "privacyPolicy": "Privacy Policy",
+    "sending": "Sending..."
+  },
+  "contact": {
+    "getInTouch": "Get in touch",
+    "headline": "Let's talk about your software",
+    "description": "Book a free 15-minute consultancy call or request a demo of our solutions.",
+    "location": "Location",
+    "namePlaceholder": "Your name",
+    "companyPlaceholder": "Company name",
+    "messagePlaceholder": "Tell us about your project...",
+    "successMessage": "Thank you! We'll be in touch soon."
   },
   "home": {
     "title": "Loggix - Custom Software & FileMaker Development",
@@ -28,6 +48,211 @@
       "discoverMore": "Learn more",
       "contactUs": "Contact us",
       "freeAdvice": "Claim Free Advice"
+    },
+    "solutions": {
+      "database": {
+        "title": "Database Solutions",
+        "subtitle": "Based on FileMaker, Supabase or Elastic",
+        "description": "We build robust database solutions that scale with your business. From simple data management to complex enterprise systems, our custom databases integrate seamlessly with your existing workflows.",
+        "examples": {
+          "crm": { "title": "CRM Systems", "description": "Customer relationship management" },
+          "erp": { "title": "ERP Solutions", "description": "Enterprise resource planning" },
+          "dataWarehouse": { "title": "Data Warehouses", "description": "Centralized data storage" },
+          "api": { "title": "API Integrations", "description": "Connect your systems" }
+        }
+      },
+      "ai": {
+        "title": "AI Solutions",
+        "subtitle": "RAG solutions, Lead generation and Voice agents",
+        "description": "Leverage artificial intelligence to automate processes, generate insights, and create intelligent interactions. Our AI solutions are practical, scalable, and designed for real business impact.",
+        "examples": {
+          "rag": { "title": "RAG Systems", "description": "AI-powered knowledge bases" },
+          "leadGen": { "title": "Lead Generation", "description": "Automated lead qualification" },
+          "voice": { "title": "Voice Agents", "description": "AI phone assistants" },
+          "chatbots": { "title": "Chatbots", "description": "Intelligent conversations" }
+        }
+      },
+      "products": {
+        "title": "Products",
+        "subtitle": "Ready-to-use software solutions",
+        "description": "Our product portfolio includes ready-to-deploy solutions that can be customized to your specific needs. Get started quickly with proven software that has been refined through years of development.",
+        "examples": {
+          "crm": { "title": "Loggix CRM", "description": "Complete customer management" },
+          "project": { "title": "Project Tracker", "description": "Manage projects efficiently" },
+          "invoice": { "title": "Invoice Pro", "description": "Automated invoicing" },
+          "stock": { "title": "Stock Manager", "description": "Inventory control" }
+        }
+      },
+      "blog": {
+        "title": "Blog & Insights",
+        "subtitle": "Knowledge sharing and industry trends",
+        "description": "Stay informed with our latest articles on software development, FileMaker tips, AI innovations, and business automation. We share our expertise to help you make better technology decisions.",
+        "examples": {
+          "tech": { "title": "Tech Articles", "description": "Development insights" },
+          "cases": { "title": "Case Studies", "description": "Real project stories" },
+          "tutorials": { "title": "Tutorials", "description": "Step-by-step guides" },
+          "news": { "title": "News", "description": "Company updates" }
+        }
+      },
+      "team": {
+        "title": "Our Team",
+        "subtitle": "Expert developers and consultants",
+        "description": "Our team consists of experienced developers, consultants and project managers spread across the Netherlands, India, Vietnam and New Zealand. Together we bring over 30 years of software development expertise.",
+        "examples": {
+          "developers": { "title": "Developers", "description": "Full-stack expertise" },
+          "consultants": { "title": "Consultants", "description": "Business analysis" },
+          "support": { "title": "Support", "description": "24/7 availability" },
+          "management": { "title": "Management", "description": "Project leadership" }
+        }
+      }
+    },
+    "trustedBy": "Trusted by leading companies"
+  },
+  "pages": {
+    "filemaker": {
+      "title": "FileMaker Development - Loggix",
+      "description": "Professional FileMaker development: custom databases, integrations and web apps. Claris Partner with 30+ years experience.",
+      "badge": "FileMaker, Supabase, Elastic Search",
+      "headline": "FileMaker Development",
+      "intro": "For over 30 years we build perfectly fitting custom solutions with the FileMaker platform. From simple databases to complete ERP systems that grow with your business.",
+      "benefits": {
+        "fast": "Fast & affordable",
+        "crossPlatform": "Cross-platform",
+        "scalable": "Scalable"
+      },
+      "stats": {
+        "years": "Years experience",
+        "projects": "Projects",
+        "connectors": "API Connectors",
+        "support": "Support"
+      },
+      "examplesTitle": "Examples of our work",
+      "examplesSubtitle": "Discover how we use FileMaker for various businesses and industries.",
+      "projects": {
+        "workplaceOs": {
+          "subtitle": "ERP System",
+          "title": "WorkplaceOS Framework",
+          "description": "Our modular ERP framework built on FileMaker. Fully customizable with ready-to-use modules for CRM, quotes, invoicing, HR and more.",
+          "features": ["Modular architecture - use only what you need", "Full customization to your workflows", "Integration with external systems via APIs", "Multi-user and multi-location support"]
+        },
+        "mediaWorkflow": {
+          "subtitle": "Client Project",
+          "title": "Media Company Workflow",
+          "description": "Complete workflow solution for a media company: from project planning to invoicing, including resource management and reporting.",
+          "features": ["Project planning with resource allocation", "Time tracking and cost management", "Automatic invoicing", "Management dashboards"]
+        },
+        "webPortal": {
+          "subtitle": "Integration",
+          "title": "FileMaker + Web Portal",
+          "description": "FileMaker database connected to a customer portal. Customers can place orders online, view status and download invoices.",
+          "features": ["Real-time data synchronization", "Secure customer login", "Online order processing", "Automatic notifications"]
+        }
+      },
+      "ctaTitle": "Ready to start your FileMaker project?",
+      "ctaDescription": "Contact us for a no-obligation conversation about your needs and possibilities."
+    },
+    "ai": {
+      "title": "AI Integrations - Loggix",
+      "description": "Integrate AI into your business processes: ChatGPT, Claude, automatic analyses and smart workflows.",
+      "badge": "Powered by GPT-4, Claude & more",
+      "headline": "AI Integrations for your Business",
+      "intro": "We integrate the latest AI technology into your existing systems. Automate documents, gain predictive insights and transform your customer service with smart chatbots.",
+      "capabilities": {
+        "chatbots": "Chatbots",
+        "document": "Document AI",
+        "predictive": "Predictive",
+        "automation": "Automation"
+      },
+      "techTitle": "Technologies we use",
+      "applicationsTitle": "AI Applications",
+      "applicationsSubtitle": "Concrete examples of how AI can transform your business.",
+      "projects": {
+        "customerBot": {
+          "subtitle": "AI Assistant",
+          "title": "Smart Customer Service Bot",
+          "description": "AI-powered chatbot that helps customers with FAQs, order tracking and appointment scheduling. Integrated with your FileMaker CRM.",
+          "features": ["Natural language processing in multiple languages", "Direct access to customer data", "Automatic escalation to staff", "24/7 available without extra personnel"]
+        },
+        "invoiceProcessing": {
+          "subtitle": "Document AI",
+          "title": "Automatic Invoice Processing",
+          "description": "AI that reads incoming invoices, categorizes them and automatically processes them in your accounting. From PDF to structured data in seconds.",
+          "features": ["OCR + AI for accurate extraction", "Automatic supplier recognition", "Integration with accounting software", "Learning algorithms - keeps improving"]
+        },
+        "predictiveAnalysis": {
+          "subtitle": "Predictive Analytics",
+          "title": "Predictive Analysis",
+          "description": "AI models that recognize patterns in your data: predict sales, identify risks and optimize inventory automatically.",
+          "features": ["Sales predictions per product/customer", "Churn prevention - identify at-risk customers", "Inventory optimization", "Custom dashboards with insights"]
+        }
+      },
+      "ctaTitle": "Ready for AI in your organization?",
+      "ctaDescription": "Let's discover together which AI possibilities best fit your business."
+    },
+    "products": {
+      "title": "Products - Loggix",
+      "description": "Our software products: WorkplaceOS ERP framework, API connectors and ready-to-use modules.",
+      "badge": "Ready-made solutions",
+      "headline": "Software Products",
+      "intro": "Besides custom development, we create our own software products. Modular ERP systems, API connectors and web templates that immediately add value to your business.",
+      "stats": {
+        "products": "Products",
+        "connectors": "API Connectors",
+        "uptime": "Uptime"
+      },
+      "items": {
+        "workplaceOs": {
+          "subtitle": "ERP Framework",
+          "title": "WorkplaceOS",
+          "description": "Our complete ERP framework built on FileMaker. A modular system that grows with your business. Start small and expand when needed.",
+          "features": ["CRM, Quotes, Invoicing, HR modules", "Fully customizable to your processes", "Multi-user, multi-location support", "Web portal and mobile app ready"]
+        },
+        "apiSuite": {
+          "subtitle": "Integration Platform",
+          "title": "API Connector Suite",
+          "description": "Over 40 ready-made API connectors to connect your FileMaker to popular services: Exact, Mollie, SendGrid, Mailchimp and more.",
+          "features": ["40+ pre-built connectors", "Two-way synchronization", "Error handling and logging", "Custom connectors on request"]
+        },
+        "fmTemplates": {
+          "subtitle": "Web Toolset",
+          "title": "FMBetterForms Templates",
+          "description": "Ready-to-use web templates for FMBetterForms. From customer portals to internal dashboards - don't start from scratch.",
+          "features": ["Responsive design templates", "Authentication and authorization", "Dashboard components", "E-commerce building blocks"]
+        },
+        "invoiceSimple": {
+          "subtitle": "Standalone Product",
+          "title": "InvoiceSimple",
+          "description": "Simple invoicing software for freelancers and small businesses. No hassle, just create and send invoices.",
+          "features": ["Professional invoices in minutes", "Automatic payment reminders", "Tax report overviews", "Bank connection"]
+        }
+      },
+      "pricingTitle": "Flexible Pricing",
+      "pricingDescription": "Our products are available as license, SaaS or as part of a custom project. We're happy to help find the best solution for your situation.",
+      "ctaTitle": "Interested in one of our products?",
+      "ctaDescription": "Request a demo or contact us for more information."
+    },
+    "team": {
+      "title": "Team - Loggix",
+      "description": "Meet the Loggix team of FileMaker and Vue.js developers.",
+      "badge": "More about us",
+      "headline": "Meet Our Team",
+      "intro": "A global team of FileMaker and Vue.js experts, united by a passion for building great software.",
+      "sections": {
+        "leadership": "Leadership",
+        "fmDevelopers": "FileMaker Developers",
+        "vueDevelopers": "Vue.js Developers",
+        "extendedTeam": "Extended Team",
+        "globalPresence": "Our Global Presence"
+      }
+    },
+    "blog": {
+      "title": "Blog - Loggix",
+      "description": "News and articles about FileMaker development, web apps, and custom software.",
+      "badge": "The latest news",
+      "headline": "Blog",
+      "intro": "News, insights, and articles about FileMaker development, web apps, and AI integration.",
+      "migratingMessage": "Blog posts are being migrated from WordPress.",
+      "checkBack": "Check back soon for updates."
     }
   },
   "footer": {

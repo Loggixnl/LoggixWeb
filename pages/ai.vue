@@ -3,10 +3,8 @@ const { t, locale } = useI18n();
 const localePath = useLocalePath();
 
 useSeoMeta({
-  title: locale.value === 'nl' ? 'AI Integraties - Loggix' : 'AI Integrations - Loggix',
-  description: locale.value === 'nl'
-    ? 'Integreer AI in uw bedrijfsprocessen: ChatGPT, Claude, automatische analyses en slimme workflows.'
-    : 'Integrate AI into your business processes: ChatGPT, Claude, automatic analyses and smart workflows.',
+  title: t('pages.ai.title'),
+  description: t('pages.ai.description'),
 });
 
 const sectionRef = ref<HTMLElement | null>(null);
@@ -33,82 +31,48 @@ onMounted(() => {
   });
 });
 
-const projects = computed(() => locale.value === 'nl' ? [
+const projects = computed(() => [
   {
-    subtitle: 'AI Assistent',
-    title: 'Slimme Klantenservice Bot',
-    description: 'AI-gestuurde chatbot die klanten helpt met veelgestelde vragen, orders tracken en afspraken plannen. Geïntegreerd met uw FileMaker CRM.',
+    subtitle: t('pages.ai.projects.customerBot.subtitle'),
+    title: t('pages.ai.projects.customerBot.title'),
+    description: t('pages.ai.projects.customerBot.description'),
     features: [
-      'Natuurlijke taalverwerking in NL en EN',
-      'Directe toegang tot klantgegevens',
-      'Automatische escalatie naar medewerkers',
-      '24/7 beschikbaar zonder extra personeel',
+      t('pages.ai.projects.customerBot.features[0]'),
+      t('pages.ai.projects.customerBot.features[1]'),
+      t('pages.ai.projects.customerBot.features[2]'),
+      t('pages.ai.projects.customerBot.features[3]'),
     ],
   },
   {
-    subtitle: 'Document AI',
-    title: 'Automatische Factuurverwerking',
-    description: 'AI die inkomende facturen leest, categoriseert en automatisch verwerkt in uw boekhouding. Van PDF naar gestructureerde data in seconden.',
+    subtitle: t('pages.ai.projects.invoiceProcessing.subtitle'),
+    title: t('pages.ai.projects.invoiceProcessing.title'),
+    description: t('pages.ai.projects.invoiceProcessing.description'),
     features: [
-      'OCR + AI voor nauwkeurige extractie',
-      'Automatische leveranciersherkenning',
-      'Integratie met exact, Twinfield, etc.',
-      'Lerende algoritmes - wordt steeds beter',
+      t('pages.ai.projects.invoiceProcessing.features[0]'),
+      t('pages.ai.projects.invoiceProcessing.features[1]'),
+      t('pages.ai.projects.invoiceProcessing.features[2]'),
+      t('pages.ai.projects.invoiceProcessing.features[3]'),
     ],
   },
   {
-    subtitle: 'Predictive Analytics',
-    title: 'Voorspellende Analyses',
-    description: 'AI-modellen die patronen herkennen in uw data: voorspel verkopen, identificeer risico\'s en optimaliseer voorraad automatisch.',
+    subtitle: t('pages.ai.projects.predictiveAnalysis.subtitle'),
+    title: t('pages.ai.projects.predictiveAnalysis.title'),
+    description: t('pages.ai.projects.predictiveAnalysis.description'),
     features: [
-      'Verkoopvoorspellingen per product/klant',
-      'Churn preventie - identificeer risico klanten',
-      'Voorraadoptimalisatie',
-      'Custom dashboards met inzichten',
-    ],
-  },
-] : [
-  {
-    subtitle: 'AI Assistant',
-    title: 'Smart Customer Service Bot',
-    description: 'AI-powered chatbot that helps customers with FAQs, order tracking and appointment scheduling. Integrated with your FileMaker CRM.',
-    features: [
-      'Natural language processing in multiple languages',
-      'Direct access to customer data',
-      'Automatic escalation to staff',
-      '24/7 available without extra personnel',
-    ],
-  },
-  {
-    subtitle: 'Document AI',
-    title: 'Automatic Invoice Processing',
-    description: 'AI that reads incoming invoices, categorizes them and automatically processes them in your accounting. From PDF to structured data in seconds.',
-    features: [
-      'OCR + AI for accurate extraction',
-      'Automatic supplier recognition',
-      'Integration with accounting software',
-      'Learning algorithms - keeps improving',
-    ],
-  },
-  {
-    subtitle: 'Predictive Analytics',
-    title: 'Predictive Analysis',
-    description: 'AI models that recognize patterns in your data: predict sales, identify risks and optimize inventory automatically.',
-    features: [
-      'Sales predictions per product/customer',
-      'Churn prevention - identify at-risk customers',
-      'Inventory optimization',
-      'Custom dashboards with insights',
+      t('pages.ai.projects.predictiveAnalysis.features[0]'),
+      t('pages.ai.projects.predictiveAnalysis.features[1]'),
+      t('pages.ai.projects.predictiveAnalysis.features[2]'),
+      t('pages.ai.projects.predictiveAnalysis.features[3]'),
     ],
   },
 ]);
 
-const aiCapabilities = [
-  { icon: 'chatbot', label: 'Chatbots', labelNl: 'Chatbots' },
-  { icon: 'document', label: 'Document AI', labelNl: 'Document AI' },
-  { icon: 'chart', label: 'Predictive', labelNl: 'Predictive' },
-  { icon: 'bolt', label: 'Automation', labelNl: 'Automatisering' },
-];
+const aiCapabilities = computed(() => [
+  { icon: 'chatbot', label: t('pages.ai.capabilities.chatbots') },
+  { icon: 'document', label: t('pages.ai.capabilities.document') },
+  { icon: 'chart', label: t('pages.ai.capabilities.predictive') },
+  { icon: 'bolt', label: t('pages.ai.capabilities.automation') },
+]);
 </script>
 
 <template>
@@ -123,18 +87,15 @@ const aiCapabilities = [
               <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#7FB800] opacity-75"></span>
               <span class="relative inline-flex rounded-full h-3 w-3 bg-[#7FB800]"></span>
             </span>
-            {{ locale === 'nl' ? 'Powered by GPT-4, Claude & meer' : 'Powered by GPT-4, Claude & more' }}
+            {{ t('pages.ai.badge') }}
           </div>
 
           <h1 class="text-4xl md:text-5xl lg:text-6xl font-semibold text-[#0D2C54] mb-6">
-            {{ locale === 'nl' ? 'AI Integraties voor uw Bedrijf' : 'AI Integrations for your Business' }}
+            {{ t('pages.ai.headline') }}
           </h1>
 
           <p class="text-lg text-[#41808B] mb-8 max-w-3xl mx-auto leading-relaxed">
-            {{ locale === 'nl'
-              ? 'Wij integreren de nieuwste AI technologie in uw bestaande systemen. Automatiseer documenten, krijg voorspellende inzichten en transformeer uw klantenservice met slimme chatbots.'
-              : 'We integrate the latest AI technology into your existing systems. Automate documents, gain predictive insights and transform your customer service with smart chatbots.'
-            }}
+            {{ t('pages.ai.intro') }}
           </p>
 
           <!-- AI capabilities -->
@@ -154,13 +115,13 @@ const aiCapabilities = [
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
-              <div class="text-sm text-[#6B7B8A]">{{ locale === 'nl' ? cap.labelNl : cap.label }}</div>
+              <div class="text-sm text-[#6B7B8A]">{{ cap.label }}</div>
             </div>
           </div>
 
           <div class="flex flex-wrap justify-center gap-4">
             <a href="#examples" class="inline-flex items-center gap-2 px-6 py-3 bg-[#41808B] text-white rounded-full font-medium hover:bg-[#357078] transition-colors">
-              {{ locale === 'nl' ? 'Bekijk mogelijkheden' : 'View possibilities' }}
+              {{ t('common.viewPossibilities') }}
             </a>
             <NuxtLink :to="localePath('/') + '#contact'" class="inline-flex items-center gap-2 px-6 py-3 text-[#41808B] font-medium hover:underline">
               {{ t('common.contactUs') }}
@@ -174,7 +135,7 @@ const aiCapabilities = [
     <section class="py-12 bg-white border-b border-[#E8E8ED]">
       <div class="container-wide">
         <p class="text-center text-sm text-[#6B7B8A] mb-6 uppercase tracking-wider">
-          {{ locale === 'nl' ? 'Technologieën die we gebruiken' : 'Technologies we use' }}
+          {{ t('pages.ai.techTitle') }}
         </p>
         <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12">
           <span class="text-2xl font-bold text-[#E8E8ED]">OpenAI</span>
@@ -190,13 +151,10 @@ const aiCapabilities = [
       <div class="container-wide">
         <div class="text-center mb-16" :class="{ 'animate-fade-in-up': isVisible }">
           <h2 class="text-xl md:text-2xl font-semibold text-[#0D2C54] mb-2">
-            {{ locale === 'nl' ? 'AI Toepassingen' : 'AI Applications' }}
+            {{ t('pages.ai.applicationsTitle') }}
           </h2>
           <p class="text-sm text-[#6B7B8A]">
-            {{ locale === 'nl'
-              ? 'Concrete voorbeelden van hoe AI uw bedrijf kan transformeren.'
-              : 'Concrete examples of how AI can transform your business.'
-            }}
+            {{ t('pages.ai.applicationsSubtitle') }}
           </p>
         </div>
 
@@ -233,7 +191,7 @@ const aiCapabilities = [
               </ul>
 
               <NuxtLink :to="localePath('/') + '#contact'" class="inline-flex items-center gap-2 text-[#41808B] font-medium hover:underline">
-                {{ locale === 'nl' ? 'Meer informatie' : 'Learn more' }}
+                {{ t('common.moreInfo') }}
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                 </svg>
@@ -248,13 +206,10 @@ const aiCapabilities = [
     <section class="py-20 md:py-32 bg-[#0D2C54]">
       <div class="container-wide text-center">
         <h2 class="text-3xl md:text-4xl font-semibold text-white mb-6">
-          {{ locale === 'nl' ? 'Klaar voor AI in uw organisatie?' : 'Ready for AI in your organization?' }}
+          {{ t('pages.ai.ctaTitle') }}
         </h2>
         <p class="text-[#41808B] text-lg mb-8 max-w-2xl mx-auto">
-          {{ locale === 'nl'
-            ? 'Laten we samen ontdekken welke AI mogelijkheden het beste passen bij uw bedrijf.'
-            : 'Let\'s discover together which AI possibilities best fit your business.'
-          }}
+          {{ t('pages.ai.ctaDescription') }}
         </p>
         <NuxtLink :to="localePath('/') + '#contact'" class="inline-flex items-center gap-2 px-6 py-3 bg-[#41808B] text-white rounded-full font-medium hover:bg-[#357078] transition-colors">
           {{ t('common.contactUs') }}

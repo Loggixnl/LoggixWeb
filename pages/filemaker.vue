@@ -3,10 +3,8 @@ const { t, locale } = useI18n();
 const localePath = useLocalePath();
 
 useSeoMeta({
-  title: locale.value === 'nl' ? 'FileMaker Development - Loggix' : 'FileMaker Development - Loggix',
-  description: locale.value === 'nl'
-    ? 'Professionele FileMaker development: maatwerk databases, integraties en web apps. Claris Partner met 30+ jaar ervaring.'
-    : 'Professional FileMaker development: custom databases, integrations and web apps. Claris Partner with 30+ years experience.',
+  title: t('pages.filemaker.title'),
+  description: t('pages.filemaker.description'),
 });
 
 const sectionRef = ref<HTMLElement | null>(null);
@@ -33,72 +31,38 @@ onMounted(() => {
   });
 });
 
-const projects = computed(() => locale.value === 'nl' ? [
+const projects = computed(() => [
   {
-    subtitle: 'ERP Systeem',
-    title: 'WorkplaceOS Framework',
-    description: 'Ons modulaire ERP framework gebouwd op FileMaker. Volledig aanpasbaar met kant-en-klare modules voor CRM, offertes, facturatie, HR en meer.',
+    subtitle: t('pages.filemaker.projects.workplaceOs.subtitle'),
+    title: t('pages.filemaker.projects.workplaceOs.title'),
+    description: t('pages.filemaker.projects.workplaceOs.description'),
     features: [
-      'Modulaire architectuur - gebruik alleen wat u nodig heeft',
-      'Volledige aanpasbaarheid aan uw werkprocessen',
-      'Integratie met externe systemen via API\'s',
-      'Multi-user en multi-locatie ondersteuning',
+      t('pages.filemaker.projects.workplaceOs.features[0]'),
+      t('pages.filemaker.projects.workplaceOs.features[1]'),
+      t('pages.filemaker.projects.workplaceOs.features[2]'),
+      t('pages.filemaker.projects.workplaceOs.features[3]'),
     ],
   },
   {
-    subtitle: 'Klantproject',
-    title: 'Mediabedrijf Workflow',
-    description: 'Complete workflow oplossing voor een mediabedrijf: van projectplanning tot facturatie, inclusief resource management en rapportages.',
+    subtitle: t('pages.filemaker.projects.mediaWorkflow.subtitle'),
+    title: t('pages.filemaker.projects.mediaWorkflow.title'),
+    description: t('pages.filemaker.projects.mediaWorkflow.description'),
     features: [
-      'Projectplanning met resource allocatie',
-      'Urenregistratie en kostenbeheer',
-      'Automatische facturatie',
-      'Management dashboards',
+      t('pages.filemaker.projects.mediaWorkflow.features[0]'),
+      t('pages.filemaker.projects.mediaWorkflow.features[1]'),
+      t('pages.filemaker.projects.mediaWorkflow.features[2]'),
+      t('pages.filemaker.projects.mediaWorkflow.features[3]'),
     ],
   },
   {
-    subtitle: 'Integratie',
-    title: 'FileMaker + Web Portal',
-    description: 'FileMaker database gekoppeld aan een klantportaal. Klanten kunnen online orders plaatsen, status bekijken en facturen downloaden.',
+    subtitle: t('pages.filemaker.projects.webPortal.subtitle'),
+    title: t('pages.filemaker.projects.webPortal.title'),
+    description: t('pages.filemaker.projects.webPortal.description'),
     features: [
-      'Realtime data synchronisatie',
-      'Veilige klant login',
-      'Online orderverwerking',
-      'Automatische notificaties',
-    ],
-  },
-] : [
-  {
-    subtitle: 'ERP System',
-    title: 'WorkplaceOS Framework',
-    description: 'Our modular ERP framework built on FileMaker. Fully customizable with ready-to-use modules for CRM, quotes, invoicing, HR and more.',
-    features: [
-      'Modular architecture - use only what you need',
-      'Full customization to your workflows',
-      'Integration with external systems via APIs',
-      'Multi-user and multi-location support',
-    ],
-  },
-  {
-    subtitle: 'Client Project',
-    title: 'Media Company Workflow',
-    description: 'Complete workflow solution for a media company: from project planning to invoicing, including resource management and reporting.',
-    features: [
-      'Project planning with resource allocation',
-      'Time tracking and cost management',
-      'Automatic invoicing',
-      'Management dashboards',
-    ],
-  },
-  {
-    subtitle: 'Integration',
-    title: 'FileMaker + Web Portal',
-    description: 'FileMaker database connected to a customer portal. Customers can place orders online, view status and download invoices.',
-    features: [
-      'Real-time data synchronization',
-      'Secure customer login',
-      'Online order processing',
-      'Automatic notifications',
+      t('pages.filemaker.projects.webPortal.features[0]'),
+      t('pages.filemaker.projects.webPortal.features[1]'),
+      t('pages.filemaker.projects.webPortal.features[2]'),
+      t('pages.filemaker.projects.webPortal.features[3]'),
     ],
   },
 ]);
@@ -117,7 +81,7 @@ const projects = computed(() => locale.value === 'nl' ? [
                 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#2F6690] opacity-75"></span>
                 <span class="relative inline-flex rounded-full h-3 w-3 bg-[#2F6690]"></span>
               </span>
-              {{ locale === 'nl' ? 'FileMaker, Supabase, Elastic Search' : 'FileMaker, Supabase, Elastic Search' }}
+              {{ t('pages.filemaker.badge') }}
             </div>
           </div>
 
@@ -129,14 +93,11 @@ const projects = computed(() => locale.value === 'nl' ? [
           </div>
 
           <h1 class="text-4xl md:text-5xl lg:text-6xl font-semibold text-[#0D2C54] mb-6">
-            {{ locale === 'nl' ? 'FileMaker Development' : 'FileMaker Development' }}
+            {{ t('pages.filemaker.headline') }}
           </h1>
 
           <p class="text-lg text-[#41808B] mb-8 max-w-3xl mx-auto leading-relaxed">
-            {{ locale === 'nl'
-              ? 'Al meer dan 30 jaar bouwen wij perfect passend maatwerk met het FileMaker platform. Van eenvoudige databases tot complete ERP-systemen die meegroeien met uw bedrijf.'
-              : 'For over 30 years we build perfectly fitting custom solutions with the FileMaker platform. From simple databases to complete ERP systems that grow with your business.'
-            }}
+            {{ t('pages.filemaker.intro') }}
           </p>
 
           <!-- Key benefits -->
@@ -145,25 +106,25 @@ const projects = computed(() => locale.value === 'nl' ? [
               <svg class="w-5 h-5 text-[#7FB800]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
               </svg>
-              <span>{{ locale === 'nl' ? 'Snel & betaalbaar' : 'Fast & affordable' }}</span>
+              <span>{{ t('pages.filemaker.benefits.fast') }}</span>
             </div>
             <div class="flex items-center gap-2 text-[#6B7B8A]">
               <svg class="w-5 h-5 text-[#7FB800]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
               </svg>
-              <span>{{ locale === 'nl' ? 'Cross-platform' : 'Cross-platform' }}</span>
+              <span>{{ t('pages.filemaker.benefits.crossPlatform') }}</span>
             </div>
             <div class="flex items-center gap-2 text-[#6B7B8A]">
               <svg class="w-5 h-5 text-[#7FB800]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
               </svg>
-              <span>{{ locale === 'nl' ? 'Schaalbaar' : 'Scalable' }}</span>
+              <span>{{ t('pages.filemaker.benefits.scalable') }}</span>
             </div>
           </div>
 
           <div class="flex flex-wrap justify-center gap-4">
             <a href="#projects" class="inline-flex items-center gap-2 px-6 py-3 bg-[#41808B] text-white rounded-full font-medium hover:bg-[#357078] transition-colors">
-              {{ locale === 'nl' ? 'Bekijk voorbeelden' : 'View examples' }}
+              {{ t('common.viewExamples') }}
             </a>
             <NuxtLink :to="localePath('/') + '#contact'" class="inline-flex items-center gap-2 px-6 py-3 text-[#41808B] font-medium hover:underline">
               {{ t('common.contactUs') }}
@@ -179,19 +140,19 @@ const projects = computed(() => locale.value === 'nl' ? [
         <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           <div>
             <div class="text-3xl font-bold text-[#41808B] mb-1">30+</div>
-            <div class="text-[#6B7B8A] text-sm">{{ locale === 'nl' ? 'Jaar ervaring' : 'Years experience' }}</div>
+            <div class="text-[#6B7B8A] text-sm">{{ t('pages.filemaker.stats.years') }}</div>
           </div>
           <div>
             <div class="text-3xl font-bold text-[#41808B] mb-1">100+</div>
-            <div class="text-[#6B7B8A] text-sm">{{ locale === 'nl' ? 'Projecten' : 'Projects' }}</div>
+            <div class="text-[#6B7B8A] text-sm">{{ t('pages.filemaker.stats.projects') }}</div>
           </div>
           <div>
             <div class="text-3xl font-bold text-[#41808B] mb-1">40+</div>
-            <div class="text-[#6B7B8A] text-sm">{{ locale === 'nl' ? 'API Connectoren' : 'API Connectors' }}</div>
+            <div class="text-[#6B7B8A] text-sm">{{ t('pages.filemaker.stats.connectors') }}</div>
           </div>
           <div>
             <div class="text-3xl font-bold text-[#41808B] mb-1">24/7</div>
-            <div class="text-[#6B7B8A] text-sm">{{ locale === 'nl' ? 'Ondersteuning' : 'Support' }}</div>
+            <div class="text-[#6B7B8A] text-sm">{{ t('pages.filemaker.stats.support') }}</div>
           </div>
         </div>
       </div>
@@ -202,13 +163,10 @@ const projects = computed(() => locale.value === 'nl' ? [
       <div class="container-wide">
         <div class="text-center mb-16" :class="{ 'animate-fade-in-up': isVisible }">
           <h2 class="text-xl md:text-2xl font-semibold text-[#0D2C54] mb-2">
-            {{ locale === 'nl' ? 'Voorbeelden van ons werk' : 'Examples of our work' }}
+            {{ t('pages.filemaker.examplesTitle') }}
           </h2>
           <p class="text-sm text-[#6B7B8A]">
-            {{ locale === 'nl'
-              ? 'Ontdek hoe wij FileMaker inzetten voor verschillende bedrijven en branches.'
-              : 'Discover how we use FileMaker for various businesses and industries.'
-            }}
+            {{ t('pages.filemaker.examplesSubtitle') }}
           </p>
         </div>
 
@@ -245,7 +203,7 @@ const projects = computed(() => locale.value === 'nl' ? [
               </ul>
 
               <NuxtLink :to="localePath('/') + '#contact'" class="inline-flex items-center gap-2 text-[#41808B] font-medium hover:underline">
-                {{ locale === 'nl' ? 'Vergelijkbaar project?' : 'Similar project?' }}
+                {{ t('common.similarProject') }}
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                 </svg>
@@ -260,13 +218,10 @@ const projects = computed(() => locale.value === 'nl' ? [
     <section class="py-20 md:py-32 bg-[#0D2C54]">
       <div class="container-wide text-center">
         <h2 class="text-3xl md:text-4xl font-semibold text-white mb-6">
-          {{ locale === 'nl' ? 'Klaar om uw FileMaker project te starten?' : 'Ready to start your FileMaker project?' }}
+          {{ t('pages.filemaker.ctaTitle') }}
         </h2>
         <p class="text-[#41808B] text-lg mb-8 max-w-2xl mx-auto">
-          {{ locale === 'nl'
-            ? 'Neem contact op voor een vrijblijvend gesprek over uw wensen en mogelijkheden.'
-            : 'Contact us for a no-obligation conversation about your needs and possibilities.'
-          }}
+          {{ t('pages.filemaker.ctaDescription') }}
         </p>
         <NuxtLink :to="localePath('/') + '#contact'" class="inline-flex items-center gap-2 px-6 py-3 bg-[#41808B] text-white rounded-full font-medium hover:bg-[#357078] transition-colors">
           {{ t('common.contactUs') }}

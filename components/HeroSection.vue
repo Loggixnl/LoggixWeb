@@ -172,7 +172,7 @@ const allClients = [...clients, ...clients];
       <div class="container-wide">
         <!-- Label -->
         <p class="text-center text-sm text-[#6B7B8A] mb-6">
-          {{ locale === 'nl' ? 'Vertrouwd door toonaangevende bedrijven' : 'Trusted by leading companies' }}
+          {{ t('home.trustedBy') }}
         </p>
 
         <!-- Auto-scrolling Logo Carousel -->

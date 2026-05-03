@@ -2,10 +2,8 @@
 const { t, locale } = useI18n();
 
 useSeoMeta({
-  title: 'Blog - Loggix',
-  description: locale.value === 'nl'
-    ? 'Nieuws en artikelen over FileMaker development en maatwerk software.'
-    : 'News and articles about FileMaker development, web apps, and custom software.',
+  title: t('pages.blog.title'),
+  description: t('pages.blog.description'),
 });
 
 const { data: posts } = await useAsyncData('blog-posts', () =>
@@ -26,18 +24,15 @@ const { data: posts } = await useAsyncData('blog-posts', () =>
                 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#A23B72] opacity-75"></span>
                 <span class="relative inline-flex rounded-full h-3 w-3 bg-[#A23B72]"></span>
               </span>
-              {{ locale === 'nl' ? 'Het laatste nieuws' : 'The latest news' }}
+              {{ t('pages.blog.badge') }}
             </div>
           </div>
 
           <h1 class="text-4xl md:text-5xl lg:text-6xl font-semibold text-[#0D2C54] mb-6">
-            Blog
+            {{ t('pages.blog.headline') }}
           </h1>
           <p class="text-lg text-[#41808B] leading-relaxed">
-            {{ locale === 'nl'
-              ? 'Nieuws, inzichten en artikelen over FileMaker development, web apps en AI.'
-              : 'News, insights, and articles about FileMaker development, web apps, and AI integration.'
-            }}
+            {{ t('pages.blog.intro') }}
           </p>
         </div>
       </div>
@@ -70,10 +65,10 @@ const { data: posts } = await useAsyncData('blog-posts', () =>
             <span class="text-4xl opacity-30">📝</span>
           </div>
           <p class="text-[#6B7B8A] mb-4">
-            {{ locale === 'nl' ? 'Blog posts worden gemigreerd.' : 'Blog posts are being migrated from WordPress.' }}
+            {{ t('pages.blog.migratingMessage') }}
           </p>
           <p class="text-sm text-[#86868B]">
-            {{ locale === 'nl' ? 'Kom binnenkort terug voor updates.' : 'Check back soon for updates.' }}
+            {{ t('pages.blog.checkBack') }}
           </p>
         </div>
       </div>

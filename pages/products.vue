@@ -3,10 +3,8 @@ const { t, locale } = useI18n();
 const localePath = useLocalePath();
 
 useSeoMeta({
-  title: locale.value === 'nl' ? 'Producten - Loggix' : 'Products - Loggix',
-  description: locale.value === 'nl'
-    ? 'Onze software producten: WorkplaceOS ERP framework, API connectoren en kant-en-klare modules.'
-    : 'Our software products: WorkplaceOS ERP framework, API connectors and ready-to-use modules.',
+  title: t('pages.products.title'),
+  description: t('pages.products.description'),
 });
 
 const sectionRef = ref<HTMLElement | null>(null);
@@ -33,94 +31,49 @@ onMounted(() => {
   });
 });
 
-const products = computed(() => locale.value === 'nl' ? [
+const products = computed(() => [
   {
-    subtitle: 'ERP Framework',
-    title: 'WorkplaceOS',
-    description: 'Ons complete ERP framework gebouwd op FileMaker. Een modulair systeem dat meegroeit met uw bedrijf. Start klein en breid uit wanneer nodig.',
+    subtitle: t('pages.products.items.workplaceOs.subtitle'),
+    title: t('pages.products.items.workplaceOs.title'),
+    description: t('pages.products.items.workplaceOs.description'),
     features: [
-      'CRM, Offertes, Facturatie, HR modules',
-      'Volledig aanpasbaar aan uw processen',
-      'Multi-user, multi-locatie ondersteuning',
-      'Web portal en mobiele app ready',
+      t('pages.products.items.workplaceOs.features[0]'),
+      t('pages.products.items.workplaceOs.features[1]'),
+      t('pages.products.items.workplaceOs.features[2]'),
+      t('pages.products.items.workplaceOs.features[3]'),
     ],
   },
   {
-    subtitle: 'Integratie Platform',
-    title: 'API Connector Suite',
-    description: 'Meer dan 40 kant-en-klare API connectoren om uw FileMaker te verbinden met populaire diensten: Exact, Mollie, SendGrid, Mailchimp en meer.',
+    subtitle: t('pages.products.items.apiSuite.subtitle'),
+    title: t('pages.products.items.apiSuite.title'),
+    description: t('pages.products.items.apiSuite.description'),
     features: [
-      '40+ voorgebouwde connectoren',
-      'Twee-weg synchronisatie',
-      'Foutafhandeling en logging',
-      'Custom connectoren op aanvraag',
+      t('pages.products.items.apiSuite.features[0]'),
+      t('pages.products.items.apiSuite.features[1]'),
+      t('pages.products.items.apiSuite.features[2]'),
+      t('pages.products.items.apiSuite.features[3]'),
     ],
   },
   {
-    subtitle: 'Web Toolset',
-    title: 'FMBetterForms Templates',
-    description: 'Startklare web templates voor FMBetterForms. Van klantportalen tot interne dashboards - begin niet vanaf nul.',
+    subtitle: t('pages.products.items.fmTemplates.subtitle'),
+    title: t('pages.products.items.fmTemplates.title'),
+    description: t('pages.products.items.fmTemplates.description'),
     features: [
-      'Responsive design templates',
-      'Authenticatie en autorisatie',
-      'Dashboard componenten',
-      'E-commerce bouwstenen',
+      t('pages.products.items.fmTemplates.features[0]'),
+      t('pages.products.items.fmTemplates.features[1]'),
+      t('pages.products.items.fmTemplates.features[2]'),
+      t('pages.products.items.fmTemplates.features[3]'),
     ],
   },
   {
-    subtitle: 'Standalone Product',
-    title: 'FactuurSimple',
-    description: 'Eenvoudige facturatie software voor ZZP\'ers en kleine bedrijven. Geen gedoe, gewoon facturen maken en versturen.',
+    subtitle: t('pages.products.items.invoiceSimple.subtitle'),
+    title: t('pages.products.items.invoiceSimple.title'),
+    description: t('pages.products.items.invoiceSimple.description'),
     features: [
-      'Professionele facturen in minuten',
-      'Automatische betalingsherinneringen',
-      'BTW aangifte overzichten',
-      'Koppeling met bank',
-    ],
-  },
-] : [
-  {
-    subtitle: 'ERP Framework',
-    title: 'WorkplaceOS',
-    description: 'Our complete ERP framework built on FileMaker. A modular system that grows with your business. Start small and expand when needed.',
-    features: [
-      'CRM, Quotes, Invoicing, HR modules',
-      'Fully customizable to your processes',
-      'Multi-user, multi-location support',
-      'Web portal and mobile app ready',
-    ],
-  },
-  {
-    subtitle: 'Integration Platform',
-    title: 'API Connector Suite',
-    description: 'Over 40 ready-made API connectors to connect your FileMaker to popular services: Exact, Mollie, SendGrid, Mailchimp and more.',
-    features: [
-      '40+ pre-built connectors',
-      'Two-way synchronization',
-      'Error handling and logging',
-      'Custom connectors on request',
-    ],
-  },
-  {
-    subtitle: 'Web Toolset',
-    title: 'FMBetterForms Templates',
-    description: 'Ready-to-use web templates for FMBetterForms. From customer portals to internal dashboards - don\'t start from scratch.',
-    features: [
-      'Responsive design templates',
-      'Authentication and authorization',
-      'Dashboard components',
-      'E-commerce building blocks',
-    ],
-  },
-  {
-    subtitle: 'Standalone Product',
-    title: 'InvoiceSimple',
-    description: 'Simple invoicing software for freelancers and small businesses. No hassle, just create and send invoices.',
-    features: [
-      'Professional invoices in minutes',
-      'Automatic payment reminders',
-      'Tax report overviews',
-      'Bank connection',
+      t('pages.products.items.invoiceSimple.features[0]'),
+      t('pages.products.items.invoiceSimple.features[1]'),
+      t('pages.products.items.invoiceSimple.features[2]'),
+      t('pages.products.items.invoiceSimple.features[3]'),
     ],
   },
 ]);
@@ -138,39 +91,36 @@ const products = computed(() => locale.value === 'nl' ? [
               <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#7FB800] opacity-75"></span>
               <span class="relative inline-flex rounded-full h-3 w-3 bg-[#7FB800]"></span>
             </span>
-            {{ locale === 'nl' ? 'Kant-en-klare oplossingen' : 'Ready-made solutions' }}
+            {{ t('pages.products.badge') }}
           </div>
 
           <h1 class="text-4xl md:text-5xl lg:text-6xl font-semibold text-[#0D2C54] mb-6">
-            {{ locale === 'nl' ? 'Software Producten' : 'Software Products' }}
+            {{ t('pages.products.headline') }}
           </h1>
 
           <p class="text-lg text-[#41808B] mb-8 max-w-3xl mx-auto leading-relaxed">
-            {{ locale === 'nl'
-              ? 'Naast maatwerk ontwikkelen we eigen software producten. Modulaire ERP-systemen, API connectoren en web templates die direct waarde toevoegen aan uw bedrijf.'
-              : 'Besides custom development, we create our own software products. Modular ERP systems, API connectors and web templates that immediately add value to your business.'
-            }}
+            {{ t('pages.products.intro') }}
           </p>
 
           <!-- Quick stats -->
           <div class="grid grid-cols-3 gap-6 mb-10 max-w-2xl mx-auto">
             <div class="bg-white rounded-xl p-4 border border-[#E8E8ED]">
               <div class="text-3xl font-bold text-[#41808B] mb-1">4+</div>
-              <div class="text-sm text-[#6B7B8A]">{{ locale === 'nl' ? 'Producten' : 'Products' }}</div>
+              <div class="text-sm text-[#6B7B8A]">{{ t('pages.products.stats.products') }}</div>
             </div>
             <div class="bg-white rounded-xl p-4 border border-[#E8E8ED]">
               <div class="text-3xl font-bold text-[#41808B] mb-1">40+</div>
-              <div class="text-sm text-[#6B7B8A]">{{ locale === 'nl' ? 'API Connectoren' : 'API Connectors' }}</div>
+              <div class="text-sm text-[#6B7B8A]">{{ t('pages.products.stats.connectors') }}</div>
             </div>
             <div class="bg-white rounded-xl p-4 border border-[#E8E8ED]">
               <div class="text-3xl font-bold text-[#41808B] mb-1">99.9%</div>
-              <div class="text-sm text-[#6B7B8A]">Uptime</div>
+              <div class="text-sm text-[#6B7B8A]">{{ t('pages.products.stats.uptime') }}</div>
             </div>
           </div>
 
           <div class="flex flex-wrap justify-center gap-4">
             <a href="#products" class="inline-flex items-center gap-2 px-6 py-3 bg-[#41808B] text-white rounded-full font-medium hover:bg-[#357078] transition-colors">
-              {{ locale === 'nl' ? 'Bekijk producten' : 'View products' }}
+              {{ t('common.viewProducts') }}
             </a>
             <NuxtLink :to="localePath('/') + '#contact'" class="inline-flex items-center gap-2 px-6 py-3 text-[#41808B] font-medium hover:underline">
               {{ t('common.contactUs') }}
@@ -216,7 +166,7 @@ const products = computed(() => locale.value === 'nl' ? [
               </ul>
 
               <NuxtLink :to="localePath('/') + '#contact'" class="inline-flex items-center gap-2 text-[#41808B] font-medium hover:underline">
-                {{ locale === 'nl' ? 'Vraag demo aan' : 'Request demo' }}
+                {{ t('common.requestDemo') }}
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                 </svg>
@@ -232,16 +182,13 @@ const products = computed(() => locale.value === 'nl' ? [
       <div class="container-wide">
         <div class="text-center max-w-3xl mx-auto">
           <h2 class="text-xl md:text-2xl font-semibold text-[#0D2C54] mb-6">
-            {{ locale === 'nl' ? 'Flexibele Prijzen' : 'Flexible Pricing' }}
+            {{ t('pages.products.pricingTitle') }}
           </h2>
           <p class="text-[#41808B] mb-8 leading-relaxed">
-            {{ locale === 'nl'
-              ? 'Onze producten zijn beschikbaar als licentie, SaaS of als onderdeel van een maatwerk project. We denken graag mee over de beste oplossing voor uw situatie.'
-              : 'Our products are available as license, SaaS or as part of a custom project. We\'re happy to help find the best solution for your situation.'
-            }}
+            {{ t('pages.products.pricingDescription') }}
           </p>
           <NuxtLink :to="localePath('/') + '#contact'" class="inline-flex items-center gap-2 px-6 py-3 bg-[#41808B] text-white rounded-full font-medium hover:bg-[#357078] transition-colors">
-            {{ locale === 'nl' ? 'Vraag prijzen aan' : 'Request pricing' }}
+            {{ t('common.requestPricing') }}
           </NuxtLink>
         </div>
       </div>
@@ -251,13 +198,10 @@ const products = computed(() => locale.value === 'nl' ? [
     <section class="py-20 md:py-32 bg-[#0D2C54]">
       <div class="container-wide text-center">
         <h2 class="text-3xl md:text-4xl font-semibold text-white mb-6">
-          {{ locale === 'nl' ? 'Interesse in een van onze producten?' : 'Interested in one of our products?' }}
+          {{ t('pages.products.ctaTitle') }}
         </h2>
         <p class="text-[#41808B] text-lg mb-8 max-w-2xl mx-auto">
-          {{ locale === 'nl'
-            ? 'Vraag een demo aan of neem contact op voor meer informatie.'
-            : 'Request a demo or contact us for more information.'
-          }}
+          {{ t('pages.products.ctaDescription') }}
         </p>
         <NuxtLink :to="localePath('/') + '#contact'" class="inline-flex items-center gap-2 px-6 py-3 bg-[#41808B] text-white rounded-full font-medium hover:bg-[#357078] transition-colors">
           {{ t('common.contactUs') }}

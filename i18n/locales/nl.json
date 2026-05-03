@@ -15,7 +15,27 @@
     "email": "E-mail",
     "message": "Bericht",
     "phone": "Telefoon",
-    "company": "Bedrijf"
+    "company": "Bedrijf",
+    "viewExamples": "Bekijk voorbeelden",
+    "viewPossibilities": "Bekijk mogelijkheden",
+    "viewProducts": "Bekijk producten",
+    "requestDemo": "Vraag demo aan",
+    "requestPricing": "Vraag prijzen aan",
+    "similarProject": "Vergelijkbaar project?",
+    "moreInfo": "Meer informatie",
+    "language": "Taal",
+    "privacyPolicy": "Privacybeleid",
+    "sending": "Verzenden..."
+  },
+  "contact": {
+    "getInTouch": "Contact",
+    "headline": "Laten we praten over uw software",
+    "description": "Boek een gratis 15 minuten consultancy gesprek of vraag een demo aan van onze oplossingen.",
+    "location": "Locatie",
+    "namePlaceholder": "Uw naam",
+    "companyPlaceholder": "Bedrijfsnaam",
+    "messagePlaceholder": "Vertel ons over uw project...",
+    "successMessage": "Bedankt! We nemen snel contact met u op."
   },
   "home": {
     "title": "Loggix - Maatwerk Software & FileMaker Development",
@@ -28,6 +48,211 @@
       "discoverMore": "Ontdek meer",
       "contactUs": "Neem contact op",
       "freeAdvice": "Claim Gratis Advies"
+    },
+    "solutions": {
+      "database": {
+        "title": "Database Oplossingen",
+        "subtitle": "Gebaseerd op FileMaker, Supabase of Elastic",
+        "description": "We bouwen robuuste database oplossingen die meegroeien met uw bedrijf. Van eenvoudig databeheer tot complexe enterprise systemen, onze databases integreren naadloos met uw bestaande workflows.",
+        "examples": {
+          "crm": { "title": "CRM Systemen", "description": "Klantrelatiebeheer" },
+          "erp": { "title": "ERP Oplossingen", "description": "Bedrijfsresource planning" },
+          "dataWarehouse": { "title": "Data Warehouses", "description": "Gecentraliseerde data opslag" },
+          "api": { "title": "API Integraties", "description": "Verbind uw systemen" }
+        }
+      },
+      "ai": {
+        "title": "AI Oplossingen",
+        "subtitle": "RAG oplossingen, Lead generatie en Voice agents",
+        "description": "Benut kunstmatige intelligentie om processen te automatiseren, inzichten te genereren en intelligente interacties te creëren. Onze AI-oplossingen zijn praktisch, schaalbaar en ontworpen voor echte bedrijfsimpact.",
+        "examples": {
+          "rag": { "title": "RAG Systemen", "description": "AI-gestuurde kennisbanken" },
+          "leadGen": { "title": "Lead Generatie", "description": "Geautomatiseerde lead kwalificatie" },
+          "voice": { "title": "Voice Agents", "description": "AI telefoon assistenten" },
+          "chatbots": { "title": "Chatbots", "description": "Intelligente gesprekken" }
+        }
+      },
+      "products": {
+        "title": "Producten",
+        "subtitle": "Kant-en-klare software oplossingen",
+        "description": "Ons productportfolio bevat kant-en-klare oplossingen die kunnen worden aangepast aan uw specifieke behoeften. Begin snel met bewezen software die door jaren van ontwikkeling is verfijnd.",
+        "examples": {
+          "crm": { "title": "Loggix CRM", "description": "Compleet klantbeheer" },
+          "project": { "title": "Project Tracker", "description": "Beheer projecten efficiënt" },
+          "invoice": { "title": "Invoice Pro", "description": "Geautomatiseerde facturatie" },
+          "stock": { "title": "Stock Manager", "description": "Voorraadbeheer" }
+        }
+      },
+      "blog": {
+        "title": "Blog & Inzichten",
+        "subtitle": "Kennisdeling en branche trends",
+        "description": "Blijf op de hoogte met onze nieuwste artikelen over softwareontwikkeling, FileMaker tips, AI innovaties en bedrijfsautomatisering. We delen onze expertise om u te helpen betere technologiekeuzes te maken.",
+        "examples": {
+          "tech": { "title": "Tech Artikelen", "description": "Ontwikkelingsinzichten" },
+          "cases": { "title": "Case Studies", "description": "Echte projectverhalen" },
+          "tutorials": { "title": "Tutorials", "description": "Stapsgewijze handleidingen" },
+          "news": { "title": "Nieuws", "description": "Bedrijfsupdates" }
+        }
+      },
+      "team": {
+        "title": "Ons Team",
+        "subtitle": "Expert ontwikkelaars en consultants",
+        "description": "Ons team bestaat uit ervaren ontwikkelaars, consultants en projectmanagers verspreid over Nederland, India, Vietnam en Nieuw-Zeeland. Samen brengen we meer dan 30 jaar softwareontwikkeling expertise.",
+        "examples": {
+          "developers": { "title": "Ontwikkelaars", "description": "Full-stack expertise" },
+          "consultants": { "title": "Consultants", "description": "Business analyse" },
+          "support": { "title": "Support", "description": "24/7 beschikbaarheid" },
+          "management": { "title": "Management", "description": "Project leiderschap" }
+        }
+      }
+    },
+    "trustedBy": "Vertrouwd door toonaangevende bedrijven"
+  },
+  "pages": {
+    "filemaker": {
+      "title": "FileMaker Development - Loggix",
+      "description": "Professionele FileMaker development: maatwerk databases, integraties en web apps. Claris Partner met 30+ jaar ervaring.",
+      "badge": "FileMaker, Supabase, Elastic Search",
+      "headline": "FileMaker Development",
+      "intro": "Al meer dan 30 jaar bouwen wij perfect passend maatwerk met het FileMaker platform. Van eenvoudige databases tot complete ERP-systemen die meegroeien met uw bedrijf.",
+      "benefits": {
+        "fast": "Snel & betaalbaar",
+        "crossPlatform": "Cross-platform",
+        "scalable": "Schaalbaar"
+      },
+      "stats": {
+        "years": "Jaar ervaring",
+        "projects": "Projecten",
+        "connectors": "API Connectoren",
+        "support": "Ondersteuning"
+      },
+      "examplesTitle": "Voorbeelden van ons werk",
+      "examplesSubtitle": "Ontdek hoe wij FileMaker inzetten voor verschillende bedrijven en branches.",
+      "projects": {
+        "workplaceOs": {
+          "subtitle": "ERP Systeem",
+          "title": "WorkplaceOS Framework",
+          "description": "Ons modulaire ERP framework gebouwd op FileMaker. Volledig aanpasbaar met kant-en-klare modules voor CRM, offertes, facturatie, HR en meer.",
+          "features": ["Modulaire architectuur - gebruik alleen wat u nodig heeft", "Volledige aanpasbaarheid aan uw werkprocessen", "Integratie met externe systemen via API's", "Multi-user en multi-locatie ondersteuning"]
+        },
+        "mediaWorkflow": {
+          "subtitle": "Klantproject",
+          "title": "Mediabedrijf Workflow",
+          "description": "Complete workflow oplossing voor een mediabedrijf: van projectplanning tot facturatie, inclusief resource management en rapportages.",
+          "features": ["Projectplanning met resource allocatie", "Urenregistratie en kostenbeheer", "Automatische facturatie", "Management dashboards"]
+        },
+        "webPortal": {
+          "subtitle": "Integratie",
+          "title": "FileMaker + Web Portal",
+          "description": "FileMaker database gekoppeld aan een klantportaal. Klanten kunnen online orders plaatsen, status bekijken en facturen downloaden.",
+          "features": ["Realtime data synchronisatie", "Veilige klant login", "Online orderverwerking", "Automatische notificaties"]
+        }
+      },
+      "ctaTitle": "Klaar om uw FileMaker project te starten?",
+      "ctaDescription": "Neem contact op voor een vrijblijvend gesprek over uw wensen en mogelijkheden."
+    },
+    "ai": {
+      "title": "AI Integraties - Loggix",
+      "description": "Integreer AI in uw bedrijfsprocessen: ChatGPT, Claude, automatische analyses en slimme workflows.",
+      "badge": "Powered by GPT-4, Claude & meer",
+      "headline": "AI Integraties voor uw Bedrijf",
+      "intro": "Wij integreren de nieuwste AI technologie in uw bestaande systemen. Automatiseer documenten, krijg voorspellende inzichten en transformeer uw klantenservice met slimme chatbots.",
+      "capabilities": {
+        "chatbots": "Chatbots",
+        "document": "Document AI",
+        "predictive": "Predictive",
+        "automation": "Automatisering"
+      },
+      "techTitle": "Technologieën die we gebruiken",
+      "applicationsTitle": "AI Toepassingen",
+      "applicationsSubtitle": "Concrete voorbeelden van hoe AI uw bedrijf kan transformeren.",
+      "projects": {
+        "customerBot": {
+          "subtitle": "AI Assistent",
+          "title": "Slimme Klantenservice Bot",
+          "description": "AI-gestuurde chatbot die klanten helpt met veelgestelde vragen, orders tracken en afspraken plannen. Geïntegreerd met uw FileMaker CRM.",
+          "features": ["Natuurlijke taalverwerking in NL en EN", "Directe toegang tot klantgegevens", "Automatische escalatie naar medewerkers", "24/7 beschikbaar zonder extra personeel"]
+        },
+        "invoiceProcessing": {
+          "subtitle": "Document AI",
+          "title": "Automatische Factuurverwerking",
+          "description": "AI die inkomende facturen leest, categoriseert en automatisch verwerkt in uw boekhouding. Van PDF naar gestructureerde data in seconden.",
+          "features": ["OCR + AI voor nauwkeurige extractie", "Automatische leveranciersherkenning", "Integratie met exact, Twinfield, etc.", "Lerende algoritmes - wordt steeds beter"]
+        },
+        "predictiveAnalysis": {
+          "subtitle": "Predictive Analytics",
+          "title": "Voorspellende Analyses",
+          "description": "AI-modellen die patronen herkennen in uw data: voorspel verkopen, identificeer risico's en optimaliseer voorraad automatisch.",
+          "features": ["Verkoopvoorspellingen per product/klant", "Churn preventie - identificeer risico klanten", "Voorraadoptimalisatie", "Custom dashboards met inzichten"]
+        }
+      },
+      "ctaTitle": "Klaar voor AI in uw organisatie?",
+      "ctaDescription": "Laten we samen ontdekken welke AI mogelijkheden het beste passen bij uw bedrijf."
+    },
+    "products": {
+      "title": "Producten - Loggix",
+      "description": "Onze software producten: WorkplaceOS ERP framework, API connectoren en kant-en-klare modules.",
+      "badge": "Kant-en-klare oplossingen",
+      "headline": "Software Producten",
+      "intro": "Naast maatwerk ontwikkelen we eigen software producten. Modulaire ERP-systemen, API connectoren en web templates die direct waarde toevoegen aan uw bedrijf.",
+      "stats": {
+        "products": "Producten",
+        "connectors": "API Connectoren",
+        "uptime": "Uptime"
+      },
+      "items": {
+        "workplaceOs": {
+          "subtitle": "ERP Framework",
+          "title": "WorkplaceOS",
+          "description": "Ons complete ERP framework gebouwd op FileMaker. Een modulair systeem dat meegroeit met uw bedrijf. Start klein en breid uit wanneer nodig.",
+          "features": ["CRM, Offertes, Facturatie, HR modules", "Volledig aanpasbaar aan uw processen", "Multi-user, multi-locatie ondersteuning", "Web portal en mobiele app ready"]
+        },
+        "apiSuite": {
+          "subtitle": "Integratie Platform",
+          "title": "API Connector Suite",
+          "description": "Meer dan 40 kant-en-klare API connectoren om uw FileMaker te verbinden met populaire diensten: Exact, Mollie, SendGrid, Mailchimp en meer.",
+          "features": ["40+ voorgebouwde connectoren", "Twee-weg synchronisatie", "Foutafhandeling en logging", "Custom connectoren op aanvraag"]
+        },
+        "fmTemplates": {
+          "subtitle": "Web Toolset",
+          "title": "FMBetterForms Templates",
+          "description": "Startklare web templates voor FMBetterForms. Van klantportalen tot interne dashboards - begin niet vanaf nul.",
+          "features": ["Responsive design templates", "Authenticatie en autorisatie", "Dashboard componenten", "E-commerce bouwstenen"]
+        },
+        "invoiceSimple": {
+          "subtitle": "Standalone Product",
+          "title": "FactuurSimple",
+          "description": "Eenvoudige facturatie software voor ZZP'ers en kleine bedrijven. Geen gedoe, gewoon facturen maken en versturen.",
+          "features": ["Professionele facturen in minuten", "Automatische betalingsherinneringen", "BTW aangifte overzichten", "Koppeling met bank"]
+        }
+      },
+      "pricingTitle": "Flexibele Prijzen",
+      "pricingDescription": "Onze producten zijn beschikbaar als licentie, SaaS of als onderdeel van een maatwerk project. We denken graag mee over de beste oplossing voor uw situatie.",
+      "ctaTitle": "Interesse in een van onze producten?",
+      "ctaDescription": "Vraag een demo aan of neem contact op voor meer informatie."
+    },
+    "team": {
+      "title": "Team - Loggix",
+      "description": "Maak kennis met het Loggix team van FileMaker en Vue.js developers.",
+      "badge": "Meer over ons",
+      "headline": "Ons Team",
+      "intro": "Een wereldwijd team van FileMaker en Vue.js experts.",
+      "sections": {
+        "leadership": "Leiderschap",
+        "fmDevelopers": "FileMaker Developers",
+        "vueDevelopers": "Vue.js Developers",
+        "extendedTeam": "Uitgebreid Team",
+        "globalPresence": "Onze Wereldwijde Aanwezigheid"
+      }
+    },
+    "blog": {
+      "title": "Blog - Loggix",
+      "description": "Nieuws en artikelen over FileMaker development en maatwerk software.",
+      "badge": "Het laatste nieuws",
+      "headline": "Blog",
+      "intro": "Nieuws, inzichten en artikelen over FileMaker development, web apps en AI.",
+      "migratingMessage": "Blog posts worden gemigreerd.",
+      "checkBack": "Kom binnenkort terug voor updates."
     }
   },
   "footer": {

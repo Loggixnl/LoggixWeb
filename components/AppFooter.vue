@@ -119,7 +119,7 @@ const quickLinks = [
                 :to="localePath('/privacy-policy')"
                 class="text-[#6B7B8A] hover:text-[#41808B] text-sm transition-colors"
               >
-                Privacy Policy
+                {{ t('common.privacyPolicy') }}
               </NuxtLink>
             </li>
           </ul>
