@@ -134,7 +134,7 @@ const allClients = [...clients, ...clients];
 
           <!-- Description -->
           <div>
-            <p class="text-xl md:text-2xl text-[#0D2C54] leading-relaxed mb-6" v-html="t('home.hero.description')"></p>
+            <p class="text-xl md:text-2xl text-[#0D2C54] leading-[2.0] mb-10" v-html="t('home.hero.description')"></p>
             <div class="flex flex-wrap gap-4">
               <NuxtLink
                 :to="{ hash: '#solutions' }"
@@ -150,6 +150,12 @@ const allClients = [...clients, ...clients];
                 class="inline-flex items-center gap-2 px-6 py-3 text-[#41808B] font-medium border border-[#41808B] rounded-full hover:bg-[#41808B] hover:text-white transition-colors"
               >
                 {{ t('home.hero.contactUs') }}
+              </NuxtLink>
+              <NuxtLink
+                :to="{ hash: '#contact' }"
+                class="inline-flex items-center gap-2 px-6 py-3 bg-[#7FB800] text-white rounded-full font-medium hover:bg-[#6a9c00] transition-colors"
+              >
+                {{ t('home.hero.freeAdvice') }}
               </NuxtLink>
             </div>
           </div>
