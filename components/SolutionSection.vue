@@ -2,6 +2,7 @@
 interface Example {
   title: string;
   description: string;
+  image?: string;
 }
 
 interface Solution {
@@ -124,8 +125,14 @@ onMounted(() => {
           <p class="text-xs text-[#6B7B8A] mb-4">
             {{ example.description }}
           </p>
-          <div class="aspect-square bg-[#F5F5F7] rounded-xl flex items-center justify-center border border-[#E8E8ED] group-hover:border-[#41808B]/30 transition-colors">
-            <span class="text-sm text-[#6B7B8A]">Image</span>
+          <div class="aspect-square bg-[#F5F5F7] rounded-xl flex items-center justify-center border border-[#E8E8ED] group-hover:border-[#41808B]/30 transition-colors overflow-hidden">
+            <img
+              v-if="example.image"
+              :src="example.image"
+              :alt="example.title"
+              class="w-full h-full object-cover"
+            />
+            <span v-else class="text-sm text-[#6B7B8A]">Image</span>
           </div>
         </div>
       </div>

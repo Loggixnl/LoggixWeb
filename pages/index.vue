@@ -25,10 +25,10 @@ const solutions = computed(() => [
     link: '/filemaker',
     image: '/images/Frame_laptop.png',
     examples: [
-      { title: t('home.solutions.database.examples.crm.title'), description: t('home.solutions.database.examples.crm.description') },
-      { title: t('home.solutions.database.examples.erp.title'), description: t('home.solutions.database.examples.erp.description') },
-      { title: t('home.solutions.database.examples.dataWarehouse.title'), description: t('home.solutions.database.examples.dataWarehouse.description') },
-      { title: t('home.solutions.database.examples.api.title'), description: t('home.solutions.database.examples.api.description') },
+      { title: t('home.solutions.database.examples.crm.title'), description: t('home.solutions.database.examples.crm.description'), image: '/images/filemaker-solutions.webp' },
+      { title: t('home.solutions.database.examples.erp.title'), description: t('home.solutions.database.examples.erp.description'), image: '/images/web-interfaces.webp' },
+      { title: t('home.solutions.database.examples.dataWarehouse.title'), description: t('home.solutions.database.examples.dataWarehouse.description'), image: '/images/hosting.webp' },
+      { title: t('home.solutions.database.examples.api.title'), description: t('home.solutions.database.examples.api.description'), image: '/images/exact-online.webp' },
     ],
   },
   {

@@ -57,10 +57,10 @@
         "subtitle": "O.a. FileMaker, Supabase en Elastic",
         "description": "Samen met jou, bouwen we robuuste database oplossingen die meegroeien met je bedrijf. Van eenvoudig databeheer tot complexe enterprise systemen, onze databases integreren naadloos met uw bestaande workflows.<br><br>Je kunt bij ons terecht voor de kleinste (uur basis) tot de grootste oplossingen. Ons bestaande FileMaker framework maakt betaalbare implementatie mogelijk.",
         "examples": {
-          "crm": { "title": "CRM Systemen", "description": "Klantrelatiebeheer" },
-          "erp": { "title": "ERP Oplossingen", "description": "Bedrijfsresource planning" },
-          "dataWarehouse": { "title": "Data Warehouses", "description": "Gecentraliseerde data opslag" },
-          "api": { "title": "API Integraties", "description": "Verbind je systemen" }
+          "crm": { "title": "FileMaker Oplossingen", "description": "We maken o.a. relatie-, offerte, order, factuur en vooraadbeheer of maatwerk oplossingen voor specifieke bedrijfsflows." },
+          "erp": { "title": "Web interfaces", "description": "We maken het mogelijk om je FileMaker database to ontsluiten op het web. Dit betekend eenvoudige toegang voor je klanten of leveranciers." },
+          "dataWarehouse": { "title": "FileMaker Hosting", "description": "Veilige FileMaker database, Elastic search of Supabase hosting in Nederland en Europa inclusief backup en monitoring." },
+          "api": { "title": "API Integraties", "description": "We verbind je software met externe systemen zoals Exact, Mollie, SendGrid, Mailchimp en meer, via API connecties." }
         }
       },
       "ai": {
