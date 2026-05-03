@@ -134,9 +134,7 @@ const allClients = [...clients, ...clients];
 
           <!-- Description -->
           <div>
-            <p class="text-xl md:text-2xl text-[#0D2C54] leading-relaxed mb-6">
-              {{ t('home.hero.description') }}
-            </p>
+            <p class="text-xl md:text-2xl text-[#0D2C54] leading-relaxed mb-6" v-html="t('home.hero.description')"></p>
             <div class="flex flex-wrap gap-4">
               <NuxtLink
                 :to="{ hash: '#solutions' }"
