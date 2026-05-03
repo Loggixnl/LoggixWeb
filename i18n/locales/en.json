@@ -55,7 +55,7 @@
       "database": {
         "title": "Database Solutions",
         "subtitle": "I.e. FileMaker, Supabase and Elastic",
-        "description": "Together with you, we build robust database solutions that scale with your business. From simple data management to complex enterprise systems, our custom databases integrate seamlessly with your existing workflows.<br><br>You can come to us for the smallest (hourly basis) to the largest (Saas) solutions.",
+        "description": "Together with you, we build robust database solutions that scale with your business. From simple data management to complex enterprise systems, our custom databases integrate seamlessly with your existing workflows.<br><br>You can come to us for the smallest (hourly basis) to the largest solutions. Our existing FileMaker framework makes affordable implementation possible.",
         "examples": {
           "crm": { "title": "CRM Systems", "description": "Customer relationship management" },
           "erp": { "title": "ERP Solutions", "description": "Enterprise resource planning" },

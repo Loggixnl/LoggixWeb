@@ -171,6 +171,68 @@ Languages:
 
 ---
 
+## Hero Section Framework
+
+All page hero sections follow a consistent layout structure for visual coherence across the site.
+
+### Section Container
+```html
+<section class="h-[calc(100vh-5rem)] pt-8 flex flex-col bg-gradient-to-b from-[COLOR] via-[COLOR] to-[#F5F5F7] snap-start">
+  <div class="flex-1 flex flex-col">
+    <div class="container-wide">
+      <!-- Content here -->
+    </div>
+  </div>
+</section>
+```
+
+### Layout Structure (Top to Bottom)
+
+1. **Badge Pill** - Centered, with animated ping indicator
+   - Margin: `mb-14 md:mb-16` (56px / 64px)
+
+2. **Main Headline** - Centered, max-width container
+   - Margin: `mb-16 md:mb-20` (64px / 80px)
+   - Font: `text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold`
+
+3. **Image + Description Grid** - Two-column layout
+   - Grid: `grid md:grid-cols-[280px_1fr] gap-10 items-start max-w-6xl mx-auto`
+
+   **Left Column: Circular Image/Video**
+   - Size: `w-56 h-56 md:w-64 md:h-64`
+   - Style: `rounded-full shadow-2xl ring-4 ring-[COLOR]/20`
+   - Home page: Video with hover-to-play
+   - Other pages: Static image or icon placeholder
+
+   **Right Column: Description Area**
+   - Description text: `text-lg md:text-xl leading-relaxed mb-11 pr-10`
+   - Additional elements (benefits, stats, capabilities): placed after description, before buttons
+   - Margin before buttons: `mb-11` (44px)
+   - Action buttons: `flex flex-wrap gap-4`
+
+### Button Styles
+- Primary: `px-6 py-3 bg-[#41808B] text-white rounded-full font-medium hover:bg-[#357078]`
+- Secondary: `px-6 py-3 text-[#41808B] font-medium border border-[#41808B] rounded-full hover:bg-[#41808B] hover:text-white`
+- Accent (home only): `px-6 py-3 bg-[#7FB800] text-white rounded-full font-medium hover:bg-[#6a9c00]`
+
+### Page-Specific Elements
+Move any page-specific UI elements (benefits, capabilities, stats, partner badges) to the description column, between the description text and the action buttons.
+
+### Color Themes per Page
+- **Home**: Green gradient `from-[#e3ebe7]`, ping color `#7FB800`
+- **FileMaker**: Teal gradient `from-[#d5e1eb]`, ping color `#2F6690`
+- **AI**: Green gradient `from-[#e3ebe7]`, ping color `#7FB800`
+- **Products**: Blue gradient `from-[#d5e1eb]`, ping color `#7FB800`
+- **Team**: Amber gradient `from-[#fdf0d5]`, ping color `#F4AC32`
+- **Blog**: Purple gradient `from-[#f0dbe6]`, ping color `#A23B72`
+
+### Vertical Alignment
+- Section is aligned to top (no `justify-center`)
+- The `flex-1` wrapper allows content to stay at top while section fills viewport
+- Carousel/footer elements (if present) are pushed to bottom with `pb-12`
+
+---
+
 ## Implementation Instructions for Claude
 Build this in phases, with clean reusable Nuxt components and a data-driven setup:
 

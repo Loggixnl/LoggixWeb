@@ -15,11 +15,11 @@ const { data: posts } = await useAsyncData('blog-posts', () =>
 <template>
   <div>
     <!-- Hero with Purple Gradient -->
-    <section class="h-[calc(100vh-5rem)] mt-20 flex flex-col justify-center bg-gradient-to-b from-[#f0dbe6] via-[#f6ecf1] to-[#F5F5F7] snap-start">
-      <div class="container-wide">
-        <div class="text-center max-w-3xl mx-auto">
-          <!-- Pill Badge -->
-          <div class="flex justify-center mb-6">
+    <section class="h-[calc(100vh-5rem)] pt-8 flex flex-col bg-gradient-to-b from-[#f0dbe6] via-[#f6ecf1] to-[#F5F5F7] snap-start">
+      <div class="flex-1 flex flex-col">
+        <div class="container-wide">
+          <!-- Badge Pill -->
+          <div class="text-center mb-14 md:mb-16">
             <div class="inline-flex items-center gap-2 px-4 py-2 bg-white border border-[#E8E8ED] rounded-full text-sm text-[#6B7B8A]">
               <span class="relative flex h-3 w-3">
                 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#A23B72] opacity-75"></span>
@@ -29,18 +29,39 @@ const { data: posts } = await useAsyncData('blog-posts', () =>
             </div>
           </div>
 
-          <h1 class="text-4xl md:text-5xl lg:text-6xl font-semibold text-[#0D2C54] mb-4">
-            <span v-html="t('pages.blog.headline')"></span>
-          </h1>
-          <p class="text-lg text-[#41808B] leading-relaxed mb-8" v-html="t('pages.blog.intro')"></p>
+          <!-- Main Headline -->
+          <div class="text-center max-w-5xl mx-auto mb-16 md:mb-20">
+            <h1 class="font-display text-[#0D2C54]">
+              <span class="block text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold leading-tight" v-html="t('pages.blog.headline')"></span>
+            </h1>
+          </div>
 
-          <div class="flex flex-wrap justify-center gap-4">
-            <a href="#posts" class="inline-flex items-center gap-2 px-6 py-3 bg-[#41808B] text-white rounded-full font-medium hover:bg-[#357078] transition-colors">
-              {{ t('common.viewArticles') || 'View Articles' }}
-            </a>
-            <NuxtLink :to="localePath('/') + '#contact'" class="inline-flex items-center gap-2 px-6 py-3 text-[#41808B] font-medium hover:underline">
-              {{ t('common.contactUs') }}
-            </NuxtLink>
+          <!-- Image + Description Row -->
+          <div class="grid md:grid-cols-[280px_1fr] gap-10 items-start max-w-6xl mx-auto">
+            <!-- Circular Image Container -->
+            <div class="flex flex-col items-center justify-center">
+              <div class="relative w-56 h-56 md:w-64 md:h-64">
+                <div class="w-full h-full rounded-full overflow-hidden shadow-2xl ring-4 ring-[#A23B72]/20 bg-gradient-to-br from-[#A23B72]/20 to-[#41808B]/20 flex items-center justify-center">
+                  <svg class="w-24 h-24 text-[#41808B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- Description -->
+            <div>
+              <p class="text-lg md:text-xl text-[#0D2C54] leading-relaxed mb-11 pr-10" v-html="t('pages.blog.intro')"></p>
+
+              <div class="flex flex-wrap gap-4">
+                <a href="#posts" class="inline-flex items-center gap-2 px-6 py-3 bg-[#41808B] text-white rounded-full font-medium hover:bg-[#357078] transition-colors">
+                  {{ t('common.viewArticles') || 'View Articles' }}
+                </a>
+                <NuxtLink :to="localePath('/') + '#contact'" class="inline-flex items-center gap-2 px-6 py-3 text-[#41808B] font-medium border border-[#41808B] rounded-full hover:bg-[#41808B] hover:text-white transition-colors">
+                  {{ t('common.contactUs') }}
+                </NuxtLink>
+              </div>
+            </div>
           </div>
         </div>
       </div>

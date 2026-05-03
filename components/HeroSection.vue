@@ -49,12 +49,12 @@ const allClients = [...clients, ...clients];
 </script>
 
 <template>
-  <section class="relative h-[calc(100vh-5rem)] mt-20 flex flex-col bg-gradient-to-b from-[#e3ebe7] via-[#eff3f1] to-[#F5F5F7] snap-start">
+  <section class="relative h-[calc(100vh-5rem)] pt-8 flex flex-col bg-gradient-to-b from-[#e3ebe7] via-[#eff3f1] to-[#F5F5F7] snap-start">
     <!-- Main Content -->
     <div class="flex-1 flex flex-col pb-4">
       <div class="container-wide">
         <!-- Badge Pill -->
-        <div class="text-center mb-4 md:mb-6">
+        <div class="text-center mb-14 md:mb-16">
           <div class="inline-flex items-center gap-2 px-4 py-2 bg-white border border-[#E8E8ED] rounded-full text-sm text-[#6B7B8A]">
             <span class="relative flex h-3 w-3">
               <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#7FB800] opacity-75"></span>
@@ -65,7 +65,7 @@ const allClients = [...clients, ...clients];
         </div>
 
         <!-- Main Headline -->
-        <div class="text-center max-w-5xl mx-auto mb-6 md:mb-10">
+        <div class="text-center max-w-5xl mx-auto mb-16 md:mb-20">
           <h1
             class="font-display text-[#0D2C54]"
             :class="{ 'animate-fade-in-up': heroReady }"
@@ -134,7 +134,7 @@ const allClients = [...clients, ...clients];
 
           <!-- Description -->
           <div>
-            <p class="text-lg md:text-xl text-[#0D2C54] leading-relaxed mb-6" v-html="t('home.hero.description')"></p>
+            <p class="text-lg md:text-xl text-[#0D2C54] leading-relaxed mb-11 pr-10" v-html="t('home.hero.description')"></p>
             <div class="flex flex-wrap gap-4">
               <NuxtLink
                 :to="{ hash: '#solutions' }"
@@ -165,7 +165,7 @@ const allClients = [...clients, ...clients];
 
     <!-- Client Logos Section (at bottom of hero) -->
     <div
-      class="pb-4"
+      class="pb-12"
       :class="{ 'animate-fade-in-up': heroReady }"
       :style="heroReady ? { animationDelay: '500ms' } : {}"
     >

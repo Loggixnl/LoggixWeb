@@ -71,11 +71,11 @@ const projects = computed(() => [
 <template>
   <div>
     <!-- Hero Section with Teal Gradient -->
-    <section class="h-[calc(100vh-5rem)] mt-20 flex flex-col justify-center bg-gradient-to-b from-[#d5e1eb] via-[#e8eff4] to-[#F5F5F7] snap-start">
-      <div class="container-wide">
-        <div class="text-center max-w-4xl mx-auto">
-          <!-- Pill Badge -->
-          <div class="flex justify-center mb-4">
+    <section class="h-[calc(100vh-5rem)] pt-8 flex flex-col bg-gradient-to-b from-[#d5e1eb] via-[#e8eff4] to-[#F5F5F7] snap-start">
+      <div class="flex-1 flex flex-col">
+        <div class="container-wide">
+          <!-- Badge Pill -->
+          <div class="text-center mb-14 md:mb-16">
             <div class="inline-flex items-center gap-2 px-4 py-2 bg-white border border-[#E8E8ED] rounded-full text-sm text-[#6B7B8A]">
               <span class="relative flex h-3 w-3">
                 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#2F6690] opacity-75"></span>
@@ -85,48 +85,61 @@ const projects = computed(() => [
             </div>
           </div>
 
-          <!-- Partner Badge -->
-          <div class="flex justify-center mb-6">
-            <div class="bg-white rounded-xl px-6 py-3 border border-[#E8E8ED]">
-              <img src="/images/claris-partner-badge.svg" alt="Claris FileMaker Partner" class="h-10 opacity-70" />
-            </div>
+          <!-- Main Headline -->
+          <div class="text-center max-w-5xl mx-auto mb-16 md:mb-20">
+            <h1 class="font-display text-[#0D2C54]">
+              <span class="block text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold leading-tight">
+                {{ t('pages.filemaker.headline') }}
+              </span>
+            </h1>
           </div>
 
-          <h1 class="text-4xl md:text-5xl lg:text-6xl font-semibold text-[#0D2C54] mb-4">
-            {{ t('pages.filemaker.headline') }}
-          </h1>
-
-          <p class="text-lg text-[#41808B] mb-6 max-w-3xl mx-auto leading-relaxed" v-html="t('pages.filemaker.intro')"></p>
-
-          <!-- Key benefits -->
-          <div class="flex flex-wrap justify-center gap-6 mb-8">
-            <div class="flex items-center gap-2 text-[#6B7B8A]">
-              <svg class="w-5 h-5 text-[#7FB800]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span v-html="t('pages.filemaker.benefits.fast')"></span>
+          <!-- Image + Description Row -->
+          <div class="grid md:grid-cols-[280px_1fr] gap-10 items-start max-w-6xl mx-auto">
+            <!-- Circular Image Container -->
+            <div class="flex flex-col items-center justify-center">
+              <div class="relative w-56 h-56 md:w-64 md:h-64">
+                <div class="w-full h-full rounded-full overflow-hidden shadow-2xl ring-4 ring-[#2F6690]/20 bg-white flex items-center justify-center">
+                  <img src="/images/claris-partner-badge.svg" alt="Claris FileMaker Partner" class="w-3/4 h-3/4 object-contain opacity-80" />
+                </div>
+              </div>
             </div>
-            <div class="flex items-center gap-2 text-[#6B7B8A]">
-              <svg class="w-5 h-5 text-[#7FB800]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span v-html="t('pages.filemaker.benefits.crossPlatform')"></span>
-            </div>
-            <div class="flex items-center gap-2 text-[#6B7B8A]">
-              <svg class="w-5 h-5 text-[#7FB800]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span v-html="t('pages.filemaker.benefits.scalable')"></span>
-            </div>
-          </div>
 
-          <div class="flex flex-wrap justify-center gap-4">
-            <a href="#projects" class="inline-flex items-center gap-2 px-6 py-3 bg-[#41808B] text-white rounded-full font-medium hover:bg-[#357078] transition-colors">
-              {{ t('common.viewExamples') }}
-            </a>
-            <NuxtLink :to="localePath('/') + '#contact'" class="inline-flex items-center gap-2 px-6 py-3 text-[#41808B] font-medium hover:underline">
-              {{ t('common.contactUs') }}
-            </NuxtLink>
+            <!-- Description -->
+            <div>
+              <p class="text-lg md:text-xl text-[#0D2C54] leading-relaxed mb-6 pr-10" v-html="t('pages.filemaker.intro')"></p>
+
+              <!-- Key benefits -->
+              <div class="flex flex-wrap gap-6 mb-11">
+                <div class="flex items-center gap-2 text-[#6B7B8A]">
+                  <svg class="w-5 h-5 text-[#7FB800]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span v-html="t('pages.filemaker.benefits.fast')"></span>
+                </div>
+                <div class="flex items-center gap-2 text-[#6B7B8A]">
+                  <svg class="w-5 h-5 text-[#7FB800]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span v-html="t('pages.filemaker.benefits.crossPlatform')"></span>
+                </div>
+                <div class="flex items-center gap-2 text-[#6B7B8A]">
+                  <svg class="w-5 h-5 text-[#7FB800]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span v-html="t('pages.filemaker.benefits.scalable')"></span>
+                </div>
+              </div>
+
+              <div class="flex flex-wrap gap-4">
+                <a href="#projects" class="inline-flex items-center gap-2 px-6 py-3 bg-[#41808B] text-white rounded-full font-medium hover:bg-[#357078] transition-colors">
+                  {{ t('common.viewExamples') }}
+                </a>
+                <NuxtLink :to="localePath('/') + '#contact'" class="inline-flex items-center gap-2 px-6 py-3 text-[#41808B] font-medium border border-[#41808B] rounded-full hover:bg-[#41808B] hover:text-white transition-colors">
+                  {{ t('common.contactUs') }}
+                </NuxtLink>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -82,47 +82,71 @@ const products = computed(() => [
 <template>
   <div>
     <!-- Hero Section with Blue Gradient -->
-    <section class="h-[calc(100vh-5rem)] mt-20 flex flex-col justify-center bg-gradient-to-b from-[#d5e1eb] via-[#e8eff4] to-[#F5F5F7] snap-start">
-      <div class="container-wide">
-        <div class="text-center max-w-4xl mx-auto">
-          <!-- Pill Badge -->
-          <div class="inline-flex items-center gap-2 px-4 py-2 bg-white border border-[#E8E8ED] rounded-full text-sm text-[#6B7B8A] mb-6">
-            <span class="relative flex h-3 w-3">
-              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#7FB800] opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-3 w-3 bg-[#7FB800]"></span>
-            </span>
-            {{ t('pages.products.badge') }}
-          </div>
-
-          <h1 class="text-4xl md:text-5xl lg:text-6xl font-semibold text-[#0D2C54] mb-4">
-            {{ t('pages.products.headline') }}
-          </h1>
-
-          <p class="text-lg text-[#41808B] mb-6 max-w-3xl mx-auto leading-relaxed" v-html="t('pages.products.intro')"></p>
-
-          <!-- Quick stats -->
-          <div class="grid grid-cols-3 gap-6 mb-8 max-w-2xl mx-auto">
-            <div class="bg-white rounded-xl p-4 border border-[#E8E8ED]">
-              <div class="text-3xl font-bold text-[#41808B] mb-1">4+</div>
-              <div class="text-sm text-[#6B7B8A]" v-html="t('pages.products.stats.products')"></div>
-            </div>
-            <div class="bg-white rounded-xl p-4 border border-[#E8E8ED]">
-              <div class="text-3xl font-bold text-[#41808B] mb-1">40+</div>
-              <div class="text-sm text-[#6B7B8A]" v-html="t('pages.products.stats.connectors')"></div>
-            </div>
-            <div class="bg-white rounded-xl p-4 border border-[#E8E8ED]">
-              <div class="text-3xl font-bold text-[#41808B] mb-1">99.9%</div>
-              <div class="text-sm text-[#6B7B8A]" v-html="t('pages.products.stats.uptime')"></div>
+    <section class="h-[calc(100vh-5rem)] pt-8 flex flex-col bg-gradient-to-b from-[#d5e1eb] via-[#e8eff4] to-[#F5F5F7] snap-start">
+      <div class="flex-1 flex flex-col">
+        <div class="container-wide">
+          <!-- Badge Pill -->
+          <div class="text-center mb-14 md:mb-16">
+            <div class="inline-flex items-center gap-2 px-4 py-2 bg-white border border-[#E8E8ED] rounded-full text-sm text-[#6B7B8A]">
+              <span class="relative flex h-3 w-3">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#7FB800] opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-3 w-3 bg-[#7FB800]"></span>
+              </span>
+              {{ t('pages.products.badge') }}
             </div>
           </div>
 
-          <div class="flex flex-wrap justify-center gap-4">
-            <a href="#products" class="inline-flex items-center gap-2 px-6 py-3 bg-[#41808B] text-white rounded-full font-medium hover:bg-[#357078] transition-colors">
-              {{ t('common.viewProducts') }}
-            </a>
-            <NuxtLink :to="localePath('/') + '#contact'" class="inline-flex items-center gap-2 px-6 py-3 text-[#41808B] font-medium hover:underline">
-              {{ t('common.contactUs') }}
-            </NuxtLink>
+          <!-- Main Headline -->
+          <div class="text-center max-w-5xl mx-auto mb-16 md:mb-20">
+            <h1 class="font-display text-[#0D2C54]">
+              <span class="block text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold leading-tight">
+                {{ t('pages.products.headline') }}
+              </span>
+            </h1>
+          </div>
+
+          <!-- Image + Description Row -->
+          <div class="grid md:grid-cols-[280px_1fr] gap-10 items-start max-w-6xl mx-auto">
+            <!-- Circular Image Container -->
+            <div class="flex flex-col items-center justify-center">
+              <div class="relative w-56 h-56 md:w-64 md:h-64">
+                <div class="w-full h-full rounded-full overflow-hidden shadow-2xl ring-4 ring-[#41808B]/20 bg-gradient-to-br from-[#41808B]/20 to-[#0D2C54]/20 flex items-center justify-center">
+                  <svg class="w-24 h-24 text-[#41808B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- Description -->
+            <div>
+              <p class="text-lg md:text-xl text-[#0D2C54] leading-relaxed mb-6 pr-10" v-html="t('pages.products.intro')"></p>
+
+              <!-- Quick stats -->
+              <div class="grid grid-cols-3 gap-4 mb-11">
+                <div class="bg-white rounded-xl p-3 border border-[#E8E8ED] text-center">
+                  <div class="text-2xl font-bold text-[#41808B] mb-1">4+</div>
+                  <div class="text-xs text-[#6B7B8A]" v-html="t('pages.products.stats.products')"></div>
+                </div>
+                <div class="bg-white rounded-xl p-3 border border-[#E8E8ED] text-center">
+                  <div class="text-2xl font-bold text-[#41808B] mb-1">40+</div>
+                  <div class="text-xs text-[#6B7B8A]" v-html="t('pages.products.stats.connectors')"></div>
+                </div>
+                <div class="bg-white rounded-xl p-3 border border-[#E8E8ED] text-center">
+                  <div class="text-2xl font-bold text-[#41808B] mb-1">99.9%</div>
+                  <div class="text-xs text-[#6B7B8A]" v-html="t('pages.products.stats.uptime')"></div>
+                </div>
+              </div>
+
+              <div class="flex flex-wrap gap-4">
+                <a href="#products" class="inline-flex items-center gap-2 px-6 py-3 bg-[#41808B] text-white rounded-full font-medium hover:bg-[#357078] transition-colors">
+                  {{ t('common.viewProducts') }}
+                </a>
+                <NuxtLink :to="localePath('/') + '#contact'" class="inline-flex items-center gap-2 px-6 py-3 text-[#41808B] font-medium border border-[#41808B] rounded-full hover:bg-[#41808B] hover:text-white transition-colors">
+                  {{ t('common.contactUs') }}
+                </NuxtLink>
+              </div>
+            </div>
           </div>
         </div>
       </div>

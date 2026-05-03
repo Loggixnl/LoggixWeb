@@ -78,52 +78,76 @@ const aiCapabilities = computed(() => [
 <template>
   <div>
     <!-- Hero Section with Green Gradient -->
-    <section class="h-[calc(100vh-5rem)] mt-20 flex flex-col justify-center bg-gradient-to-b from-[#e3ebe7] via-[#eff3f1] to-[#F5F5F7] snap-start">
-      <div class="container-wide">
-        <div class="text-center max-w-4xl mx-auto">
-          <!-- AI Badge -->
-          <div class="inline-flex items-center gap-2 px-4 py-2 bg-white border border-[#E8E8ED] rounded-full text-sm text-[#6B7B8A] mb-6">
-            <span class="relative flex h-3 w-3">
-              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#7FB800] opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-3 w-3 bg-[#7FB800]"></span>
-            </span>
-            {{ t('pages.ai.badge') }}
-          </div>
-
-          <h1 class="text-4xl md:text-5xl lg:text-6xl font-semibold text-[#0D2C54] mb-4">
-            {{ t('pages.ai.headline') }}
-          </h1>
-
-          <p class="text-lg text-[#41808B] mb-6 max-w-3xl mx-auto leading-relaxed" v-html="t('pages.ai.intro')"></p>
-
-          <!-- AI capabilities -->
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 max-w-3xl mx-auto">
-            <div v-for="cap in aiCapabilities" :key="cap.icon" class="bg-white rounded-xl p-4 border border-[#E8E8ED]">
-              <div class="w-10 h-10 rounded-lg bg-[#F5F5F7] flex items-center justify-center mx-auto mb-2">
-                <svg v-if="cap.icon === 'chatbot'" class="w-5 h-5 text-[#41808B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                </svg>
-                <svg v-if="cap.icon === 'document'" class="w-5 h-5 text-[#41808B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
-                <svg v-if="cap.icon === 'chart'" class="w-5 h-5 text-[#41808B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                </svg>
-                <svg v-if="cap.icon === 'bolt'" class="w-5 h-5 text-[#41808B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <div class="text-sm text-[#6B7B8A]" v-html="cap.label"></div>
+    <section class="h-[calc(100vh-5rem)] pt-8 flex flex-col bg-gradient-to-b from-[#e3ebe7] via-[#e8eff4] to-[#F5F5F7] snap-start">
+      <div class="flex-1 flex flex-col">
+        <div class="container-wide">
+          <!-- Badge Pill -->
+          <div class="text-center mb-14 md:mb-16">
+            <div class="inline-flex items-center gap-2 px-4 py-2 bg-white border border-[#E8E8ED] rounded-full text-sm text-[#6B7B8A]">
+              <span class="relative flex h-3 w-3">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#7FB800] opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-3 w-3 bg-[#7FB800]"></span>
+              </span>
+              {{ t('pages.ai.badge') }}
             </div>
           </div>
 
-          <div class="flex flex-wrap justify-center gap-4">
-            <a href="#examples" class="inline-flex items-center gap-2 px-6 py-3 bg-[#41808B] text-white rounded-full font-medium hover:bg-[#357078] transition-colors">
-              {{ t('common.viewPossibilities') }}
-            </a>
-            <NuxtLink :to="localePath('/') + '#contact'" class="inline-flex items-center gap-2 px-6 py-3 text-[#41808B] font-medium hover:underline">
-              {{ t('common.contactUs') }}
-            </NuxtLink>
+          <!-- Main Headline -->
+          <div class="text-center max-w-5xl mx-auto mb-16 md:mb-20">
+            <h1 class="font-display text-[#0D2C54]">
+              <span class="block text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold leading-tight">
+                {{ t('pages.ai.headline') }}
+              </span>
+            </h1>
+          </div>
+
+          <!-- Image + Description Row -->
+          <div class="grid md:grid-cols-[280px_1fr] gap-10 items-start max-w-6xl mx-auto">
+            <!-- Circular Image Container -->
+            <div class="flex flex-col items-center justify-center">
+              <div class="relative w-56 h-56 md:w-64 md:h-64">
+                <div class="w-full h-full rounded-full overflow-hidden shadow-2xl ring-4 ring-[#7FB800]/20 bg-gradient-to-br from-[#7FB800]/20 to-[#41808B]/20 flex items-center justify-center">
+                  <svg class="w-24 h-24 text-[#41808B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- Description -->
+            <div>
+              <p class="text-lg md:text-xl text-[#0D2C54] leading-relaxed mb-6 pr-10" v-html="t('pages.ai.intro')"></p>
+
+              <!-- AI capabilities -->
+              <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-11">
+                <div v-for="cap in aiCapabilities" :key="cap.icon" class="bg-white rounded-xl p-3 border border-[#E8E8ED]">
+                  <div class="w-8 h-8 rounded-lg bg-[#F5F5F7] flex items-center justify-center mx-auto mb-2">
+                    <svg v-if="cap.icon === 'chatbot'" class="w-4 h-4 text-[#41808B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                    </svg>
+                    <svg v-if="cap.icon === 'document'" class="w-4 h-4 text-[#41808B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                    <svg v-if="cap.icon === 'chart'" class="w-4 h-4 text-[#41808B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                    </svg>
+                    <svg v-if="cap.icon === 'bolt'" class="w-4 h-4 text-[#41808B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </div>
+                  <div class="text-xs text-[#6B7B8A] text-center" v-html="cap.label"></div>
+                </div>
+              </div>
+
+              <div class="flex flex-wrap gap-4">
+                <a href="#examples" class="inline-flex items-center gap-2 px-6 py-3 bg-[#41808B] text-white rounded-full font-medium hover:bg-[#357078] transition-colors">
+                  {{ t('common.viewPossibilities') }}
+                </a>
+                <NuxtLink :to="localePath('/') + '#contact'" class="inline-flex items-center gap-2 px-6 py-3 text-[#41808B] font-medium border border-[#41808B] rounded-full hover:bg-[#41808B] hover:text-white transition-colors">
+                  {{ t('common.contactUs') }}
+                </NuxtLink>
+              </div>
+            </div>
           </div>
         </div>
       </div>

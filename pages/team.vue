@@ -64,11 +64,11 @@ const locations = [
 <template>
   <div>
     <!-- Hero with Amber Gradient -->
-    <section class="h-[calc(100vh-5rem)] mt-20 flex flex-col justify-center bg-gradient-to-b from-[#fdf0d5] via-[#fef7e8] to-[#F5F5F7] snap-start">
-      <div class="container-wide">
-        <div class="text-center max-w-3xl mx-auto">
-          <!-- Pill Badge -->
-          <div class="flex justify-center mb-6">
+    <section class="h-[calc(100vh-5rem)] pt-8 flex flex-col bg-gradient-to-b from-[#fdf0d5] via-[#fef7e8] to-[#F5F5F7] snap-start">
+      <div class="flex-1 flex flex-col">
+        <div class="container-wide">
+          <!-- Badge Pill -->
+          <div class="text-center mb-14 md:mb-16">
             <div class="inline-flex items-center gap-2 px-4 py-2 bg-white border border-[#E8E8ED] rounded-full text-sm text-[#6B7B8A]">
               <span class="relative flex h-3 w-3">
                 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#F4AC32] opacity-75"></span>
@@ -78,18 +78,39 @@ const locations = [
             </div>
           </div>
 
-          <h1 class="text-4xl md:text-5xl lg:text-6xl font-semibold text-[#0D2C54] mb-4">
-            <span v-html="t('pages.team.headline')"></span>
-          </h1>
-          <p class="text-lg text-[#41808B] leading-relaxed mb-8" v-html="t('pages.team.intro')"></p>
+          <!-- Main Headline -->
+          <div class="text-center max-w-5xl mx-auto mb-16 md:mb-20">
+            <h1 class="font-display text-[#0D2C54]">
+              <span class="block text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold leading-tight" v-html="t('pages.team.headline')"></span>
+            </h1>
+          </div>
 
-          <div class="flex flex-wrap justify-center gap-4">
-            <a href="#leadership" class="inline-flex items-center gap-2 px-6 py-3 bg-[#41808B] text-white rounded-full font-medium hover:bg-[#357078] transition-colors">
-              {{ t('common.meetTeam') || 'Meet the Team' }}
-            </a>
-            <NuxtLink :to="localePath('/') + '#contact'" class="inline-flex items-center gap-2 px-6 py-3 text-[#41808B] font-medium hover:underline">
-              {{ t('common.contactUs') }}
-            </NuxtLink>
+          <!-- Image + Description Row -->
+          <div class="grid md:grid-cols-[280px_1fr] gap-10 items-start max-w-6xl mx-auto">
+            <!-- Circular Image Container -->
+            <div class="flex flex-col items-center justify-center">
+              <div class="relative w-56 h-56 md:w-64 md:h-64">
+                <div class="w-full h-full rounded-full overflow-hidden shadow-2xl ring-4 ring-[#F4AC32]/20 bg-gradient-to-br from-[#F4AC32]/20 to-[#41808B]/20 flex items-center justify-center">
+                  <svg class="w-24 h-24 text-[#41808B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- Description -->
+            <div>
+              <p class="text-lg md:text-xl text-[#0D2C54] leading-relaxed mb-11 pr-10" v-html="t('pages.team.intro')"></p>
+
+              <div class="flex flex-wrap gap-4">
+                <a href="#leadership" class="inline-flex items-center gap-2 px-6 py-3 bg-[#41808B] text-white rounded-full font-medium hover:bg-[#357078] transition-colors">
+                  {{ t('common.meetTeam') || 'Meet the Team' }}
+                </a>
+                <NuxtLink :to="localePath('/') + '#contact'" class="inline-flex items-center gap-2 px-6 py-3 text-[#41808B] font-medium border border-[#41808B] rounded-full hover:bg-[#41808B] hover:text-white transition-colors">
+                  {{ t('common.contactUs') }}
+                </NuxtLink>
+              </div>
+            </div>
           </div>
         </div>
       </div>
