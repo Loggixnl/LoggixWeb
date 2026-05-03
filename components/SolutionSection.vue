@@ -91,9 +91,7 @@ onMounted(() => {
 
         <!-- Description -->
         <div :class="reversed ? 'md:order-1' : 'md:order-2'">
-          <p class="text-lg text-[#0D2C54] leading-relaxed mb-8">
-            {{ solution.description }}
-          </p>
+          <p class="text-lg text-[#0D2C54] leading-relaxed mb-8" v-html="solution.description"></p>
 
           <!-- Learn More Button -->
           <NuxtLink
