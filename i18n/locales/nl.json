@@ -45,22 +45,41 @@
     "hero": {
       "headline": "We creëren oplossingen",
       "headlineSub": "waarop bedrijven exceleren",
-      "description": "<b>Welkom bij Loggix.</b> We geloven dat elk bedrijf recht heeft op betaalbare, op maat gemaakte software, afgestemd op hun behoeften en processen. We bouwen en verbinden jouw oplossing snel en betaalbaar met AI, API's en Webapplicaties.",
+      "description": "<b>Welkom bij Loggix.</b><br><br>We geloven dat elk bedrijf recht heeft op betaalbare, op maat gemaakte software, afgestemd op hun behoeften en processen.<br><br>We bouwen jouw oplossing snel en betaalbaar met behulp van AI, koppelen hem wanneer nodig middels API's en maken hem voor iedereen bereikbaar via Mobiele of Web apps.",
       "videoHint": "Muis over de video om te bekijken",
       "discoverMore": "Ontdek meer",
       "contactUs": "Neem contact op",
-      "freeAdvice": "Claim Gratis Advies"
+      "freeAdvice": "Claim Gratis Advies",
+      "supportText": "Ondersteuning al vanaf € 55,- per uur!",
+      "features": {
+        "database": {
+          "title": "Database Oplossingen",
+          "description": "Robuuste databases die meegroeien met je bedrijf. Van eenvoudig tot enterprise niveau."
+        },
+        "ai": {
+          "title": "AI Toepassingen",
+          "description": "Slimme automatisering en AI-gestuurde processen voor efficiëntere workflows."
+        },
+        "webapps": {
+          "title": "Web Apps",
+          "description": "Moderne web applicaties die overal toegankelijk zijn, op elk apparaat."
+        },
+        "api": {
+          "title": "API Koppelingen",
+          "description": "Naadloze integraties met externe systemen en bestaande software."
+        }
+      }
     },
     "solutions": {
       "database": {
         "title": "Database Oplossingen",
         "subtitle": "O.a. FileMaker, Supabase en Elastic",
-        "description": "Samen met jou, bouwen we robuuste database oplossingen die meegroeien met je bedrijf. Van eenvoudig databeheer tot complexe enterprise systemen, onze databases integreren naadloos met uw bestaande workflows.<br><br>Je kunt bij ons terecht voor de kleinste (uur basis) tot de grootste oplossingen. Ons bestaande FileMaker framework maakt betaalbare implementatie mogelijk.",
+        "description": "<b>Samen met jou</b>, bouwen we robuuste database oplossingen die meegroeien met je bedrijf. Van eenvoudig databases tot complexe enterprise systemen, onze oplossingen integreren naadloos met uw bestaande workflows.<br><br>Je kunt bij ons terecht met de kleinste (uur basis) tot de grootste opdrachten. O.a. ons bestaande FileMaker framework en ons eigen ontwikkelteam in India, maken betaalbare implementaties mogelijk.</b>",
         "examples": {
           "crm": { "title": "FileMaker Oplossingen", "description": "We maken o.a. relatie-, offerte, order, factuur en vooraadbeheer of maatwerk oplossingen voor specifieke bedrijfsflows." },
-          "erp": { "title": "Web interfaces", "description": "We maken het mogelijk om je FileMaker database to ontsluiten op het web. Dit betekend eenvoudige toegang voor je klanten of leveranciers." },
+          "erp": { "title": "Web Interfaces", "description": "We maken het mogelijk om je FileMaker database to ontsluiten op het web. Dit betekend eenvoudige toegang voor je klanten of leveranciers." },
           "dataWarehouse": { "title": "FileMaker Hosting", "description": "Veilige FileMaker database, Elastic search of Supabase hosting in Nederland en Europa inclusief backup en monitoring." },
-          "api": { "title": "API Integraties", "description": "We verbind je software met externe systemen zoals Exact, Mollie, SendGrid, Mailchimp en meer, via API connecties." }
+          "api": { "title": "API Integraties", "description": "We verbinden je software met externe systemen zoals Exact, Mollie, SendGrid, Mailchimp en meer, via API connecties." }
         }
       },
       "ai": {

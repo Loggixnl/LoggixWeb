@@ -45,17 +45,36 @@
     "hero": {
       "headline": "We create solutions",
       "headlineSub": "that run companies",
-      "description": "<b>Welcome to Loggix.</b> We believe every company deserves affordable custom software, tailored to their needs and processes. We build and connect your solution fast and affordable using AI, API's and Webapps.",
+      "description": "<b>Welcome to Loggix.</b><br><br> We believe every company deserves affordable custom software, tailored to their needs and processes. <br><br>We build your solution fast and affordable using AI, connect it when needed via API's and make it accessible via Mobile or Web apps.",
       "videoHint": "Hover to watch the video",
       "discoverMore": "Learn more",
       "contactUs": "Contact us",
-      "freeAdvice": "Claim Free Advice"
+      "freeAdvice": "Claim Free Advice",
+      "supportText": "Support starting from €55 per hour!",
+      "features": {
+        "database": {
+          "title": "Database Solutions",
+          "description": "Robust databases that scale with your business. From simple to enterprise level."
+        },
+        "ai": {
+          "title": "AI Applications",
+          "description": "Smart automation and AI-driven processes for more efficient workflows."
+        },
+        "webapps": {
+          "title": "Web Apps",
+          "description": "Modern web applications accessible anywhere, on any device."
+        },
+        "api": {
+          "title": "API Connections",
+          "description": "Seamless integrations with external systems and existing software."
+        }
+      }
     },
     "solutions": {
       "database": {
         "title": "Database Solutions",
         "subtitle": "I.e. FileMaker, Supabase and Elastic",
-        "description": "Together with you, we build robust database solutions that scale with your business. From simple data management to complex enterprise systems, our custom databases integrate seamlessly with your existing workflows.<br><br>You can come to us for the smallest (hourly basis) to the largest solutions. Our existing FileMaker framework makes affordable implementation possible.",
+        "description": "<b>Together with you</b>, we build robust database solutions that scale with your business. From simple databases to complex enterprise systems, our solutions integrate seamlessly with your existing workflows.<br><br>You can come to us for the smallest (hourly basis) to the largest solutions. Our existing FileMaker framework and our own development team in India make affordable implementations possible.",
         "examples": {
           "crm": { "title": "FileMaker Solutions", "description": "We build CRM, quotes, orders, invoicing and inventory management or custom solutions for specific business workflows." },
           "erp": { "title": "Web Interfaces", "description": "We make it possible to expose your FileMaker database on the web. This means easy access for your customers or suppliers." },
