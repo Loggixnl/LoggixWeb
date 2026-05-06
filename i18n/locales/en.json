@@ -27,7 +27,11 @@
     "privacyPolicy": "Privacy Policy",
     "sending": "Sending...",
     "meetTeam": "Meet the Team",
-    "viewArticles": "View Articles"
+    "viewArticles": "View Articles",
+    "theProblem": "The problem:",
+    "ourSolution": "Our solution:",
+    "solutionsFor": "Solutions for",
+    "productPlaceholderDescription": "Streamline and automate with intelligent workflows."
   },
   "contact": {
     "getInTouch": "Get in touch",
@@ -43,6 +47,7 @@
     "title": "Loggix - Custom Software & FileMaker Development",
     "description": "Loggix builds custom software with FileMaker, web applications and API integrations for businesses.",
     "hero": {
+      "badge": "Bespoke software, web apps, AI and API's",
       "headline": "We create solutions",
       "headlineSub": "that run companies",
       "description": "<b>Welcome to Loggix.</b><br><br> We believe every company deserves affordable custom software, tailored to their needs and processes. <br><br>We build your solution fast and affordable using AI, connect it when needed via API's and make it accessible via Mobile or Web apps.",
@@ -127,7 +132,13 @@
         }
       }
     },
-    "trustedBy": "Trusted by leading companies"
+    "trustedBy": "Trusted by leading companies",
+    "imac": {
+      "tagline": "One system, complete overview",
+      "headline": "Your business at a glance",
+      "description": "Loggix connects all your departments in one streamlined platform.",
+      "scrollHint": "Scroll to explore"
+    }
   },
   "pages": {
     "filemaker": {
@@ -274,6 +285,14 @@
       "intro": "News, insights, and articles about FileMaker development, web apps, and AI integration.",
       "migratingMessage": "Blog posts are being migrated from WordPress.",
       "checkBack": "Check back soon for updates."
+    },
+    "privacy": {
+      "title": "Privacy Policy - Loggix",
+      "description": "Loggix privacy policy",
+      "headline": "Privacy Policy",
+      "intro": "This page contains the privacy policy of Loggix BV.",
+      "dataCollectionTitle": "Data Collection",
+      "dataCollectionText": "We only collect data necessary for our services."
     }
   },
   "footer": {

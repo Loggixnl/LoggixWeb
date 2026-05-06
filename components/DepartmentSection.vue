@@ -16,7 +16,7 @@ const props = defineProps<{
   isLast?: boolean;
 }>();
 
-const { locale } = useI18n();
+const { t } = useI18n();
 
 const sectionRef = ref<HTMLElement | null>(null);
 const isVisible = ref(false);
@@ -88,7 +88,7 @@ const isReversed = computed(() => props.index % 2 === 1);
           <!-- Pain point -->
           <p class="text-foreground-secondary mb-4">
             <span class="font-semibold text-foreground-primary">
-              {{ locale === 'nl' ? 'Het probleem:' : 'The problem:' }}
+              {{ t('common.theProblem') }}
             </span>
             {{ department.displayPain }}
           </p>
@@ -96,7 +96,7 @@ const isReversed = computed(() => props.index % 2 === 1);
           <!-- Solution -->
           <p class="text-foreground-secondary mb-8">
             <span class="font-semibold text-foreground-primary">
-              {{ locale === 'nl' ? 'Onze oplossing:' : 'Our solution:' }}
+              {{ t('common.ourSolution') }}
             </span>
             {{ department.displaySolution }}
           </p>

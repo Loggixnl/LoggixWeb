@@ -27,7 +27,11 @@
     "privacyPolicy": "Privacybeleid",
     "sending": "Verzenden...",
     "meetTeam": "Ontmoet het team",
-    "viewArticles": "Bekijk artikelen"
+    "viewArticles": "Bekijk artikelen",
+    "theProblem": "Het probleem:",
+    "ourSolution": "Onze oplossing:",
+    "solutionsFor": "Oplossingen voor",
+    "productPlaceholderDescription": "Stroomlijn en automatiseer met intelligente workflows."
   },
   "contact": {
     "getInTouch": "Contact",
@@ -43,6 +47,7 @@
     "title": "Loggix - Maatwerk Software & FileMaker Development",
     "description": "Loggix bouwt maatwerk software met FileMaker, web applicaties en API integraties voor bedrijven.",
     "hero": {
+      "badge": "Maatwerk software, web apps, AI en API's",
       "headline": "We creëren oplossingen",
       "headlineSub": "waarop bedrijven exceleren",
       "description": "<b>Welkom bij Loggix.</b><br><br>We geloven dat elk bedrijf recht heeft op betaalbare, op maat gemaakte software, afgestemd op hun behoeften en processen.<br><br>We bouwen jouw oplossing snel en betaalbaar met behulp van AI, koppelen hem wanneer nodig middels API's en maken hem voor iedereen bereikbaar via Mobiele of Web apps.",
@@ -127,7 +132,13 @@
         }
       }
     },
-    "trustedBy": "Vertrouwd door toonaangevende bedrijven"
+    "trustedBy": "Vertrouwd door toonaangevende bedrijven",
+    "imac": {
+      "tagline": "Eén systeem, volledig overzicht",
+      "headline": "Uw bedrijf in één blik",
+      "description": "Loggix verbindt al uw afdelingen in één gestroomlijnd platform.",
+      "scrollHint": "Scroll om te ontdekken"
+    }
   },
   "pages": {
     "filemaker": {
@@ -274,6 +285,14 @@
       "intro": "Nieuws, inzichten en artikelen over FileMaker development, web apps en AI.",
       "migratingMessage": "Blog posts worden gemigreerd.",
       "checkBack": "Kom binnenkort terug voor updates."
+    },
+    "privacy": {
+      "title": "Privacybeleid - Loggix",
+      "description": "Loggix privacybeleid",
+      "headline": "Privacybeleid",
+      "intro": "Deze pagina bevat het privacybeleid van Loggix BV.",
+      "dataCollectionTitle": "Gegevensverzameling",
+      "dataCollectionText": "We verzamelen alleen gegevens die nodig zijn voor onze dienstverlening."
     }
   },
   "footer": {

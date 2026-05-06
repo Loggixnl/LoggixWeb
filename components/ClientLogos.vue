@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { locale } = useI18n();
+const { t } = useI18n();
 
 // Sample client logos (using placeholder SVG logos)
 const clients = [
@@ -22,7 +22,7 @@ const allClients = [...clients, ...clients];
     <div class="container-wide">
       <!-- Label -->
       <p class="text-center text-sm text-[#6B7B8A] mb-8">
-        {{ locale === 'nl' ? 'Vertrouwd door toonaangevende bedrijven' : 'Trusted by leading companies' }}
+        {{ t('home.trustedBy') }}
       </p>
 
       <!-- Auto-scrolling Logo Carousel -->

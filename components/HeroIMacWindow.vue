@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted, computed } from 'vue';
 
-const { locale } = useI18n();
+const { t } = useI18n();
 const localePath = useLocalePath();
 
 // Scroll state
@@ -124,16 +124,13 @@ const getParallaxOffset = (speed: number) => {
           :class="isZoomed ? 'opacity-0 -translate-y-10' : 'opacity-100 translate-y-0'"
         >
           <p class="text-accent-400 text-sm uppercase tracking-wider mb-2 font-medium">
-            {{ locale === 'nl' ? 'Eén systeem, volledig overzicht' : 'One system, complete overview' }}
+            {{ t('home.imac.tagline') }}
           </p>
           <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
-            {{ locale === 'nl' ? 'Uw bedrijf in één blik' : 'Your business at a glance' }}
+            {{ t('home.imac.headline') }}
           </h1>
           <p class="text-gray-400 text-lg max-w-2xl mx-auto">
-            {{ locale === 'nl'
-              ? 'Loggix verbindt al uw afdelingen in één gestroomlijnd platform.'
-              : 'Loggix connects all your departments in one streamlined platform.'
-            }}
+            {{ t('home.imac.description') }}
           </p>
         </div>
 
@@ -187,7 +184,6 @@ const getParallaxOffset = (speed: number) => {
           v-if="activeDepartment"
           :department="activeDepartment"
           :show="showProducts"
-          :locale="locale"
         />
 
         <!-- Scroll indicator -->
@@ -196,7 +192,7 @@ const getParallaxOffset = (speed: number) => {
           :class="scrollProgress > 0.1 ? 'opacity-0' : 'opacity-100'"
         >
           <span class="text-gray-500 text-sm mb-2">
-            {{ locale === 'nl' ? 'Scroll om te ontdekken' : 'Scroll to explore' }}
+            {{ t('home.imac.scrollHint') }}
           </span>
           <div class="w-6 h-10 border-2 border-gray-600 rounded-full flex items-start justify-center p-2">
             <div class="w-1.5 h-3 bg-accent-400 rounded-full animate-bounce"></div>

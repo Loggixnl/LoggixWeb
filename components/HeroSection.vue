@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { t, locale } = useI18n();
+const { t } = useI18n();
 
 const heroReady = ref(false);
 const videoRef = ref<HTMLVideoElement | null>(null);
@@ -49,7 +49,7 @@ const pauseVideo = () => {
                 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#7FB800] opacity-75"></span>
                 <span class="relative inline-flex rounded-full h-3 w-3 bg-[#7FB800]"></span>
               </span>
-              {{ locale === 'nl' ? 'Maatwerk software, web apps, AI en API\'s' : 'Bespoke software, web apps, AI and API\'s' }}
+              {{ t('home.hero.badge') }}
             </div>
           </div>
 

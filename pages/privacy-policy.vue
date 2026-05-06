@@ -1,32 +1,26 @@
 <script setup lang="ts">
-const { locale } = useI18n();
+const { t } = useI18n();
 
 useSeoMeta({
-  title: 'Privacy Policy - Loggix',
-  description: 'Loggix privacy policy',
+  title: () => t('pages.privacy.title'),
+  description: () => t('pages.privacy.description'),
 });
 </script>
 
 <template>
   <div class="section">
     <div class="container-narrow">
-      <h1 class="text-gray-900 mb-8">Privacy Policy</h1>
+      <h1 class="text-gray-900 mb-8">{{ t('pages.privacy.headline') }}</h1>
 
       <div class="prose prose-lg max-w-none">
         <p class="text-gray-600">
-          {{ locale === 'nl'
-            ? 'Deze pagina bevat het privacybeleid van Loggix BV.'
-            : 'This page contains the privacy policy of Loggix BV.'
-          }}
+          {{ t('pages.privacy.intro') }}
         </p>
 
         <!-- Add privacy policy content here -->
-        <h2>{{ locale === 'nl' ? 'Gegevensverzameling' : 'Data Collection' }}</h2>
+        <h2>{{ t('pages.privacy.dataCollectionTitle') }}</h2>
         <p class="text-gray-600">
-          {{ locale === 'nl'
-            ? 'We verzamelen alleen gegevens die nodig zijn voor onze dienstverlening.'
-            : 'We only collect data necessary for our services.'
-          }}
+          {{ t('pages.privacy.dataCollectionText') }}
         </p>
 
         <h2>Contact</h2>

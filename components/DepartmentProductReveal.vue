@@ -13,11 +13,11 @@ interface LocalizedDepartment extends Department {
 interface Props {
   department: LocalizedDepartment;
   show: boolean;
-  locale: string;
 }
 
 const props = defineProps<Props>();
 
+const { t } = useI18n();
 const localePath = useLocalePath();
 
 // Stagger delay for each product card
@@ -34,7 +34,7 @@ const getStaggerDelay = (index: number) => {
     <!-- Products header -->
     <div class="text-center mb-6">
       <p class="text-gray-400 text-sm uppercase tracking-wider mb-2">
-        {{ locale === 'nl' ? 'Oplossingen voor' : 'Solutions for' }} {{ department.displayName }}
+        {{ t('common.solutionsFor') }} {{ department.displayName }}
       </p>
     </div>
 
@@ -78,10 +78,7 @@ const getStaggerDelay = (index: number) => {
 
         <!-- Product mini description (placeholder) -->
         <p class="text-gray-400 text-sm mb-4">
-          {{ locale === 'nl'
-            ? 'Stroomlijn en automatiseer met intelligente workflows.'
-            : 'Streamline and automate with intelligent workflows.'
-          }}
+          {{ t('common.productPlaceholderDescription') }}
         </p>
 
         <!-- Learn more link -->
@@ -90,7 +87,7 @@ const getStaggerDelay = (index: number) => {
           class="inline-flex items-center gap-1 text-sm font-medium transition-colors"
           :style="{ color: department.color }"
         >
-          {{ locale === 'nl' ? 'Meer info' : 'Learn more' }}
+          {{ t('common.moreInfo') }}
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
           </svg>
