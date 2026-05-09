@@ -47,7 +47,7 @@
     "title": "Loggix - Custom Software & FileMaker Development",
     "description": "Loggix builds custom software with FileMaker, web applications and API integrations for businesses.",
     "hero": {
-      "badge": "Bespoke software, web apps, AI and API's",
+      "badge": "Support starting from €55 per hour!",
       "headline": "We create solutions",
       "headlineSub": "that run companies",
       "description": "<b>Welcome to Loggix.</b><br><br> We believe every company deserves affordable custom software, tailored to their needs and processes. <br><br>We build your solution fast and affordable using AI, connect it when needed via API's and make it accessible via Mobile or Web apps.",
@@ -55,23 +55,23 @@
       "discoverMore": "Learn more",
       "contactUs": "Contact us",
       "freeAdvice": "Claim Free Advice",
-      "supportText": "Support starting from €55 per hour!",
+      "supportText": "Specialists in FileMaker, Klai studio, Vue.js and AI",
       "features": {
         "database": {
           "title": "Database Solutions",
-          "description": "Robust databases that scale with your business. From simple to enterprise level."
+          "description": "Flexible custom databases that scale with your business. From simple to enterprise level."
         },
         "ai": {
           "title": "AI Applications",
-          "description": "Smart automation and AI-driven processes for more efficient workflows."
+          "description": "Artificial intelligence (AI) to get more out of your data and automate your workflows."
         },
         "webapps": {
           "title": "Web Apps",
-          "description": "Modern web applications accessible anywhere, on any device."
+          "description": "Web or native apps that make data accessible anywhere, on any device."
         },
         "api": {
           "title": "API Connections",
-          "description": "Seamless integrations with external systems and existing software."
+          "description": "Seamless and error-free data exchange with external systems and existing software."
         }
       }
     },
@@ -92,43 +92,21 @@
         "subtitle": "RAG solutions, Lead generation and Voice agents",
         "description": "Leverage artificial intelligence to automate processes, generate insights, and create intelligent interactions. Our AI solutions are practical, scalable, and designed for real business impact.",
         "examples": {
-          "rag": { "title": "RAG Systems", "description": "AI-powered knowledge bases" },
-          "leadGen": { "title": "Lead Generation", "description": "Automated lead qualification" },
-          "voice": { "title": "Voice Agents", "description": "AI phone assistants" },
-          "chatbots": { "title": "Chatbots", "description": "Intelligent conversations" }
+          "rag": { "title": "RAG Systems", "description": "Let employees or customers find answers instantly from your company documents and data using AI-powered search." },
+          "leadGen": { "title": "Lead Generation", "description": "Automatically score and qualify leads to identify your most promising prospects and prioritize follow-up actions." },
+          "voice": { "title": "Voice Agents", "description": "AI phone assistants that handle incoming calls, schedule appointments and answer frequently asked questions 24/7." },
+          "chatbots": { "title": "Chatbots", "description": "Smart conversational interfaces for your website that provide instant customer support and capture leads automatically." }
         }
       },
       "products": {
-        "title": "Products",
+        "title": "Web Apps",
         "subtitle": "Ready-to-use software solutions",
-        "description": "Our product portfolio includes ready-to-deploy solutions that can be customized to your specific needs. Get started quickly with proven software that has been refined through years of development.",
+        "description": "Our product portfolio includes a large amount of custom and ready-to-use solutions that can be deployed or customized to your specific needs. Get started quickly with proven software that has been refined through years of development.",
         "examples": {
-          "crm": { "title": "Loggix CRM", "description": "Complete customer management" },
-          "project": { "title": "Project Tracker", "description": "Manage projects efficiently" },
-          "invoice": { "title": "Invoice Pro", "description": "Automated invoicing" },
-          "stock": { "title": "Stock Manager", "description": "Inventory control" }
-        }
-      },
-      "blog": {
-        "title": "Blog & Insights",
-        "subtitle": "Knowledge sharing and industry trends",
-        "description": "Stay informed with our latest articles on software development, FileMaker tips, AI innovations, and business automation. We share our expertise to help you make better technology decisions.",
-        "examples": {
-          "tech": { "title": "Tech Articles", "description": "Development insights" },
-          "cases": { "title": "Case Studies", "description": "Real project stories" },
-          "tutorials": { "title": "Tutorials", "description": "Step-by-step guides" },
-          "news": { "title": "News", "description": "Company updates" }
-        }
-      },
-      "team": {
-        "title": "Our Team",
-        "subtitle": "Expert developers and consultants",
-        "description": "Our team consists of experienced developers, consultants and project managers spread across the Netherlands, India, Vietnam and New Zealand. Together we bring over 30 years of software development expertise.",
-        "examples": {
-          "developers": { "title": "Developers", "description": "Full-stack expertise" },
-          "consultants": { "title": "Consultants", "description": "Business analysis" },
-          "support": { "title": "Support", "description": "24/7 availability" },
-          "management": { "title": "Management", "description": "Project leadership" }
+          "crm": { "title": "Loggix CRM", "description": "Track contacts, manage your sales pipeline and keep activity history organized in one central place." },
+          "project": { "title": "Project Tracker", "description": "Plan, track and deliver projects on time with task management, time tracking and team collaboration tools." },
+          "invoice": { "title": "Invoice Pro", "description": "Create professional invoices, track payments and automate reminders to improve your cash flow." },
+          "stock": { "title": "Stock Manager", "description": "Real-time inventory tracking with stock alerts, purchase orders and multi-location warehouse support." }
         }
       }
     },

@@ -88,7 +88,7 @@ const pauseVideo = () => {
                 <video
                   ref="videoRef"
                   src="/videos/loggix-intro-small.mp4"
-                  poster="/videos/loggix-poster.jpg"
+                  poster="/images/loggix-poster.jpg"
                   loop
                   playsinline
                   preload="metadata"

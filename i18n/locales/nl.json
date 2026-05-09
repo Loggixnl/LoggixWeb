@@ -47,7 +47,7 @@
     "title": "Loggix - Maatwerk Software & FileMaker Development",
     "description": "Loggix bouwt maatwerk software met FileMaker, web applicaties en API integraties voor bedrijven.",
     "hero": {
-      "badge": "Maatwerk software, web apps, AI en API's",
+      "badge": "Ondersteuning al vanaf € 55,- per uur!",
       "headline": "We creëren oplossingen",
       "headlineSub": "waarop bedrijven exceleren",
       "description": "<b>Welkom bij Loggix.</b><br><br>We geloven dat elk bedrijf recht heeft op betaalbare, op maat gemaakte software, afgestemd op hun behoeften en processen.<br><br>We bouwen jouw oplossing snel en betaalbaar met behulp van AI, koppelen hem wanneer nodig middels API's en maken hem voor iedereen bereikbaar via Mobiele of Web apps.",
@@ -55,23 +55,23 @@
       "discoverMore": "Ontdek meer",
       "contactUs": "Neem contact op",
       "freeAdvice": "Claim Gratis Advies",
-      "supportText": "Ondersteuning al vanaf € 55,- per uur!",
+      "supportText": "Specialisten in FileMaker, Klai studio, Vue.js en AI",
       "features": {
         "database": {
           "title": "Database Oplossingen",
-          "description": "Robuuste databases die meegroeien met je bedrijf. Van eenvoudig tot enterprise niveau."
+          "description": "Flexibele maatwerk databases die meegroeien met je bedrijf. Van eenvoudig tot enterprise niveau."
         },
         "ai": {
           "title": "AI Toepassingen",
-          "description": "Slimme automatisering en AI-gestuurde processen voor efficiëntere workflows."
+          "description": "Artificial intelligence (AI) om meer uit je data te halen en je workflows te automatiseren."
         },
         "webapps": {
           "title": "Web Apps",
-          "description": "Moderne web applicaties die overal toegankelijk zijn, op elk apparaat."
+          "description": "Web of nativeapps die data overal toegankelijk maakt, op elk apparaat."
         },
         "api": {
           "title": "API Koppelingen",
-          "description": "Naadloze integraties met externe systemen en bestaande software."
+          "description": "Naad- en foutloze uitwisseling van data met externe systemen en bestaande software."
         }
       }
     },
@@ -92,43 +92,21 @@
         "subtitle": "RAG oplossingen, Lead generatie en Voice agents",
         "description": "Benut kunstmatige intelligentie om processen te automatiseren, inzichten te genereren en intelligente interacties te creëren. Onze AI-oplossingen zijn praktisch, schaalbaar en ontworpen voor echte bedrijfsimpact.",
         "examples": {
-          "rag": { "title": "RAG Systemen", "description": "AI-gestuurde kennisbanken" },
-          "leadGen": { "title": "Lead Generatie", "description": "Geautomatiseerde lead kwalificatie" },
-          "voice": { "title": "Voice Agents", "description": "AI telefoon assistenten" },
-          "chatbots": { "title": "Chatbots", "description": "Intelligente gesprekken" }
+          "rag": { "title": "RAG Systemen", "description": "Laat medewerkers of klanten direct antwoorden vinden in uw bedrijfsdocumenten en data met AI-gestuurde zoekopdrachten." },
+          "leadGen": { "title": "Lead Generatie", "description": "Automatisch leads scoren en kwalificeren om uw meest kansrijke prospects te identificeren en op te volgen." },
+          "voice": { "title": "Voice Agents", "description": "AI telefoonassistenten die inkomende gesprekken afhandelen, afspraken plannen en veelgestelde vragen 24/7 beantwoorden." },
+          "chatbots": { "title": "Chatbots", "description": "Slimme conversatie-interfaces voor uw website die directe klantenondersteuning bieden en automatisch leads vastleggen." }
         }
       },
       "products": {
-        "title": "Producten",
-        "subtitle": "Kant-en-klare software oplossingen",
-        "description": "Ons productportfolio bevat kant-en-klare oplossingen die kunnen worden aangepast aan uw specifieke behoeften. Begin snel met bewezen software die door jaren van ontwikkeling is verfijnd.",
+        "title": "(Web) Apps",
+        "subtitle": "(Maatwerk) Software oplossingen",
+        "description": "Ons productportfolio bevat een grote hoeveelheid aan maatwerk en kant-en-klare oplossingen die kunnen worden ingezet of aangepast aan uw specifieke behoeften. Begin snel met bewezen software die door jaren van ontwikkeling is verfijnd.",
         "examples": {
-          "crm": { "title": "Loggix CRM", "description": "Compleet klantbeheer" },
-          "project": { "title": "Project Tracker", "description": "Beheer projecten efficiënt" },
-          "invoice": { "title": "Invoice Pro", "description": "Geautomatiseerde facturatie" },
-          "stock": { "title": "Stock Manager", "description": "Voorraadbeheer" }
-        }
-      },
-      "blog": {
-        "title": "Blog & Inzichten",
-        "subtitle": "Kennisdeling en branche trends",
-        "description": "Blijf op de hoogte met onze nieuwste artikelen over softwareontwikkeling, FileMaker tips, AI innovaties en bedrijfsautomatisering. We delen onze expertise om u te helpen betere technologiekeuzes te maken.",
-        "examples": {
-          "tech": { "title": "Tech Artikelen", "description": "Ontwikkelingsinzichten" },
-          "cases": { "title": "Case Studies", "description": "Echte projectverhalen" },
-          "tutorials": { "title": "Tutorials", "description": "Stapsgewijze handleidingen" },
-          "news": { "title": "Nieuws", "description": "Bedrijfsupdates" }
-        }
-      },
-      "team": {
-        "title": "Ons Team",
-        "subtitle": "Expert ontwikkelaars en consultants",
-        "description": "Ons team bestaat uit ervaren ontwikkelaars, consultants en projectmanagers verspreid over Nederland, India, Vietnam en Nieuw-Zeeland. Samen brengen we meer dan 30 jaar softwareontwikkeling expertise.",
-        "examples": {
-          "developers": { "title": "Ontwikkelaars", "description": "Full-stack expertise" },
-          "consultants": { "title": "Consultants", "description": "Business analyse" },
-          "support": { "title": "Support", "description": "24/7 beschikbaarheid" },
-          "management": { "title": "Management", "description": "Project leiderschap" }
+          "crm": { "title": "Loggix CRM", "description": "Beheer contacten, volg uw verkooppijplijn en houd activiteitenhistorie overzichtelijk bij op één centrale plek." },
+          "project": { "title": "Project Tracker", "description": "Plan, volg en lever projecten op tijd met taakbeheer, urenregistratie en samenwerkingstools voor teams." },
+          "invoice": { "title": "Invoice Pro", "description": "Maak professionele facturen, volg betalingen en automatiseer herinneringen voor een betere cashflow." },
+          "stock": { "title": "Stock Manager", "description": "Realtime voorraadtracking met voorraadmeldingen, inkooporders en ondersteuning voor meerdere magazijnen." }
         }
       }
     },
